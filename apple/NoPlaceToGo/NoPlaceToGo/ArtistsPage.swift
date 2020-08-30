@@ -11,10 +11,12 @@ import SwiftUI
 struct ArtistsPage: View {
     @EnvironmentObject var pm: ProgressManager
     
-    let artists: [Artists] = [.NicoleBanowetz, .Nolan, .HayleyK, .Renee_HayleyD, .Chrissy_Grace, .Emily_Michaela, .MoeGram, .StevenFrost]
     var body: some View {
-        List (artists, id: \.self) {artist in
-            Text(artist.rawValue)
+        List (artistbios.shuffled()) {artist in
+            NavigationLink(destination: ArtistPage(artist: artist)) {
+                ArtistRow(artist: artist)
+            }
+            
         }
         .navigationBarTitle("Artists")
     }
@@ -22,6 +24,8 @@ struct ArtistsPage: View {
 
 struct ArtistsPage_Previews: PreviewProvider {
     static var previews: some View {
-        ArtistsPage()
+        NavigationView {
+            ArtistsPage()
+        }
     }
 }
