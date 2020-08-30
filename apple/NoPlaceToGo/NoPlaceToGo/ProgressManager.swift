@@ -14,12 +14,4 @@ class ProgressManager: ObservableObject {
         curSite = site
     }
     
-    static func getDirections(lat: Float, lon: Float) {
-        UIApplication.shared.open(URL(string: "https://maps.google.com/?daddr=@\(lat),\(lon)")!) // TODO use preferred map provider
-    }
-    
-    static func getDirections(to loc: String) {
-        UIApplication.shared.open(URL(string: "https://maps.google.com/?daddr=\(loc)")!) // TODO use preferred map provider
-    }
-    
 }

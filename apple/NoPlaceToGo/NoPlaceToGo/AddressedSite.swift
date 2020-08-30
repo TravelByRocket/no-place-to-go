@@ -61,6 +61,9 @@ class AddressedSite {
     }
     
     func getDirections() {
-        UIApplication.shared.open(URL(string: "https://maps.google.com/?daddr=\(self.addressSearchableString)")!) // TODO use preferred map provider
+        let preferGoogle: Bool = UserDefaults.standard.bool(forKey: "preferGoogle")
+        UIApplication.shared.open(URL(string:
+            "https://maps.\(preferGoogle ? "google" : "apple").com/?daddr=\(self.addressSearchableString)"
+            )!)
     }
 }
