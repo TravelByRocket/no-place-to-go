@@ -19,7 +19,7 @@ struct LamarA: View {
                 }
                 
                 Button(action: {
-                    self.site.getDirections()
+                    print("nothing yet")
                 }) {
                     Text("I have arrived ACTIVATES EXPERIENCE")
                 }

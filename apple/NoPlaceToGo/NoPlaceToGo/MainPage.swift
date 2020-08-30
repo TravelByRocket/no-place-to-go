@@ -27,15 +27,15 @@ struct MainPage: View {
     func viewFromEnum(site: Sites?) -> AnyView {
         switch site {
         case .LamarA:
-            return AnyView(Text("Placeholder"))
+            return AnyView(LamarA())
         case .LamarB:
-            return AnyView(Text("Placeholder"))
+            return AnyView(LamarB())
         case .MintSerif:
-            return AnyView(Text("Placeholder"))
+            return AnyView(MintSerif())
         case .MusicRange:
-            return AnyView(Text("Placeholder"))
+            return AnyView(MusicRange())
         case .Tootsies:
-            return AnyView(Text("Placeholder"))
+            return AnyView(Tootsies())
         default:
             return AnyView(EnterGroupPassword())
         }

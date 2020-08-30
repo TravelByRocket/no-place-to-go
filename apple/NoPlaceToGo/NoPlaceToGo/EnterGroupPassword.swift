@@ -35,6 +35,8 @@ struct EnterGroupPassword: View {
                 Text("Password does not match")
             }
             Text("The passwords are the name of the location lowercase with no spaces:\n-mintserif\n-lamara\n-lamarb\n-musicrange\n-tootsies")
+                .foregroundColor(.secondary)
+                .italic()
                 .padding()
         }
     }
