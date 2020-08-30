@@ -5,10 +5,21 @@
 //  Created by Bryan Costanza on 8/27/20.
 //
 
-import Foundation
+import SwiftUI
 
-struct LamarA: SingleAddressSite {
-    var addressSearchableString: String = "6451 W Colfax Ave, Lakewood, CO 80214".replacingOccurrences(of: " ", with: "+")
-    var artists: [Artists] = [.StevenFrost, .Chrissy_Grace, .Thomas_Koko_Chris]
-    var nextLocation: Sites = .LamarB
+struct LamarA: View {
+    let site = AddressedSite.lamarA
+    var body: some View {
+        Button(action: {
+            self.site.getDirections()
+        }) {
+        Text("Get directions")
+        }
+    }
+}
+
+struct LamarA_Previews: PreviewProvider {
+    static var previews: some View {
+        LamarA()
+    }
 }
