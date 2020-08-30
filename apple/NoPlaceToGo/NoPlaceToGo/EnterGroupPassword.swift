@@ -28,8 +28,8 @@ struct EnterGroupPassword: View {
                 Button("Start the Journey") {
                     let siteEnum = self.passDict[self.passwordEntry.lowercased()]! // force unwrap OK because being check by `matching`
                     self.pm.setLocation(to: siteEnum)
-                    let siteObject = AddressedSite.siteObjectFromSiteEnum(site: siteEnum)
-                    self.pm.getDirections(to: siteObject.addressSearchableString)
+//                    let siteObject = AddressedSite.siteObjectFromSiteEnum(site: siteEnum)
+//                    self.pm.getDirections(to: siteObject.addressSearchableString)
                 }
             } else {
                 Text("Password does not match")
