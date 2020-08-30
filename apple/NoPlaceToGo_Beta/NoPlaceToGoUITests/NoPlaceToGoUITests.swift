@@ -2,8 +2,7 @@
 //  NoPlaceToGoUITests.swift
 //  NoPlaceToGoUITests
 //
-//  Created by Bryan Costanza on 8/29/20.
-//  Copyright © 2020 Bryan Costanza. All rights reserved.
+//  Created by Bryan Costanza on 8/17/20.
 //
 
 import XCTest
@@ -35,7 +34,7 @@ class NoPlaceToGoUITests: XCTestCase {
     func testLaunchPerformance() throws {
         if #available(macOS 10.15, iOS 13.0, tvOS 13.0, *) {
             // This measures how long it takes to launch your application.
-            measure(metrics: [XCTOSSignpostMetric.applicationLaunch]) {
+            measure(metrics: [XCTApplicationLaunchMetric()]) {
                 XCUIApplication().launch()
             }
         }

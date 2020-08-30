@@ -2,8 +2,7 @@
 //  NoPlaceToGoTests.swift
 //  NoPlaceToGoTests
 //
-//  Created by Bryan Costanza on 8/29/20.
-//  Copyright © 2020 Bryan Costanza. All rights reserved.
+//  Created by Bryan Costanza on 8/17/20.
 //
 
 import XCTest
