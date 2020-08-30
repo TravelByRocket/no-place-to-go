@@ -7,32 +7,19 @@
 
 import SwiftUI
 
-class ProgressManager: ObservableObject { // should be singleton
-    @Published private(set) var curPage: DisplayPages = .home
-    @Published private(set) var curSite: Sites = .MintSerif
-    
-    func setCurrentPage(to page: DisplayPages) {
-        curPage = page
-    }
+class ProgressManager: ObservableObject {
+    @Published private(set) var curSite: Sites? = nil
 
-    func setLocation(to site: Sites) {
+    func setLocation(to site: Sites?) {
         curSite = site
     }
     
-    func getDirections(lat: Float, lon: Float) {
+    static func getDirections(lat: Float, lon: Float) {
         UIApplication.shared.open(URL(string: "https://maps.google.com/?daddr=@\(lat),\(lon)")!) // TODO use preferred map provider
     }
     
-    func getDirections(to loc: String) {
+    static func getDirections(to loc: String) {
         UIApplication.shared.open(URL(string: "https://maps.google.com/?daddr=\(loc)")!) // TODO use preferred map provider
     }
     
-}
-
-enum DisplayPages {
-    case home
-    case settings
-    case artists
-    case about
-    case experience
 }
