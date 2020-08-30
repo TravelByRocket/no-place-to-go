@@ -32,7 +32,7 @@ struct MoreInfoButton: View {
             self.showSheet = true
         }) {
             Text("Backstage")
-                .font(.custom(Fonts.Notable.rawValue, size: 18))
+                .font(.custom(Fonts.Notable.rawValue, size: 24))
         }
         .foregroundColor(Color("PinkHeadings"))
         .sheet(isPresented: $showSheet) {
