@@ -12,7 +12,8 @@ struct ContentView: View {
     
     var body: some View {
         VStack{
-            HomePage()
+            MainPage()
+            Spacer() // keeps the info button at the bottom for less-than-full views
             MoreInfoButton()
         }
     }
@@ -20,7 +21,7 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView().environmentObject(ProgressManager())
     }
 }
 
@@ -33,7 +34,7 @@ struct MoreInfoButton: View {
             Text("Backstage")
                 .font(.custom(Fonts.Notable.rawValue, size: 18))
         }
-        .foregroundColor(Color(Colors.PinkHeadings.rawValue))
+        .foregroundColor(Color("PinkHeadings"))
         .sheet(isPresented: $showSheet) {
             MoreInfo()
         }
