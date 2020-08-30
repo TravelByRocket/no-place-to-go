@@ -16,7 +16,7 @@ struct SettingsPage: View {
         Form {
             Text("Enable Notifications PLACEHOLDER").italic().foregroundColor(.secondary)
             Text("Enable Location Services PLACEHOLDER").italic().foregroundColor(.secondary)
-            Picker(selection: $preferGoogleMaps.onChange(saveDefault), label: Text("Map Provider")) { // this works but view does not update deeply uuntil sheet is dismissed
+            Picker(selection: $preferGoogleMaps.onChange(saveDefault), label: Text("Map Provider")) { // this works but view does not update deeply until sheet is dismissed
                 Text("Apple").tag(false)
                 Text("Google").tag(true)
             }
