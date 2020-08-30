@@ -5,7 +5,7 @@
 //  Created by Bryan Costanza on 8/29/20.
 //
 
-import Foundation
+import SwiftUI
 
 class AddressedSite {
     let addressSearchableString: String
@@ -58,5 +58,9 @@ class AddressedSite {
         case .MusicRange:
             return AddressedSite.musicRange
         }
+    }
+    
+    func getDirections() {
+        UIApplication.shared.open(URL(string: "https://maps.google.com/?daddr=\(self.addressSearchableString)")!) // TODO use preferred map provider
     }
 }
