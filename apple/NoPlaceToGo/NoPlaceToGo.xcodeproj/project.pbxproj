@@ -151,17 +151,12 @@
 				2F76A02B24FB235C00736326 /* AboutPage.swift */,
 				2F76A02124FAF06700736326 /* ExamplesPage.swift */,
 				2F76A00F24FAE0D200736326 /* Artists.swift */,
-				2F76A00924FAE0D100736326 /* Sites.swift */,
 				2F76A00A24FAE0D100736326 /* AssetEnums.swift */,
 				2F76A00D24FAE0D200736326 /* EnterGroupPassword.swift */,
-				2F76A00E24FAE0D200736326 /* LamarA.swift */,
-				2F76A01324FAE0D300736326 /* LamarB.swift */,
-				2F76A01124FAE0D300736326 /* MintSerif.swift */,
-				2F76A01224FAE0D300736326 /* MusicRange.swift */,
+				2F76A02F24FC10E400736326 /* Sites */,
 				2F76A01424FAE0D300736326 /* ProgressManager.swift */,
 				2F76A01024FAE0D200736326 /* AddressedSite.swift */,
 				2F76A00B24FAE0D100736326 /* SingleAddressSite.swift */,
-				2F76A00C24FAE0D200736326 /* Tootsies.swift */,
 				2F769FC024FADF7900736326 /* Assets.xcassets */,
 				2F769FEA24FADFDC00736326 /* Fonts */,
 				2F769FC524FADF7900736326 /* LaunchScreen.storyboard */,
@@ -205,6 +200,19 @@
 				2F769FED24FAE02C00736326 /* ZCOOLXiaoWei-Regular.ttf */,
 			);
 			name = Fonts;
+			sourceTree = "<group>";
+		};
+		2F76A02F24FC10E400736326 /* Sites */ = {
+			isa = PBXGroup;
+			children = (
+				2F76A00924FAE0D100736326 /* Sites.swift */,
+				2F76A00E24FAE0D200736326 /* LamarA.swift */,
+				2F76A01324FAE0D300736326 /* LamarB.swift */,
+				2F76A01124FAE0D300736326 /* MintSerif.swift */,
+				2F76A01224FAE0D300736326 /* MusicRange.swift */,
+				2F76A00C24FAE0D200736326 /* Tootsies.swift */,
+			);
+			name = Sites;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
