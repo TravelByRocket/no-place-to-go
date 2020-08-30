@@ -8,14 +8,34 @@
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject var pm: ProgressManager
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack{
+            HomePage()
+            MoreInfoButton()
+        }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+    }
+}
+
+struct MoreInfoButton: View {
+    @State private var showSheet = false
+    var body: some View {
+        Button(action: {
+            self.showSheet = true
+        }) {
+            Text("Backstage")
+                .font(.custom(Fonts.Notable.rawValue, size: 18))
+        }
+        .foregroundColor(Color(Colors.PinkHeadings.rawValue))
+        .sheet(isPresented: $showSheet) {
+            MoreInfo()
+        }
     }
 }
