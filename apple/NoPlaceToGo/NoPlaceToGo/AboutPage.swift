@@ -18,6 +18,5 @@ struct AboutPage: View {
 struct AboutPage_Previews: PreviewProvider {
     static var previews: some View {
         AboutPage()
-//        .environment(\.colorScheme, .dark)
     }
 }

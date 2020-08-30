@@ -31,7 +31,7 @@
 		2F76A01F24FAE0D400736326 /* LamarB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F76A01324FAE0D300736326 /* LamarB.swift */; };
 		2F76A02024FAE0D400736326 /* ProgressManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F76A01424FAE0D300736326 /* ProgressManager.swift */; };
 		2F76A02224FAF06700736326 /* ExamplesPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F76A02124FAF06700736326 /* ExamplesPage.swift */; };
-		2F76A02424FAF23F00736326 /* HomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F76A02324FAF23F00736326 /* HomePage.swift */; };
+		2F76A02424FAF23F00736326 /* MainPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F76A02324FAF23F00736326 /* MainPage.swift */; };
 		2F76A02624FAF2E900736326 /* SettingsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F76A02524FAF2E900736326 /* SettingsPage.swift */; };
 		2F76A02824FB006800736326 /* ArtistsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F76A02724FB006800736326 /* ArtistsPage.swift */; };
 		2F76A02C24FB235C00736326 /* AboutPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F76A02B24FB235C00736326 /* AboutPage.swift */; };
@@ -86,7 +86,7 @@
 		2F76A01324FAE0D300736326 /* LamarB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LamarB.swift; sourceTree = "<group>"; };
 		2F76A01424FAE0D300736326 /* ProgressManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressManager.swift; sourceTree = "<group>"; };
 		2F76A02124FAF06700736326 /* ExamplesPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamplesPage.swift; sourceTree = "<group>"; };
-		2F76A02324FAF23F00736326 /* HomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePage.swift; sourceTree = "<group>"; };
+		2F76A02324FAF23F00736326 /* MainPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPage.swift; sourceTree = "<group>"; };
 		2F76A02524FAF2E900736326 /* SettingsPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPage.swift; sourceTree = "<group>"; };
 		2F76A02724FB006800736326 /* ArtistsPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistsPage.swift; sourceTree = "<group>"; };
 		2F76A02B24FB235C00736326 /* AboutPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutPage.swift; sourceTree = "<group>"; };
@@ -144,7 +144,7 @@
 				2F769FB724FADF6C00736326 /* AppDelegate.swift */,
 				2F769FB924FADF6C00736326 /* SceneDelegate.swift */,
 				2F769FBE24FADF6D00736326 /* ContentView.swift */,
-				2F76A02324FAF23F00736326 /* HomePage.swift */,
+				2F76A02324FAF23F00736326 /* MainPage.swift */,
 				2F76A02D24FB263B00736326 /* MoreInfo.swift */,
 				2F76A02524FAF2E900736326 /* SettingsPage.swift */,
 				2F76A02724FB006800736326 /* ArtistsPage.swift */,
@@ -341,7 +341,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F76A01624FAE0D400736326 /* AssetEnums.swift in Sources */,
-				2F76A02424FAF23F00736326 /* HomePage.swift in Sources */,
+				2F76A02424FAF23F00736326 /* MainPage.swift in Sources */,
 				2F76A01B24FAE0D400736326 /* Artists.swift in Sources */,
 				2F769FB824FADF6C00736326 /* AppDelegate.swift in Sources */,
 				2F76A01C24FAE0D400736326 /* AddressedSite.swift in Sources */,
