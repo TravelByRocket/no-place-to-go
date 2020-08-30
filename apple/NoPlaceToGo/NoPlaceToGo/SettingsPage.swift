@@ -24,7 +24,8 @@ struct SettingsPage: View {
     .navigationBarTitle("Settings")
     }
     
-    func saveDefault(_ val: Bool) { // part of `onChange` workaround, below
+    // part of `onChange` workaround, below
+    func saveDefault(_ val: Bool) {
         print("got \(val)")
         UserDefaults.standard.set(val, forKey: "preferGoogle")
     }
