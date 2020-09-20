@@ -22,22 +22,49 @@ struct EnterGroupPassword: View {
     }
     
     var body: some View {
-        Form {
-            TextField("Enter Password", text: $passwordEntry)
+        VStack {
+            Image("logo_isolated")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .edgesIgnoringSafeArea(.top)
+            TextField("Try to go somewhere", text: $passwordEntry)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .padding()
             if matching {
-                Button("Start the Journey") {
+                Button(action: {
                     let siteEnum = self.passDict[self.passwordEntry.lowercased()]! // force unwrap OK because being check by `matching`
                     self.pm.setLocation(to: siteEnum)
-//                    let siteObject = AddressedSite.siteObjectFromSiteEnum(site: siteEnum)
-//                    self.pm.getDirections(to: siteObject.addressSearchableString)
+                    
+                }) {
+                    HStack {
+                        Spacer()
+                        Text("Try this out...")
+                        .padding()
+                        .foregroundColor(Color("Gold"))
+//                        .font(.custom(Fonts.ZCOOL.rawValue, size: 20))
+                        Spacer()
+                    }
+                    .overlay(RoundedRectangle(cornerRadius: 8)
+                    .stroke(Color.primary, lineWidth: 1))
+                    .padding()
                 }
             } else {
-                Text("Password does not match")
-            }
-            Text("The passwords are the name of the location lowercase with no spaces:\n-mintserif\n-lamara\n-lamarb\n-musicrange\n-tootsies")
-                .foregroundColor(.secondary)
-                .italic()
+                HStack {
+                    Spacer()
+                    Text("You're not going anywhere")
+                        .padding()
+//                        .font(.custom(Fonts.ZCOOL.rawValue, size: 20))
+                    Spacer()
+                }
+                .overlay(RoundedRectangle(cornerRadius: 8)
+                    .stroke(Color.primary, lineWidth: 1)
+                )
                 .padding()
+            }
+//            Text("The passwords are the name of the location lowercase with no spaces:\n-mintserif\n-lamara\n-lamarb\n-musicrange\n-tootsies")
+//                .foregroundColor(.secondary)
+//                .italic()
+//                .padding()
         }
     }
 }

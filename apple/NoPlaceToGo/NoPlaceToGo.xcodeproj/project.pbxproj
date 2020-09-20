@@ -7,6 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2F4CCE23250D0E310030AF10 /* laptophumlong.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2F4CCE20250D0E300030AF10 /* laptophumlong.mp3 */; };
+		2F4CCE24250D0E310030AF10 /* laptophumshort.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2F4CCE21250D0E300030AF10 /* laptophumshort.mp3 */; };
+		2F4D8DE22511A82E00FA814E /* phonetree.csv in Resources */ = {isa = PBXBuildFile; fileRef = 2F4D8DE12511A82E00FA814E /* phonetree.csv */; };
+		2F5C4F832512797600E81B39 /* sleepsound.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2F5C4F822512797600E81B39 /* sleepsound.mp3 */; };
+		2F7298F1250423C100FC45FD /* MoeGraham.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7298F0250423C100FC45FD /* MoeGraham.swift */; };
+		2F7298F3250423D800FC45FD /* ChrissyGrace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7298F2250423D800FC45FD /* ChrissyGrace.swift */; };
+		2F7298F5250423F200FC45FD /* StevenFrost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7298F4250423F200FC45FD /* StevenFrost.swift */; };
+		2F7298F72504242300FC45FD /* BAGBAYSHA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7298F62504242300FC45FD /* BAGBAYSHA.swift */; };
+		2F7298F92504243A00FC45FD /* ReneeHayleyD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7298F82504243A00FC45FD /* ReneeHayleyD.swift */; };
+		2F7298FB2504245100FC45FD /* EmilyMichaela.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7298FA2504245100FC45FD /* EmilyMichaela.swift */; };
+		2F7298FD2504246300FC45FD /* NolanTredway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7298FC2504246300FC45FD /* NolanTredway.swift */; };
+		2F7298FF2504247800FC45FD /* HayleyKrichels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7298FE2504247800FC45FD /* HayleyKrichels.swift */; };
+		2F7299012504248800FC45FD /* NicoleBanowetz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7299002504248800FC45FD /* NicoleBanowetz.swift */; };
 		2F769FB824FADF6C00736326 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F769FB724FADF6C00736326 /* AppDelegate.swift */; };
 		2F769FBA24FADF6C00736326 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F769FB924FADF6C00736326 /* SceneDelegate.swift */; };
 		2F769FBD24FADF6D00736326 /* NoPlaceToGo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2F769FBB24FADF6D00736326 /* NoPlaceToGo.xcdatamodeld */; };
@@ -38,6 +51,9 @@
 		2F76A02E24FB263B00736326 /* MoreInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F76A02D24FB263B00736326 /* MoreInfo.swift */; };
 		2F76A03124FC54E000736326 /* ArtistPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F76A03024FC54DF00736326 /* ArtistPage.swift */; };
 		2F76A03324FC54F400736326 /* ArtistRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F76A03224FC54F400736326 /* ArtistRow.swift */; };
+		2F7ED1362516E2B600E5546A /* PhaseOne.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7ED1352516E2B600E5546A /* PhaseOne.swift */; };
+		2F7ED13E2516E2C700E5546A /* PhaseTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7ED13D2516E2C700E5546A /* PhaseTwo.swift */; };
+		2F7ED1432516E5FF00E5546A /* RemoteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7ED1422516E5FF00E5546A /* RemoteImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +74,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2F4CCE20250D0E300030AF10 /* laptophumlong.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = laptophumlong.mp3; sourceTree = "<group>"; };
+		2F4CCE21250D0E300030AF10 /* laptophumshort.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = laptophumshort.mp3; sourceTree = "<group>"; };
+		2F4D8DE12511A82E00FA814E /* phonetree.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = phonetree.csv; sourceTree = "<group>"; };
+		2F5C4F822512797600E81B39 /* sleepsound.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sleepsound.mp3; sourceTree = "<group>"; };
+		2F7298F0250423C100FC45FD /* MoeGraham.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoeGraham.swift; sourceTree = "<group>"; };
+		2F7298F2250423D800FC45FD /* ChrissyGrace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChrissyGrace.swift; sourceTree = "<group>"; };
+		2F7298F4250423F200FC45FD /* StevenFrost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StevenFrost.swift; sourceTree = "<group>"; };
+		2F7298F62504242300FC45FD /* BAGBAYSHA.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BAGBAYSHA.swift; sourceTree = "<group>"; };
+		2F7298F82504243A00FC45FD /* ReneeHayleyD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReneeHayleyD.swift; sourceTree = "<group>"; };
+		2F7298FA2504245100FC45FD /* EmilyMichaela.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmilyMichaela.swift; sourceTree = "<group>"; };
+		2F7298FC2504246300FC45FD /* NolanTredway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NolanTredway.swift; sourceTree = "<group>"; };
+		2F7298FE2504247800FC45FD /* HayleyKrichels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HayleyKrichels.swift; sourceTree = "<group>"; };
+		2F7299002504248800FC45FD /* NicoleBanowetz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NicoleBanowetz.swift; sourceTree = "<group>"; };
 		2F769FB424FADF6C00736326 /* NP2G.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NP2G.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F769FB724FADF6C00736326 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2F769FB924FADF6C00736326 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -95,6 +124,9 @@
 		2F76A02D24FB263B00736326 /* MoreInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreInfo.swift; sourceTree = "<group>"; };
 		2F76A03024FC54DF00736326 /* ArtistPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistPage.swift; sourceTree = "<group>"; };
 		2F76A03224FC54F400736326 /* ArtistRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistRow.swift; sourceTree = "<group>"; };
+		2F7ED1352516E2B600E5546A /* PhaseOne.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhaseOne.swift; sourceTree = "<group>"; };
+		2F7ED13D2516E2C700E5546A /* PhaseTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhaseTwo.swift; sourceTree = "<group>"; };
+		2F7ED1422516E5FF00E5546A /* RemoteImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +154,54 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2F4CCE1F250D0E300030AF10 /* moe */ = {
+			isa = PBXGroup;
+			children = (
+				2F4CCE20250D0E300030AF10 /* laptophumlong.mp3 */,
+				2F4CCE21250D0E300030AF10 /* laptophumshort.mp3 */,
+			);
+			name = moe;
+			path = ../../../../shared/moe;
+			sourceTree = "<group>";
+		};
+		2F4D8DE02511A82E00FA814E /* reneehayleyd */ = {
+			isa = PBXGroup;
+			children = (
+				2F4D8DE12511A82E00FA814E /* phonetree.csv */,
+			);
+			name = reneehayleyd;
+			path = ../../../../shared/reneehayleyd;
+			sourceTree = "<group>";
+		};
+		2F5C4F812512797600E81B39 /* chrissygrace */ = {
+			isa = PBXGroup;
+			children = (
+				2F5C4F822512797600E81B39 /* sleepsound.mp3 */,
+			);
+			name = chrissygrace;
+			path = ../../../../shared/chrissygrace;
+			sourceTree = "<group>";
+		};
+		2F7298EF2504233200FC45FD /* Installations */ = {
+			isa = PBXGroup;
+			children = (
+				2F7298F0250423C100FC45FD /* MoeGraham.swift */,
+				2F4CCE1F250D0E300030AF10 /* moe */,
+				2F7298F2250423D800FC45FD /* ChrissyGrace.swift */,
+				2F5C4F812512797600E81B39 /* chrissygrace */,
+				2F7298F4250423F200FC45FD /* StevenFrost.swift */,
+				2F7298F62504242300FC45FD /* BAGBAYSHA.swift */,
+				2F7298F82504243A00FC45FD /* ReneeHayleyD.swift */,
+				2F4D8DE02511A82E00FA814E /* reneehayleyd */,
+				2F7298FA2504245100FC45FD /* EmilyMichaela.swift */,
+				2F7ED1342516E29200E5546A /* emilymichaela */,
+				2F7298FC2504246300FC45FD /* NolanTredway.swift */,
+				2F7298FE2504247800FC45FD /* HayleyKrichels.swift */,
+				2F7299002504248800FC45FD /* NicoleBanowetz.swift */,
+			);
+			path = Installations;
+			sourceTree = "<group>";
+		};
 		2F769FAB24FADF6C00736326 = {
 			isa = PBXGroup;
 			children = (
@@ -149,20 +229,22 @@
 				2F769FB924FADF6C00736326 /* SceneDelegate.swift */,
 				2F769FBE24FADF6D00736326 /* ContentView.swift */,
 				2F76A02324FAF23F00736326 /* MainPage.swift */,
+				2F76A00D24FAE0D200736326 /* EnterGroupPassword.swift */,
 				2F76A02D24FB263B00736326 /* MoreInfo.swift */,
 				2F76A02524FAF2E900736326 /* SettingsPage.swift */,
-				2F76A00F24FAE0D200736326 /* Artists.swift */,
 				2F76A02724FB006800736326 /* ArtistsPage.swift */,
 				2F76A03024FC54DF00736326 /* ArtistPage.swift */,
 				2F76A03224FC54F400736326 /* ArtistRow.swift */,
 				2F76A02B24FB235C00736326 /* AboutPage.swift */,
+				2F7298EF2504233200FC45FD /* Installations */,
+				2F76A00F24FAE0D200736326 /* Artists.swift */,
 				2F76A02124FAF06700736326 /* ExamplesPage.swift */,
 				2F76A00A24FAE0D100736326 /* AssetEnums.swift */,
-				2F76A00D24FAE0D200736326 /* EnterGroupPassword.swift */,
 				2F76A02F24FC10E400736326 /* Sites */,
 				2F76A01424FAE0D300736326 /* ProgressManager.swift */,
 				2F76A01024FAE0D200736326 /* AddressedSite.swift */,
 				2F76A00B24FAE0D100736326 /* SingleAddressSite.swift */,
+				2F7ED1422516E5FF00E5546A /* RemoteImage.swift */,
 				2F769FC024FADF7900736326 /* Assets.xcassets */,
 				2F769FEA24FADFDC00736326 /* Fonts */,
 				2F769FC524FADF7900736326 /* LaunchScreen.storyboard */,
@@ -219,6 +301,15 @@
 				2F76A00C24FAE0D200736326 /* Tootsies.swift */,
 			);
 			name = Sites;
+			sourceTree = "<group>";
+		};
+		2F7ED1342516E29200E5546A /* emilymichaela */ = {
+			isa = PBXGroup;
+			children = (
+				2F7ED1352516E2B600E5546A /* PhaseOne.swift */,
+				2F7ED13D2516E2C700E5546A /* PhaseTwo.swift */,
+			);
+			path = emilymichaela;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -284,7 +375,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1160;
-				LastUpgradeCheck = 1160;
+				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = "Bryan Costanza";
 				TargetAttributes = {
 					2F769FB324FADF6C00736326 = {
@@ -325,7 +416,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F5C4F832512797600E81B39 /* sleepsound.mp3 in Resources */,
 				2F769FC724FADF7900736326 /* LaunchScreen.storyboard in Resources */,
+				2F4D8DE22511A82E00FA814E /* phonetree.csv in Resources */,
+				2F4CCE24250D0E310030AF10 /* laptophumshort.mp3 in Resources */,
+				2F4CCE23250D0E310030AF10 /* laptophumlong.mp3 in Resources */,
 				2F769FEE24FAE02C00736326 /* ZCOOLXiaoWei-Regular.ttf in Resources */,
 				2F769FC424FADF7900736326 /* Preview Assets.xcassets in Resources */,
 				2F769FC124FADF7900736326 /* Assets.xcassets in Resources */,
@@ -355,6 +450,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F76A01624FAE0D400736326 /* AssetEnums.swift in Sources */,
+				2F7298FD2504246300FC45FD /* NolanTredway.swift in Sources */,
 				2F76A02424FAF23F00736326 /* MainPage.swift in Sources */,
 				2F76A01B24FAE0D400736326 /* Artists.swift in Sources */,
 				2F769FB824FADF6C00736326 /* AppDelegate.swift in Sources */,
@@ -365,17 +461,28 @@
 				2F769FBD24FADF6D00736326 /* NoPlaceToGo.xcdatamodeld in Sources */,
 				2F76A03324FC54F400736326 /* ArtistRow.swift in Sources */,
 				2F769FBF24FADF6D00736326 /* ContentView.swift in Sources */,
+				2F7ED1362516E2B600E5546A /* PhaseOne.swift in Sources */,
 				2F76A01824FAE0D400736326 /* Tootsies.swift in Sources */,
+				2F7298F1250423C100FC45FD /* MoeGraham.swift in Sources */,
 				2F76A02C24FB235C00736326 /* AboutPage.swift in Sources */,
 				2F76A01724FAE0D400736326 /* SingleAddressSite.swift in Sources */,
+				2F7298FF2504247800FC45FD /* HayleyKrichels.swift in Sources */,
 				2F76A02824FB006800736326 /* ArtistsPage.swift in Sources */,
+				2F7298F72504242300FC45FD /* BAGBAYSHA.swift in Sources */,
 				2F76A01924FAE0D400736326 /* EnterGroupPassword.swift in Sources */,
 				2F76A01F24FAE0D400736326 /* LamarB.swift in Sources */,
+				2F7299012504248800FC45FD /* NicoleBanowetz.swift in Sources */,
 				2F76A02E24FB263B00736326 /* MoreInfo.swift in Sources */,
 				2F76A01E24FAE0D400736326 /* MusicRange.swift in Sources */,
+				2F7298F92504243A00FC45FD /* ReneeHayleyD.swift in Sources */,
 				2F76A01A24FAE0D400736326 /* LamarA.swift in Sources */,
+				2F7ED1432516E5FF00E5546A /* RemoteImage.swift in Sources */,
+				2F7298F5250423F200FC45FD /* StevenFrost.swift in Sources */,
+				2F7298FB2504245100FC45FD /* EmilyMichaela.swift in Sources */,
 				2F76A02624FAF2E900736326 /* SettingsPage.swift in Sources */,
+				2F7298F3250423D800FC45FD /* ChrissyGrace.swift in Sources */,
 				2F769FBA24FADF6C00736326 /* SceneDelegate.swift in Sources */,
+				2F7ED13E2516E2C700E5546A /* PhaseTwo.swift in Sources */,
 				2F76A02024FAE0D400736326 /* ProgressManager.swift in Sources */,
 				2F76A01524FAE0D400736326 /* Sites.swift in Sources */,
 			);
@@ -450,6 +557,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -510,6 +618,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;

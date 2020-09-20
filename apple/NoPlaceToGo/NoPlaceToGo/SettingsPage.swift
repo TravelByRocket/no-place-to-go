@@ -14,8 +14,11 @@ struct SettingsPage: View {
     
     var body: some View {
         Form {
-            Text("Enable Notifications PLACEHOLDER").italic().foregroundColor(.secondary)
-            Text("Enable Location Services PLACEHOLDER").italic().foregroundColor(.secondary)
+            Text("Notifications PLACEHOLDER").italic().foregroundColor(.secondary)
+            Text("Location PLACEHOLDER").italic().foregroundColor(.secondary)
+            Text("Bluetooth PLACEHOLDER").italic().foregroundColor(.secondary)
+            Text("Start Time PLACEHOLDER").italic().foregroundColor(.secondary)
+            Text("Password PLACEHOLDER").italic().foregroundColor(.secondary)
             Picker(selection: $preferGoogleMaps.onChange(saveDefault), label: Text("Map Provider")) { // this works but view does not update deeply until sheet is dismissed
                 Text("Apple").tag(false)
                 Text("Google").tag(true)

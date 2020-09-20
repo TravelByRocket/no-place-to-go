@@ -18,7 +18,7 @@ struct ArtistRow: View {
                 .frame(width: 70)
                 .padding(.trailing)
             Text(artist.name)
-                .font(.title)
+//                .font(.title)
 //                .foregroundColor(Color("PinkHeadings"))
         }
     }

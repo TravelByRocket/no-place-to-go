@@ -37,9 +37,6 @@ struct ArtistPage: View {
                 }
             }
         }
-        .onAppear {
-            UITableView.appearance().separatorStyle = .none
-        }
     }
 }
 
