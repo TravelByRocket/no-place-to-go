@@ -11,9 +11,18 @@ import CoreNFC
 import SwiftUI
 
 class NFCViewController: UIViewController {
-    
+    @Binding var tagMessage: String
     var session: NFCReaderSession?
 
+    init(tagMessage: Binding<String>) {
+        _tagMessage = tagMessage
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -63,14 +72,7 @@ class NFCViewController: UIViewController {
     }
     
     func showResult(record: NFCNDEFPayload) {
-        let dismiss = { () in
-            self.dismiss(animated: true, completion: nil)
-        }
-        
-        let resultView = ScanResultView(record: record, dismiss: dismiss)
-        let vc = UIHostingController(rootView: resultView)
-        
-        self.showDetailViewController(vc, sender: nil)
+        tagMessage = record.body ?? "no tag message body found"
     }
     
     deinit {
@@ -187,10 +189,26 @@ extension NFCViewController: NFCTagReaderSessionDelegate {
     }
 }
 
+extension NFCNDEFPayload {
+    var body: String? {
+        switch self.typeNameFormat {
+        case .nfcWellKnown:
+            let (info, _) = self.wellKnownTypeTextPayload()
+            return info
+        case .absoluteURI:
+            let url = self.wellKnownTypeURIPayload()
+            return url?.absoluteString
+        default:
+            return nil
+        }
+    }
+}
+
+
 func createButton(title: String) -> UIButton {
     let btn = UIButton(type: .system)
     btn.setTitle(title, for: .normal)
-    btn.setTitleColor(UIColor.white, for: .normal)
+    btn.setTitleColor(UIColor.black, for: .normal)
     btn.backgroundColor = UIColor.white
     btn.layer.cornerRadius = 6
     

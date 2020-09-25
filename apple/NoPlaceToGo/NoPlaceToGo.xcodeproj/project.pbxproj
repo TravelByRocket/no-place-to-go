@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		2F4AA4F525181C38005A7740 /* NFCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4AA4F425181C38005A7740 /* NFCViewController.swift */; };
 		2F4AA599251E7430005A7740 /* NFCView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4AA598251E7430005A7740 /* NFCView.swift */; };
-		2F4AA5A1251E771F005A7740 /* ScanResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4AA5A0251E771F005A7740 /* ScanResultView.swift */; };
 		2F4CCE23250D0E310030AF10 /* laptophumlong.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2F4CCE20250D0E300030AF10 /* laptophumlong.mp3 */; };
 		2F4CCE24250D0E310030AF10 /* laptophumshort.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2F4CCE21250D0E300030AF10 /* laptophumshort.mp3 */; };
 		2F4D8DE22511A82E00FA814E /* phonetree.csv in Resources */ = {isa = PBXBuildFile; fileRef = 2F4D8DE12511A82E00FA814E /* phonetree.csv */; };
@@ -80,7 +79,6 @@
 		2F4AA4F025181719005A7740 /* NP2G.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NP2G.entitlements; sourceTree = "<group>"; };
 		2F4AA4F425181C38005A7740 /* NFCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFCViewController.swift; sourceTree = "<group>"; };
 		2F4AA598251E7430005A7740 /* NFCView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFCView.swift; sourceTree = "<group>"; };
-		2F4AA5A0251E771F005A7740 /* ScanResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanResultView.swift; sourceTree = "<group>"; };
 		2F4CCE20250D0E300030AF10 /* laptophumlong.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = laptophumlong.mp3; sourceTree = "<group>"; };
 		2F4CCE21250D0E300030AF10 /* laptophumshort.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = laptophumshort.mp3; sourceTree = "<group>"; };
 		2F4D8DE12511A82E00FA814E /* phonetree.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = phonetree.csv; sourceTree = "<group>"; };
@@ -248,7 +246,6 @@
 				2F76A00F24FAE0D200736326 /* Artists.swift */,
 				2F4AA598251E7430005A7740 /* NFCView.swift */,
 				2F4AA4F425181C38005A7740 /* NFCViewController.swift */,
-				2F4AA5A0251E771F005A7740 /* ScanResultView.swift */,
 				2F76A02124FAF06700736326 /* ExamplesPage.swift */,
 				2F76A00A24FAE0D100736326 /* AssetEnums.swift */,
 				2F76A02F24FC10E400736326 /* Sites */,
@@ -464,7 +461,6 @@
 				2F4AA599251E7430005A7740 /* NFCView.swift in Sources */,
 				2F7298FD2504246300FC45FD /* NolanTredway.swift in Sources */,
 				2F76A02424FAF23F00736326 /* MainPage.swift in Sources */,
-				2F4AA5A1251E771F005A7740 /* ScanResultView.swift in Sources */,
 				2F76A01B24FAE0D400736326 /* Artists.swift in Sources */,
 				2F769FB824FADF6C00736326 /* AppDelegate.swift in Sources */,
 				2F76A01C24FAE0D400736326 /* AddressedSite.swift in Sources */,

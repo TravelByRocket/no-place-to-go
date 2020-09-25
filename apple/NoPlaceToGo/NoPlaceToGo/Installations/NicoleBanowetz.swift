@@ -10,10 +10,12 @@ import SwiftUI
 import CoreNFC
 
 struct NicoleBanowetz: View {
-    @State var showSheet = false
-    
+    @State var message = "Placeholder"
     var body: some View {
-        NFCView()
+        VStack {
+            Text(message)
+            NFCView(msg: $message)
+        }
     }
     
 }
