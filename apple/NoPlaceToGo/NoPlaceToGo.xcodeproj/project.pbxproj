@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		2F4AA4F525181C38005A7740 /* NFCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4AA4F425181C38005A7740 /* NFCViewController.swift */; };
-		2F4AA58E251DB350005A7740 /* ScanView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F4AA58D251DB350005A7740 /* ScanView.storyboard */; };
 		2F4AA599251E7430005A7740 /* NFCView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4AA598251E7430005A7740 /* NFCView.swift */; };
 		2F4AA5A1251E771F005A7740 /* ScanResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4AA5A0251E771F005A7740 /* ScanResultView.swift */; };
 		2F4CCE23250D0E310030AF10 /* laptophumlong.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2F4CCE20250D0E300030AF10 /* laptophumlong.mp3 */; };
@@ -80,7 +79,6 @@
 /* Begin PBXFileReference section */
 		2F4AA4F025181719005A7740 /* NP2G.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NP2G.entitlements; sourceTree = "<group>"; };
 		2F4AA4F425181C38005A7740 /* NFCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFCViewController.swift; sourceTree = "<group>"; };
-		2F4AA58D251DB350005A7740 /* ScanView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ScanView.storyboard; sourceTree = "<group>"; };
 		2F4AA598251E7430005A7740 /* NFCView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFCView.swift; sourceTree = "<group>"; };
 		2F4AA5A0251E771F005A7740 /* ScanResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanResultView.swift; sourceTree = "<group>"; };
 		2F4CCE20250D0E300030AF10 /* laptophumlong.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = laptophumlong.mp3; sourceTree = "<group>"; };
@@ -207,7 +205,6 @@
 				2F7298FC2504246300FC45FD /* NolanTredway.swift */,
 				2F7298FE2504247800FC45FD /* HayleyKrichels.swift */,
 				2F7299002504248800FC45FD /* NicoleBanowetz.swift */,
-				2F4AA58D251DB350005A7740 /* ScanView.storyboard */,
 			);
 			path = Installations;
 			sourceTree = "<group>";
@@ -430,7 +427,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2F4AA58E251DB350005A7740 /* ScanView.storyboard in Resources */,
 				2F5C4F832512797600E81B39 /* sleepsound.mp3 in Resources */,
 				2F769FC724FADF7900736326 /* LaunchScreen.storyboard in Resources */,
 				2F4D8DE22511A82E00FA814E /* phonetree.csv in Resources */,
