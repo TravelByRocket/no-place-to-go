@@ -14,7 +14,10 @@ struct NicoleBanowetz: View {
     var body: some View {
         VStack {
             Text(message)
+            Spacer()
             NFCView(msg: $message)
+            Spacer()
+            PeripheralView(msg: $message)
         }
     }
     
