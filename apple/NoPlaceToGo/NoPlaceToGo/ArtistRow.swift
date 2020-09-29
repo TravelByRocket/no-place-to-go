@@ -12,14 +12,14 @@ struct ArtistRow: View {
     let artist: artistbio
     var body: some View {
         HStack {
-            artist.image
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .frame(width: 70)
-                .padding(.trailing)
+            ForEach (0..<artist.images.count) {index in
+                artist.images[index]
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 70)
+            }
             Text(artist.name)
-//                .font(.title)
-//                .foregroundColor(Color("PinkHeadings"))
+                .padding(.leading)
         }
     }
 }
@@ -27,10 +27,10 @@ struct ArtistRow: View {
 struct ArtistRow_Previews: PreviewProvider {
     static var previews: some View {
         List {
-            ArtistRow(artist: artistbios.randomElement()!)
-            ArtistRow(artist: artistbios.randomElement()!)
-            ArtistRow(artist: artistbios.randomElement()!)
-            ArtistRow(artist: artistbios.randomElement()!)
+            ArtistRow(artist: artistbio.allartists.randomElement()!)
+            ArtistRow(artist: artistbio.allartists.randomElement()!)
+            ArtistRow(artist: artistbio.allartists.randomElement()!)
+            ArtistRow(artist: artistbio.allartists.randomElement()!)
         }
     }
 }

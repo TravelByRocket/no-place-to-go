@@ -18,6 +18,9 @@ struct MoreInfo: View {
                 NavigationLink(destination: ArtistsPage()) {
                     Text("Artists")
                 }
+                NavigationLink(destination: PartnersPage()) {
+                    Text("Partners & Funders")
+                }
                 NavigationLink(destination: AboutPage()) {
                     Text("About")
                 }

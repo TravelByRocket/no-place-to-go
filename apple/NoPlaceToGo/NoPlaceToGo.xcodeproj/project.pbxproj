@@ -11,6 +11,10 @@
 		2F4AA599251E7430005A7740 /* NFCView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4AA598251E7430005A7740 /* NFCView.swift */; };
 		2F4AA5BE251FB5F4005A7740 /* PeripheralViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4AA5BD251FB5F3005A7740 /* PeripheralViewController.swift */; };
 		2F4AA5C3251FB791005A7740 /* PeripheralView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4AA5C2251FB791005A7740 /* PeripheralView.swift */; };
+		2F4AA5D12522B23D005A7740 /* PartnerRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4AA5D02522B23D005A7740 /* PartnerRow.swift */; };
+		2F4AA5D62522B24C005A7740 /* PartnerPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4AA5D52522B24C005A7740 /* PartnerPage.swift */; };
+		2F4AA5DB2522B25B005A7740 /* PartnersPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4AA5DA2522B25B005A7740 /* PartnersPage.swift */; };
+		2F4AA5E32522B58B005A7740 /* Partners.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4AA5E22522B58B005A7740 /* Partners.swift */; };
 		2F4CCE23250D0E310030AF10 /* laptophumlong.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2F4CCE20250D0E300030AF10 /* laptophumlong.mp3 */; };
 		2F4CCE24250D0E310030AF10 /* laptophumshort.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2F4CCE21250D0E300030AF10 /* laptophumshort.mp3 */; };
 		2F4D8DE22511A82E00FA814E /* phonetree.csv in Resources */ = {isa = PBXBuildFile; fileRef = 2F4D8DE12511A82E00FA814E /* phonetree.csv */; };
@@ -83,6 +87,10 @@
 		2F4AA598251E7430005A7740 /* NFCView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFCView.swift; sourceTree = "<group>"; };
 		2F4AA5BD251FB5F3005A7740 /* PeripheralViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeripheralViewController.swift; sourceTree = "<group>"; };
 		2F4AA5C2251FB791005A7740 /* PeripheralView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeripheralView.swift; sourceTree = "<group>"; };
+		2F4AA5D02522B23D005A7740 /* PartnerRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartnerRow.swift; sourceTree = "<group>"; };
+		2F4AA5D52522B24C005A7740 /* PartnerPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartnerPage.swift; sourceTree = "<group>"; };
+		2F4AA5DA2522B25B005A7740 /* PartnersPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartnersPage.swift; sourceTree = "<group>"; };
+		2F4AA5E22522B58B005A7740 /* Partners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Partners.swift; sourceTree = "<group>"; };
 		2F4CCE20250D0E300030AF10 /* laptophumlong.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = laptophumlong.mp3; sourceTree = "<group>"; };
 		2F4CCE21250D0E300030AF10 /* laptophumshort.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = laptophumshort.mp3; sourceTree = "<group>"; };
 		2F4D8DE12511A82E00FA814E /* phonetree.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = phonetree.csv; sourceTree = "<group>"; };
@@ -245,9 +253,13 @@
 				2F76A02724FB006800736326 /* ArtistsPage.swift */,
 				2F76A03024FC54DF00736326 /* ArtistPage.swift */,
 				2F76A03224FC54F400736326 /* ArtistRow.swift */,
+				2F4AA5D02522B23D005A7740 /* PartnerRow.swift */,
+				2F4AA5D52522B24C005A7740 /* PartnerPage.swift */,
+				2F4AA5DA2522B25B005A7740 /* PartnersPage.swift */,
 				2F76A02B24FB235C00736326 /* AboutPage.swift */,
 				2F7298EF2504233200FC45FD /* Installations */,
 				2F76A00F24FAE0D200736326 /* Artists.swift */,
+				2F4AA5E22522B58B005A7740 /* Partners.swift */,
 				2F4AA598251E7430005A7740 /* NFCView.swift */,
 				2F4AA4F425181C38005A7740 /* NFCViewController.swift */,
 				2F4AA5C2251FB791005A7740 /* PeripheralView.swift */,
@@ -471,6 +483,7 @@
 				2F769FB824FADF6C00736326 /* AppDelegate.swift in Sources */,
 				2F76A01C24FAE0D400736326 /* AddressedSite.swift in Sources */,
 				2F76A02224FAF06700736326 /* ExamplesPage.swift in Sources */,
+				2F4AA5E32522B58B005A7740 /* Partners.swift in Sources */,
 				2F76A01D24FAE0D400736326 /* MintSerif.swift in Sources */,
 				2F76A03124FC54E000736326 /* ArtistPage.swift in Sources */,
 				2F769FBD24FADF6D00736326 /* NoPlaceToGo.xcdatamodeld in Sources */,
@@ -478,6 +491,7 @@
 				2F76A03324FC54F400736326 /* ArtistRow.swift in Sources */,
 				2F769FBF24FADF6D00736326 /* ContentView.swift in Sources */,
 				2F7ED1362516E2B600E5546A /* PhaseOne.swift in Sources */,
+				2F4AA5D62522B24C005A7740 /* PartnerPage.swift in Sources */,
 				2F76A01824FAE0D400736326 /* Tootsies.swift in Sources */,
 				2F7298F1250423C100FC45FD /* MoeGraham.swift in Sources */,
 				2F76A02C24FB235C00736326 /* AboutPage.swift in Sources */,
@@ -488,6 +502,7 @@
 				2F76A01924FAE0D400736326 /* EnterGroupPassword.swift in Sources */,
 				2F76A01F24FAE0D400736326 /* LamarB.swift in Sources */,
 				2F4AA5C3251FB791005A7740 /* PeripheralView.swift in Sources */,
+				2F4AA5DB2522B25B005A7740 /* PartnersPage.swift in Sources */,
 				2F7299012504248800FC45FD /* NicoleBanowetz.swift in Sources */,
 				2F76A02E24FB263B00736326 /* MoreInfo.swift in Sources */,
 				2F76A01E24FAE0D400736326 /* MusicRange.swift in Sources */,
@@ -499,6 +514,7 @@
 				2F7298FB2504245100FC45FD /* EmilyMichaela.swift in Sources */,
 				2F76A02624FAF2E900736326 /* SettingsPage.swift in Sources */,
 				2F7298F3250423D800FC45FD /* ChrissyGrace.swift in Sources */,
+				2F4AA5D12522B23D005A7740 /* PartnerRow.swift in Sources */,
 				2F769FBA24FADF6C00736326 /* SceneDelegate.swift in Sources */,
 				2F7ED13E2516E2C700E5546A /* PhaseTwo.swift in Sources */,
 				2F76A02024FAE0D400736326 /* ProgressManager.swift in Sources */,

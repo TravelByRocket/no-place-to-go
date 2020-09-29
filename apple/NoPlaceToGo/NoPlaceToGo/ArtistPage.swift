@@ -13,9 +13,11 @@ struct ArtistPage: View {
     var body: some View {
         List {
             VStack(alignment: .center) {
-                artist.image
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
+                ForEach (0..<artist.images.count) {index in
+                    artist.images[index]
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                }
                 Text(artist.name)
                     .multilineTextAlignment(.center)
                     .font(.custom(Fonts.Notable.rawValue, size: 28))
@@ -42,6 +44,6 @@ struct ArtistPage: View {
 
 struct ArtistPage_Previews: PreviewProvider {
     static var previews: some View {
-        ArtistPage(artist: artistbios.randomElement()!)
+        ArtistPage(artist: artistbio.allartists.randomElement()!)
     }
 }

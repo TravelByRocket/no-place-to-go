@@ -12,11 +12,46 @@ struct ArtistsPage: View {
     @EnvironmentObject var pm: ProgressManager
     
     var body: some View {
-        List (artistbios.shuffled()) {artist in
-            NavigationLink(destination: ArtistPage(artist: artist)) {
-                ArtistRow(artist: artist)
+        List {
+            Section(header: Text("Co-Directors")) {
+                ForEach (artistbio.alldirectors) {director in
+                    NavigationLink(destination: ArtistPage(artist: director)) {
+                        ArtistRow(artist: director)
+                    }
+                }
             }
             
+            Section(header: Text("Artists")) {
+                ForEach (artistbio.allartists) {artist in
+                    NavigationLink(destination: ArtistPage(artist: artist)) {
+                        ArtistRow(artist: artist)
+                    }
+                }
+            }
+            
+            Section(header: Text("Sound Design")) {
+                NavigationLink(destination: ArtistPage(artist: artistbio.mike)) {
+                    ArtistRow(artist: artistbio.mike)
+                }
+            }
+            
+            Section(header: Text("App Design")) {
+                NavigationLink(destination: ArtistPage(artist: artistbio.bryan)) {
+                    ArtistRow(artist: artistbio.bryan)
+                }
+            }
+            
+            Section(header: Text("Narration")) {
+                NavigationLink(destination: ArtistPage(artist: artistbio.james)) {
+                    ArtistRow(artist: artistbio.james)
+                }
+            }
+            
+            Section(header: Text("360 Degree Video Editing")) {
+                NavigationLink(destination: ArtistPage(artist: artistbio.max)) {
+                    ArtistRow(artist: artistbio.max)
+                }
+            }
         }
         .navigationBarTitle("Artists")
     }

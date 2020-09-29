@@ -23,7 +23,7 @@ struct EnterGroupPassword: View {
     
     var body: some View {
         VStack {
-            Image("logo_isolated")
+            Image("nptg_transparent")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
                 .edgesIgnoringSafeArea(.top)
