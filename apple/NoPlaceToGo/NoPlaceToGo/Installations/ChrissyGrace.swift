@@ -10,9 +10,9 @@ import SwiftUI
 import AVFoundation
 
 struct ChrissyGrace: View {
-    @State var timeRemaining = 60*3
-    
-    private let player = chrissygraceplayer()
+    @State var counter = 0
+    @Binding var installIndex: Int
+    var numInstallsAtSite: Int
     
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
@@ -25,55 +25,51 @@ struct ChrissyGrace: View {
     
     var body: some View {
         VStack {
-            Text("App should look like it's crashing")
-            Text("System restoring in \(timeRemaining) seconds")
-            .onReceive(timer) { _ in
-                if self.timeRemaining > 0 {
-                    self.timeRemaining -= 1
+            Spacer()
+            HStack {
+                Spacer()
+                VStack {
+                    
+                    if (counter < 10) {
+                        Text("Please follow the arrows on the floor to the back of Liberaci's dream\n\n\(10-counter)")
+                            .multilineTextAlignment(.center)
+                            .font(.custom(Fonts.ZCOOL.rawValue, size: 26))
+                            .padding()
+                            .foregroundColor(.primary)
+                    } else if (counter < 16) {
+                        Image("Demon")
+                            .resizable()
+                            .aspectRatio(contentMode: .fit)
+                    } else {
+                        PlayerView()
+                        NextInstallationButton(installIndex: $installIndex, numInstallsAtSite: numInstallsAtSite)
+                    }
+//                    else {
+//                        Image(systemName: "speaker.zzz")
+//                            .font(.largeTitle)
+//                            .foregroundColor(Color("PinkHeadings"))
+//                            .onAppear {
+//                                self.player.play()
+//                            }
+//                            .onDisappear {
+//                                self.player.stop()
+//                            }
+//                    }
                 }
+                Spacer()
             }
+            .onReceive(timer) { _ in
+                counter += 1
+            }
+            Spacer()
         }
         .foregroundColor(.pink)
-        .onAppear {
-            self.player.play()
-        }
-        .onDisappear {
-            self.player.stop()
-        }
     }
     
 }
 
-struct ChrissyGrace_Previews: PreviewProvider {
-    static var previews: some View {
-        ChrissyGrace()
-    }
-}
-
-fileprivate class chrissygraceplayer { // make Singleton perhaps
-    var background: AVAudioPlayer?
-    
-    init() {
-        let path = Bundle.main.path(forResource: "sleepsound.mp3", ofType:nil)!
-        let url = URL(fileURLWithPath: path)
-        
-        do {
-            background = try AVAudioPlayer(contentsOf: url)
-            //            clownstory?.play()
-        } catch {
-            // couldn't load file :(
-        }
-    }
-    
-    func play() {
-        background?.play()
-    }
-    
-    func pause() {
-        background?.pause()
-    }
-    
-    func stop() {
-        background?.stop()
-    }
-}
+//struct ChrissyGrace_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ChrissyGrace()
+//    }
+//}

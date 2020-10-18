@@ -12,9 +12,9 @@ import SwiftUI
 // Integrate NFC with SwiftUI https://github.com/purkylin/NFCTool
 
 struct NFCView: View {
-    @Binding var msg: String
+    @Binding var scannedMsg: String
     var body: some View {
-        ContentViewController(tagMessage: $msg)
+        ContentViewController(tagMessage: $scannedMsg)
     }
 }
 
@@ -45,6 +45,6 @@ struct ContentViewController: UIViewControllerRepresentable {
 
 struct NFCView_Previews: PreviewProvider {
     static var previews: some View {
-        NFCView(msg: .constant("placeholder"))
+        NFCView(scannedMsg: .constant("placeholder"))
     }
 }

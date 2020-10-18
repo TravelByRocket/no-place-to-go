@@ -2,14 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NFCReaderUsageDescription</key>
-	<string>Allow interactions with certain installations during the experience</string>
-	<key>NSBluetoothAlwaysUsageDescription</key>
-	<string>Allow interactions with certain installations during the experience</string>
-	<key>UIUserInterfaceStyle</key>
-	<string>Dark</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<key>CFBundleDisplayName</key>
+	<string>NP2G</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -23,9 +19,15 @@
 	<key>CFBundleShortVersionString</key>
 	<string>$(MARKETING_VERSION)</string>
 	<key>CFBundleVersion</key>
-	<string>1</string>
+	<string>$(CURRENT_PROJECT_VERSION)</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NFCReaderUsageDescription</key>
+	<string>Interact with certain installations during the experience</string>
+	<key>NSBluetoothAlwaysUsageDescription</key>
+	<string>Interact with certain installations during the experience</string>
+	<key>NSBluetoothPeripheralUsageDescription</key>
+	<string>Interact with certain installations during the experience</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>Notable-Regular.ttf</string>
@@ -54,6 +56,10 @@
 	<array>
 		<string>armv7</string>
 	</array>
+	<key>UIStatusBarHidden</key>
+	<false/>
+	<key>UIStatusBarStyle</key>
+	<string>UIStatusBarStyleDefault</string>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>
@@ -65,5 +71,7 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>UIUserInterfaceStyle</key>
+	<string>Dark</string>
 </dict>
 </plist>

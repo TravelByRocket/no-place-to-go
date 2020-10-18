@@ -9,11 +9,22 @@
 import SwiftUI
 
 struct HayleyKrichels: View {
+    @EnvironmentObject var pm: ProgressManager
     var body: some View {
         VStack {
-            Text("Send notification later, maybe after next site complete, shows photo taken at site")
-            RemoteImage(url: "https://files.synodic.co/np2g/oct16/group1830.jpg")
-                .aspectRatio(contentMode: .fit)
+            Spacer()
+            HStack {
+                Spacer()
+                Text("Please find the photo booth inside Mint & Serif across from the coffee bar.")
+                    .multilineTextAlignment(.center)
+                    .font(.custom(Fonts.ZCOOL.rawValue, size: 26))
+                    .padding()
+                    .onAppear{
+                        pm.photoDate = Date()
+                    }
+                Spacer()
+            }
+            Spacer()
         }
     }
 }

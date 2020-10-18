@@ -9,8 +9,33 @@
 import SwiftUI
 
 struct NolanTredway: View {
+    let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+    @State var angle = 0.0
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Spacer()
+            Text("Welcome. Please find the genitals that match your body, and press the corresponding button on the center console.")
+                .multilineTextAlignment(.center)
+                .font(.custom(Fonts.ZCOOL.rawValue, size: 24))
+                .padding()
+            Spacer()
+            Image("nolaninstallationicon")
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .padding()
+                .rotationEffect(.degrees(angle))
+                .onAppear{
+                    withAnimation(.linear(duration: 1.0)) {
+                        angle += 20
+                    }
+                }
+                .onReceive(timer) { _ in
+                    withAnimation(.linear(duration: 1.0)) {
+                        angle += 20
+                    }
+                }
+            Spacer()
+        }
     }
 }
 

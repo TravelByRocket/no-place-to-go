@@ -11,8 +11,13 @@ import AVFoundation
 import UserNotifications
 
 struct MoeGraham: View {
-    private let player = moeplayer()
+//    private let player = MoePlayer()
+    @Binding var installIndex: Int
+    @EnvironmentObject private var am: AudioManager
     @State private var isPlaying = false // can show wrong state if leaving the view and coming back but this shouldn't happen anyway
+    @State private var pausedManually = true
+    
+    let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     var body: some View {
         VStack {
             Spacer()
@@ -20,107 +25,106 @@ struct MoeGraham: View {
                 .resizable()
                 .aspectRatio(contentMode: .fit)
             HStack {
-                ResetAudio(player: player, isPlaying: $isPlaying)
-                PlayPause(player: player, isPlaying: $isPlaying)
-            }
-            Text("Notifications at random times to play clown sound")
-            Spacer()
-            VStack {
-                Button("Request Permission") {
-                    UNUserNotificationCenter.current().requestAuthorization(options: [.alert, .badge, .sound]) { success, error in
-                        if success {
-                            print("All set!")
-                        } else if let error = error {
-                            print(error.localizedDescription)
-                        }
+                Spacer()
+                ResetAudio(isPlaying: $isPlaying)
+                    .frame(width: 60)
+                    .overlay(RoundedRectangle(cornerRadius: 4)
+                            .stroke(Color.secondary, lineWidth: 1))
+                    .padding()
+                Spacer()
+                PlayAudio(isPlaying: $isPlaying, pausedManually: $pausedManually)
+                    .frame(width: 60)
+                    .overlay(RoundedRectangle(cornerRadius: 4)
+                            .stroke(Color.secondary, lineWidth: 1))
+                    .padding()
+                    .onLongPressGesture(minimumDuration: 4) {
+                        installIndex += 1
                     }
-                }
-
-                Button("Schedule Notification") {
-                    let content = UNMutableNotificationContent()
-                    content.title = "Feed the cat"
-                    content.subtitle = "It looks hungry"
-                    content.sound = UNNotificationSound.default
-
-                    // show this notification five seconds from now
-                    let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
-
-                    // choose a random identifier
-                    let request = UNNotificationRequest(identifier: UUID().uuidString, content: content, trigger: trigger)
-
-                    // add our notification request
-                    UNUserNotificationCenter.current().add(request)
+                Spacer()
+                PauseAudio(isPlaying: $isPlaying, pausedManually: $pausedManually)
+                    .frame(width: 60)
+                    .overlay(RoundedRectangle(cornerRadius: 4)
+                            .stroke(Color.secondary, lineWidth: 1))
+                    .padding()
+                Spacer()
+            }
+            .foregroundColor(Color(Colors.Gold.rawValue))
+            Spacer()
+        }
+        .onAppear{
+            am.load(filename: "NP2G3.mp3", loop: false)
+        }
+        .onDisappear{
+            am.stop()
+        }
+        .onReceive(timer, perform: { _ in
+            if let playing = am.audioPlayer?.isPlaying {
+                if (isPlaying && !playing) {
+                    installIndex += 1
                 }
             }
-        }
+        })
     }
 }
 
-struct MoeGraham_Previews: PreviewProvider {
-    static var previews: some View {
-        MoeGraham()
-    }
-}
-
-fileprivate class moeplayer { // make Singleton perhaps
-    var clownstory: AVAudioPlayer?
-    
-    init() {
-        let path = Bundle.main.path(forResource: "laptophumlong.mp3", ofType:nil)!
-        let url = URL(fileURLWithPath: path)
-        
-        do {
-            clownstory = try AVAudioPlayer(contentsOf: url)
-            //            clownstory?.play()
-        } catch {
-            // couldn't load file :(
-        }
-    }
-    
-    func play() {
-        clownstory?.play()
-    }
-    
-    func pause() {
-        clownstory?.pause()
-    }
-    
-    func stop() {
-        clownstory?.stop()
-    }
-}
+//struct MoeGraham_Previews: PreviewProvider {
+//    static var previews: some View {
+//        MoeGraham()
+//    }
+//}
 
 fileprivate struct ResetAudio: View {
-    var player: moeplayer
+    @EnvironmentObject private var am: AudioManager
     @Binding var isPlaying: Bool
     var body: some View {
         Button(action: {
-            self.player.stop()
-            self.isPlaying = false
+            am.audioPlayer?.currentTime = 0
         }, label: {
-            Image(systemName: "gobackward")
+            Image(systemName: "backward.end")
                 .font(.title)
                 .padding()
         })
-            .disabled(!isPlaying)
     }
 }
 
-fileprivate struct PlayPause: View {
-    var player: moeplayer
+fileprivate struct PlayAudio: View {
+    @EnvironmentObject private var am: AudioManager
     @Binding var isPlaying: Bool
+    @Binding var pausedManually: Bool
     var body: some View {
         Button(action: {
-            if self.isPlaying {
-                self.player.pause()
-            } else {
-                self.player.play()
+            if !self.isPlaying {
+                self.am.play()
+                self.isPlaying = true
+                self.pausedManually = false
             }
-            self.isPlaying.toggle()
         }) {
-            Image(systemName: isPlaying ? "pause" : "play")
+            Image(systemName: "play")
                 .font(.largeTitle)
                 .padding()
         }
+        .disabled(isPlaying)
+        .opacity(isPlaying ? 0.3 : 1.0)
+    }
+}
+
+fileprivate struct PauseAudio: View {
+    @EnvironmentObject private var am: AudioManager
+    @Binding var isPlaying: Bool
+    @Binding var pausedManually: Bool
+    var body: some View {
+        Button(action: {
+            if self.isPlaying {
+                self.am.pause()
+                self.isPlaying = false
+                self.pausedManually = true
+            }
+        }) {
+            Image(systemName: "pause")
+                .font(.largeTitle)
+                .padding()
+        }
+        .disabled(!isPlaying)
+        .opacity(!isPlaying ? 0.3 : 1.0)
     }
 }

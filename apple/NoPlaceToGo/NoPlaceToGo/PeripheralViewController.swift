@@ -12,6 +12,8 @@ import SwiftUI
 
 class PeripheralViewController: UIViewController {
     @Binding var tagMessage: String
+    @Binding var sentMessage: String
+    @Binding var hasSubscriber: Bool
     var peripheralManager: CBPeripheralManager!
 
     var transferCharacteristic: CBMutableCharacteristic?
@@ -19,8 +21,10 @@ class PeripheralViewController: UIViewController {
     var dataToSend = Data()
     var sendDataIndex: Int = 0
     
-    init(tagMessage: Binding<String>) {
+    init(tagMessage: Binding<String>, sentMessage: Binding<String>, hasSubscriber: Binding<Bool>) {
         _tagMessage = tagMessage
+        _sentMessage = sentMessage
+        _hasSubscriber = hasSubscriber
         super.init(nibName: nil, bundle: nil)
     }
     
@@ -33,7 +37,7 @@ class PeripheralViewController: UIViewController {
     override func viewDidLoad() {
         peripheralManager = CBPeripheralManager(delegate: self, queue: nil, options: [CBPeripheralManagerOptionShowPowerAlertKey: true])
         
-        let sendBtn = createButton(title: "Send BLE")
+        let sendBtn = createButton(title: "Send")
         sendBtn.addTarget(self, action: #selector(btnSendClicked), for: .touchUpInside)
         view.addSubview(sendBtn)
                 
@@ -111,6 +115,9 @@ class PeripheralViewController: UIViewController {
             
             // Send it
             didSend = peripheralManager.updateValue(chunk, for: transferCharacteristic, onSubscribedCentrals: nil)
+            if didSend {
+                sentMessage = tagMessage
+            }
             
             // If it didn't work, drop out and wait for the callback
             if !didSend {
@@ -235,6 +242,7 @@ extension PeripheralViewController: CBPeripheralManagerDelegate {
         
         // save central
         connectedCentral = central
+        hasSubscriber = true
         
         // Start sending
         sendData()

@@ -10,7 +10,18 @@ import SwiftUI
 
 struct StevenFrost: View {
     var body: some View {
-        Text("Hello, World!")
+        VStack {
+            Spacer()
+            HStack {
+                Spacer()
+                Text("Please return to the app when Liberaci is finished with you.")
+                    .multilineTextAlignment(.center)
+                    .font(.custom(Fonts.ZCOOL.rawValue, size: 26))
+                    .padding()
+                Spacer()
+            }
+            Spacer()
+        }
     }
 }
 

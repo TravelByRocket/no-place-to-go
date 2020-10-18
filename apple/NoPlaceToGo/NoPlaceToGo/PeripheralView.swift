@@ -9,21 +9,25 @@
 import SwiftUI
 
 struct PeripheralView: View {
-    @Binding var msg: String
+    @Binding var scannedMsg: String
+    @Binding var sentMsg: String
+    @Binding var hasSubscriber: Bool
     var body: some View {
-        PeripheralContentViewController(tagMessage: $msg)
+        PeripheralContentViewController(scannedMsg: $scannedMsg, sentMsg: $sentMsg, hasSubscriber: $hasSubscriber)
     }
 }
 
 struct PeripheralContentViewController: UIViewControllerRepresentable {
-    @Binding var tagMessage: String
+    @Binding var scannedMsg: String
+    @Binding var sentMsg: String
+    @Binding var hasSubscriber: Bool
     
     func makeCoordinator() -> PeripheralContentViewController.Coordinator {
         Coordinator()
     }
     
     func makeUIViewController(context: Context) -> some UIViewController {
-        return PeripheralViewController(tagMessage: $tagMessage)
+        return PeripheralViewController(tagMessage: $scannedMsg, sentMessage: $sentMsg, hasSubscriber: $hasSubscriber)
     }
     
     func updateUIViewController(_ uiViewController: UIViewControllerType, context: Context) {

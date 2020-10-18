@@ -22,8 +22,7 @@ struct ContentView: View {
                         self.safeAreaBottom = geo.safeAreaInsets.bottom
                     }
             }
-            .edgesIgnoringSafeArea(.bottom)
-            // .ignoresSafeArea(.keyboard) better but only iOS 14
+            .edgesIgnoringSafeArea(.bottom) // .ignoresSafeArea(.keyboard) better but only iOS 14
         }
     }
 }

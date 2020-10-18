@@ -7,70 +7,98 @@
 
 import SwiftUI
 
-class AddressedSite {
+struct addressedSites {
     let name: String
-    let addressSearchableString: String
-    let artists: [Artists]
-    let nextLocation: Sites
-    
-    init(name: String, address: String, artists: [Artists], next: Sites) {
-        self.name = name
-        self.addressSearchableString = address.replacingOccurrences(of: " ", with: "+")
-        self.artists = artists
-        self.nextLocation = next
+    let address: String
+    let arrivalConfirmationMessage: String
+    let arrivalClownAudio: String?
+    let departureConfirmationMessage: String
+    static let finalDepartureConfirmationMessage: String = "I am in my car and ready to go No Place!"
+    let narrativeAudioFilename: String
+    let loopingAudioFilename: String
+    var addressSearchableString: String {
+        address.replacingOccurrences(of: " ", with: "+")
     }
     
-    // These used to be computed properties but now just constant
-    // setting `next` to the others directly caused compilation problems
-    static var mintSerif: AddressedSite = AddressedSite(
-        name: "Mint & Serif",
+    static let mintSerif: addressedSites = addressedSites(
+        name: "The Overwhelm",
         address: "7310 W Colfax Ave, Lakewood, CO 80214",
-        artists: [.MoeGram, .HayleyK],
-        next: Sites.LamarA)
+        arrivalConfirmationMessage: "I have arrived at\nThe Overwhelm\nand am on the back\npatio of the\nclown's house",
+        arrivalClownAudio: nil,
+//        arrivalClownAudio: "NP2G3_b1.mp3",
+        departureConfirmationMessage: "I am in my car and ready to go to Liberace's Dream!",
+        narrativeAudioFilename: "mintseriffull.mp3",
+        loopingAudioFilename: "reflections.mp3")
     
-    static var lamarA: AddressedSite = AddressedSite(
-        name: "Lamar A",
+    static let lamarA: addressedSites = addressedSites(
+        name: "The Surveillance Spa",
         address: "6451 W Colfax Ave, Lakewood, CO 80214",
-        artists: [.StevenFrost, .Chrissy_Grace, .Thomas_Koko_Chris],
-        next: Sites.LamarB)
+        arrivalConfirmationMessage: "I have arrived at\nThe Surveillance Spa",
+        arrivalClownAudio: nil,
+//        arrivalClownAudio: "NP2G3_b2.mp3",
+        departureConfirmationMessage: "I am in my car and ready to go to The Waiting Room!",
+        narrativeAudioFilename: "lamarafull.mp3",
+        loopingAudioFilename: "jauntyvampire.mp3")
     
-    static var lamarB: AddressedSite = AddressedSite(
-        name: "Lamar B",
+    static let lamarB: addressedSites = addressedSites(
+        name: "A Liberaci Dream",
         address: "6579 W Colfax Ave, Lakewood, CO 80214",
-        artists: [.NicoleBanowetz, .Nolan],
-        next: Sites.Tootsies)
+        arrivalConfirmationMessage: "I have arrived at\nA Liberaci Dream",
+        arrivalClownAudio: nil,
+//        arrivalClownAudio: "NP2G3_b3.mp3",
+        departureConfirmationMessage: "I have exited Liberace's Dream and am ready to walk to The Surveillance Spa!",
+        narrativeAudioFilename: "lamarbcut.mp3",
+        loopingAudioFilename: "jauntyvampire.mp3")
     
-    static var tootsies: AddressedSite = AddressedSite(
-        name: "Tootsies",
+    static let tootsies: addressedSites = addressedSites(
+        name: "The Waiting Room",
         address: "6985 W 38th Ave, Wheat Ridge, CO 80033",
-        artists: [.Renee_HayleyD],
-        next: Sites.MusicRange)
+        arrivalConfirmationMessage: "I have arrived at\nThe Waiting Room\nand I am waiting inside",
+        arrivalClownAudio: nil,
+//        arrivalClownAudio: "NP2G3_b4.mp3",
+        departureConfirmationMessage: "I am in my car and ready to go to Data Assimilation Base!",
+        narrativeAudioFilename: "tootsiesfullmix.mp3",
+        loopingAudioFilename: "tootsiesfullmix.mp3")
     
-    static var musicRange: AddressedSite = AddressedSite(
-        name: "Music Range",
+    static let musicRange: addressedSites = addressedSites(
+        name: "Data Assimilation Base",
         address: "1520 Iris St, Lakewood, CO 80215",
-        artists: [.Emily_Michaela],
-        next: Sites.MintSerif)
+        arrivalConfirmationMessage: "I have arrived at\nData Assimilation Base",
+        arrivalClownAudio: nil,
+//        arrivalClownAudio: "NP2G3_b5.mp3",
+        departureConfirmationMessage: "I am in my car and ready to go to The Overwhelm!",
+        narrativeAudioFilename: "musicrangefull.mp3",
+        loopingAudioFilename: "reflections.mp3")
     
-    static func siteObjectFromSiteEnum(site: Sites) -> AddressedSite {
+    static let mintSerifFinal: addressedSites = addressedSites(
+        name: "No Place",
+        address: "7310 W Colfax Ave, Lakewood, CO 80214",
+        arrivalConfirmationMessage: "I have arrived at\nNo Place",
+        arrivalClownAudio: nil,
+        departureConfirmationMessage: "this content is not used",
+        narrativeAudioFilename: "mintseriffinal.mp3",
+        loopingAudioFilename: "jauntyvampire.mp3")
+    
+    static func siteObjectFromSiteEnum(site: Sites) -> addressedSites {
         switch site {
         case .MintSerif:
-            return AddressedSite.mintSerif
+            return addressedSites.mintSerif
         case .LamarA:
-            return AddressedSite.lamarA
+            return addressedSites.lamarA
         case .LamarB:
-            return AddressedSite.lamarB
+            return addressedSites.lamarB
         case .Tootsies:
-            return AddressedSite.tootsies
+            return addressedSites.tootsies
         case .MusicRange:
-            return AddressedSite.musicRange
+            return addressedSites.musicRange
+        case .MintSerifFinal:
+            return addressedSites.mintSerifFinal
         }
     }
     
     func getDirections() {
-        let preferGoogle: Bool = UserDefaults.standard.bool(forKey: "preferGoogle")
-        UIApplication.shared.open(URL(string:
-            "https://maps.\(preferGoogle ? "google" : "apple").com/?daddr=\(self.addressSearchableString)"
-            )!)
+//        let preferGoogle: Bool = UserDefaults.standard.bool(forKey: "preferGoogle")
+        UIApplication.shared.open(URL(string:"https://maps.google.com/?daddr=\(self.addressSearchableString)")!)
+//            "https://maps.\(preferGoogle ? "google" : "apple").com/?daddr=\(self.addressSearchableString)"
     }
 }

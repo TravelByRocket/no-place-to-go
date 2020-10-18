@@ -12,17 +12,26 @@ struct MoreInfo: View {
     var body: some View {
         NavigationView{
             List{
-                NavigationLink(destination: SettingsPage()) {
-                    Text("Settings")
-                }
+//                NavigationLink(destination: SettingsPage()) {
+//                    Text("Settings")
+//                }
                 NavigationLink(destination: ArtistsPage()) {
                     Text("Artists")
+                }
+                NavigationLink(destination: InstallationsPage()) {
+                    Text("Installations")
                 }
                 NavigationLink(destination: PartnersPage()) {
                     Text("Partners & Funders")
                 }
                 NavigationLink(destination: AboutPage()) {
                     Text("About")
+                }
+                NavigationLink(destination: DonatePage()) {
+                    Text("Donate")
+                }
+                NavigationLink(destination: HelpPage()) {
+                    Text("Help")
                 }
             }
             .navigationBarTitle("Backstage")

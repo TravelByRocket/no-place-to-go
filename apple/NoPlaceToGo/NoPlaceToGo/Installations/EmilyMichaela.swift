@@ -9,22 +9,32 @@
 import SwiftUI
 
 struct EmilyMichaela: View {
+    @Binding var installIndex: Int
+    var numInstallsAtSite: Int
     
    @State private var canProceed = false
     
     var body: some View {
         VStack {
             if !canProceed {
-                PhaseOne(canProceed: $canProceed)
+                HStack {
+                    Spacer()
+                    VStack {
+                        Spacer()
+                        PhaseOne(canProceed: $canProceed)
+                        Spacer()
+                    }
+                    Spacer()
+                }
             } else {
-                PhaseTwo()
+                PhaseTwo(installIndex: $installIndex, numInstallsAtSite: numInstallsAtSite)
             }
         }
     }
 }
 
-struct EmilyMichaela_Previews: PreviewProvider {
-    static var previews: some View {
-        EmilyMichaela()
-    }
-}
+//struct EmilyMichaela_Previews: PreviewProvider {
+//    static var previews: some View {
+//        EmilyMichaela()
+//    }
+//}

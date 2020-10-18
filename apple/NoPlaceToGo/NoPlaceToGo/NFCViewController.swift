@@ -26,7 +26,7 @@ class NFCViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let readBtn = createButton(title: "Read")
+        let readBtn = createButton(title: "Scan")
         readBtn.addTarget(self, action: #selector(btnReadClicked), for: .touchUpInside)
         view.addSubview(readBtn)
                 
@@ -211,6 +211,7 @@ func createButton(title: String) -> UIButton {
     btn.setTitleColor(UIColor.black, for: .normal)
     btn.backgroundColor = UIColor.white
     btn.layer.cornerRadius = 6
+    btn.contentEdgeInsets = UIEdgeInsets(top: 20.0, left: 20.0, bottom: 20.0, right: 20.0)
     
     btn.translatesAutoresizingMaskIntoConstraints = false
     btn.heightAnchor.constraint(equalToConstant: 32).isActive = true

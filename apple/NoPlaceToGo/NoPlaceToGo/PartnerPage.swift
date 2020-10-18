@@ -24,6 +24,9 @@ struct PartnerPage: View {
                     UIApplication.shared.open(URL(string:"http://\(self.partner.url)")!)
                 }) {
                     Text(self.partner.url)
+                        .font(.custom(Fonts.ZCOOL.rawValue, size: 18))
+                        .foregroundColor(Color("Gold"))
+                        .multilineTextAlignment(.center)
                 }
                 .padding(5)
             }

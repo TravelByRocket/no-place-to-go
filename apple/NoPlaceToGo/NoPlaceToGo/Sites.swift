@@ -13,4 +13,5 @@ enum Sites {
     case MintSerif
     case Tootsies
     case MusicRange
+    case MintSerifFinal
 }

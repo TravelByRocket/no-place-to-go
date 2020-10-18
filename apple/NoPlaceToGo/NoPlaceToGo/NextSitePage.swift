@@ -1,0 +1,57 @@
+//
+//  NextSitePage.swift
+//  NoPlaceToGo
+//
+//  Created by Bryan Costanza on 10/9/20.
+//  Copyright © 2020 Bryan Costanza. All rights reserved.
+//
+
+import SwiftUI
+
+struct NextSitePage: View {
+    @EnvironmentObject private var pm: ProgressManager
+    var body: some View {
+        VStack {
+            Spacer()
+            Button(action: {
+                self.pm.inTransitToSite = true
+                self.pm.setLocation(to: self.pm.nextSite(from: pm.curSite!))
+            }) {
+                Text(pm.completions.hasCompletedAllSites
+                        ? addressedSites.finalDepartureConfirmationMessage
+                        : addressedSites.siteObjectFromSiteEnum(site: pm.curSite!).departureConfirmationMessage
+                )
+                .font(.custom(Fonts.ZCOOL.rawValue, size: 22))
+                .multilineTextAlignment(.center)
+                .foregroundColor(Color(Colors.Gold.rawValue))
+                .padding()
+            }
+            .overlay(RoundedRectangle(cornerRadius: 8)
+                        .stroke(Color.secondary, lineWidth: 1))
+            .padding(.horizontal, 40)
+            .onAppear{
+                switch pm.curSite! {
+                case .LamarB:
+                    pm.completions.lamarb = true
+                case .LamarA:
+                    pm.completions.lamara = true
+                case .Tootsies:
+                    pm.completions.tootsies = true
+                case .MusicRange:
+                    pm.completions.musicrange = true
+                case .MintSerif:
+                    pm.completions.mintserif = true
+                case .MintSerifFinal:
+                    pm.completions.mintseriffinal = true
+                }
+            }
+            Spacer()
+        }
+    }
+}
+
+struct NextSitePage_Previews: PreviewProvider {
+    static var previews: some View {
+        NextSitePage()
+    }
+}

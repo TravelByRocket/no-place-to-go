@@ -48,7 +48,7 @@ struct artistbio: Identifiable {
         name: "nolan tredway",
         pronouns: "He/Him",
         bio: "Found covered in moss near the Korvik River, Nolan was raised in the Great North by a mountain and a burning forest. He learned the art of storytelling from his time among the Volkos, before studying art at the University of Nebraska and Fundacion Ortega y Gasset in Toledo, Spain. He creates surreal and symbolic worlds in painting, sculpture, puppetry and interactive media.",
-        urls: ["nolantrendway.com"],
+        urls: ["nolantredway.com"],
         images: [Image("NolanTredway")]
     )
     

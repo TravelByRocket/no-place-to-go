@@ -21,7 +21,9 @@ struct PhaseOne: View {
     @State var hasLetSomethingGo = false
     
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
-    @State var secondsToWait: Int = 5
+    var secondsToWait: Int = 5
+    @State var secondsCounter: Int = 0
+    @State var rectWidth: CGFloat = 0
     
     var body: some View {
         if !hasLetSomethingGo {
@@ -39,15 +41,32 @@ struct PhaseOne: View {
                 .padding(.vertical)
             Spacer()
         } else {
-            Text(randomResponse)
-                .font(.custom(Fonts.ZCOOL.rawValue, size: 30))
-                .onReceive(timer, perform: { _ in
-                    if self.secondsToWait > 0 {
-                        self.secondsToWait -= 1
-                    } else if self.secondsToWait == 0 {
-                        self.canProceed = true
-                    }
-                })
+            VStack {
+                Spacer()
+                Text(randomResponse)
+                    .font(.custom(Fonts.ZCOOL.rawValue, size: 30))
+                    .onReceive(timer, perform: { _ in
+                        if self.secondsCounter < self.secondsToWait {
+                            self.secondsCounter += 1
+                        } else {
+                            self.canProceed = true
+                        }
+                    })
+                Spacer()
+                GeometryReader{geo in
+                    Rectangle()
+                        .frame(width: rectWidth, height: 20, alignment: .center)
+                        .foregroundColor(Color(Colors.PinkHeadings.rawValue))
+                        .onAppear{
+                            rectWidth = geo.size.width
+                        }
+                        .onReceive(timer, perform: { _ in
+                            withAnimation(.linear(duration: 1)){
+                                rectWidth = geo.size.width * CGFloat((secondsToWait - secondsCounter)) / 5.0
+                            }
+                        })
+                }
+            }
         }
     }
 }
@@ -72,6 +91,7 @@ struct LetGoButton: View {
                 .padding(20)
                 .background(Color(Colors.PinkHeadings.rawValue))
                 .mask(RoundedRectangle(cornerRadius: 25))
+                .foregroundColor(whatToLeave.count < 3 ? .secondary : .black)
         }
         .alert(isPresented: $showingAlert) {
             Alert(
@@ -84,6 +104,7 @@ struct LetGoButton: View {
                 }
             )
         }
+        .opacity(whatToLeave.count < 3 ? 0.3 : 1.0)
         .disabled(whatToLeave.count < 3)
     }
 }

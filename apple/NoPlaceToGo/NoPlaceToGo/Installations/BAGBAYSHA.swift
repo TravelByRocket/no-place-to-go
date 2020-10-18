@@ -10,7 +10,18 @@ import SwiftUI
 
 struct BAGBAYSHA: View {
     var body: some View {
-        Text("an interactive guide for an unconventional installation. Just photos and audio. Would just be more background info.")
+        VStack {
+            Spacer()
+            HStack {
+                Spacer()
+                Text("Please enjoy the installation. Come back to the app when you are done in this location.")
+                    .multilineTextAlignment(.center)
+                    .font(.custom(Fonts.ZCOOL.rawValue, size: 26))
+                    .padding()
+                Spacer()
+            }
+            Spacer()
+        }
     }
 }
 
