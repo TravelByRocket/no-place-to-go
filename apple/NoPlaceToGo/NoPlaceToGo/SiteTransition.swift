@@ -7,6 +7,7 @@
 //
 
 import SwiftUI
+import AVFoundation
 
 struct SiteTransition: View {
     @EnvironmentObject private var pm: ProgressManager
@@ -105,9 +106,8 @@ struct SiteTransition: View {
             .onReceive(timer, perform: { _ in
                 
                 if let playing = am.audioPlayer?.isPlaying {
-                    if (!playing && !pausedManually && !gotDirections) {
+                    if (!playing && !pausedManually && !gotDirections && !AVAudioSession.sharedInstance().isOtherAudioPlaying) {
                         am.load(filename: addressedSites.siteObjectFromSiteEnum(site: pm.curSite!).loopingAudioFilename, loop: true)
-//                        }
                         am.play()
                     } else if (playing && !pm.hasShownSpyPhoto && !showSpyPhoto) {
                         if let phototime = pm.photoDate {
