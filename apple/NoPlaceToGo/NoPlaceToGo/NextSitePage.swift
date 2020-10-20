@@ -45,6 +45,13 @@ struct NextSitePage: View {
                     pm.completions.mintseriffinal = true
                 }
             }
+            if (pm.completions.hasCompletedAllSites) {
+                Text("If you are already at Mint & Serif (No Place), don't go anywhere. Please wait in your car as you listen to the next and final portion of the show.")
+                    .multilineTextAlignment(.center)
+                    .font(.custom(Fonts.ZCOOL.rawValue, size: 24))
+                    .foregroundColor(Color(Colors.Gold.rawValue))
+                    .padding(20)
+            }
             Spacer()
         }
     }

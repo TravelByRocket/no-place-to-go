@@ -10,6 +10,7 @@ import SwiftUI
 
 struct HayleyPhotoPush: View {
     @EnvironmentObject var pm: ProgressManager
+    @Environment(\.presentationMode) var presentationMode
     
     var photoURL: String {
         let domain = "https://files.synodic.co/np2g/"
@@ -26,12 +27,30 @@ struct HayleyPhotoPush: View {
     var body: some View {
         VStack {
 //            Text("Send notification later, maybe after next site complete, shows photo taken at site. URL root is \(photoURL)")
-            Text("We are so happy to see you!\nPlease report any anxious persons and please sanitize now.")
+            Text("""
+                We are so happy to see you!
+                Please report any anxious
+                persons and please
+                sanitize now.
+                """)
                 .multilineTextAlignment(.center)
                 .font(.custom(Fonts.ZCOOL.rawValue, size: 24))
                 .padding()
             RemoteImage(url: photoURL)
                 .aspectRatio(contentMode: .fit)
+            Spacer()
+            Button(action: {
+                self.presentationMode.wrappedValue.dismiss()
+            }) {
+                Text("Dismiss")
+                .font(.custom(Fonts.ZCOOL.rawValue, size: 22))
+                .multilineTextAlignment(.center)
+                .foregroundColor(Color(Colors.Gold.rawValue))
+                .padding()
+            }
+            .overlay(RoundedRectangle(cornerRadius: 8)
+                        .stroke(Color.secondary, lineWidth: 1))
+            .padding(.horizontal, 40)
         }
     }
 }

@@ -16,7 +16,7 @@ struct EnterGroupPassword: View {
                                         "lamara": .a2,
                                         "lamarb": .a1,
                                         "musicrange": .a4,
-                                        "allcomplete": .a1,
+                                        "allcomplete": .c4,
                                         "tofinal": .a1,
                                      // shortcuts above, guest access below
                                      "paparazzi": .a1,

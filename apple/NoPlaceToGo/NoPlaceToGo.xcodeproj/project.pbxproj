@@ -16,10 +16,6 @@
 		2F06911025294AE0005DF827 /* NextInstallationButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F06910F25294AE0005DF827 /* NextInstallationButton.swift */; };
 		2F11A8D0253758B20032B96D /* mintseriffinal.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2F11A8CF253758B10032B96D /* mintseriffinal.mp3 */; };
 		2F229AB9253B721400F2E74E /* lamarbcut.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2F229AB8253B721400F2E74E /* lamarbcut.mp3 */; };
-		2F4AA4F525181C38005A7740 /* NFCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4AA4F425181C38005A7740 /* NFCViewController.swift */; };
-		2F4AA599251E7430005A7740 /* NFCView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4AA598251E7430005A7740 /* NFCView.swift */; };
-		2F4AA5BE251FB5F4005A7740 /* PeripheralViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4AA5BD251FB5F3005A7740 /* PeripheralViewController.swift */; };
-		2F4AA5C3251FB791005A7740 /* PeripheralView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4AA5C2251FB791005A7740 /* PeripheralView.swift */; };
 		2F4AA5D12522B23D005A7740 /* PartnerRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4AA5D02522B23D005A7740 /* PartnerRow.swift */; };
 		2F4AA5D62522B24C005A7740 /* PartnerPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4AA5D52522B24C005A7740 /* PartnerPage.swift */; };
 		2F4AA5DB2522B25B005A7740 /* PartnersPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F4AA5DA2522B25B005A7740 /* PartnersPage.swift */; };
@@ -59,7 +55,6 @@
 		2F76A02024FAE0D400736326 /* ProgressManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F76A01424FAE0D300736326 /* ProgressManager.swift */; };
 		2F76A02224FAF06700736326 /* ExamplesPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F76A02124FAF06700736326 /* ExamplesPage.swift */; };
 		2F76A02424FAF23F00736326 /* MainPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F76A02324FAF23F00736326 /* MainPage.swift */; };
-		2F76A02624FAF2E900736326 /* SettingsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F76A02524FAF2E900736326 /* SettingsPage.swift */; };
 		2F76A02824FB006800736326 /* ArtistsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F76A02724FB006800736326 /* ArtistsPage.swift */; };
 		2F76A02C24FB235C00736326 /* AboutPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F76A02B24FB235C00736326 /* AboutPage.swift */; };
 		2F76A02E24FB263B00736326 /* MoreInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F76A02D24FB263B00736326 /* MoreInfo.swift */; };
@@ -115,10 +110,6 @@
 		2F11A8CF253758B10032B96D /* mintseriffinal.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = mintseriffinal.mp3; path = ../../../../shared/audiomixes/mintseriffinal.mp3; sourceTree = "<group>"; };
 		2F229AB8253B721400F2E74E /* lamarbcut.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = lamarbcut.mp3; path = ../../../../shared/audiomixes/lamarbcut.mp3; sourceTree = "<group>"; };
 		2F4AA4F025181719005A7740 /* NP2G.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NP2G.entitlements; sourceTree = "<group>"; };
-		2F4AA4F425181C38005A7740 /* NFCViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFCViewController.swift; sourceTree = "<group>"; };
-		2F4AA598251E7430005A7740 /* NFCView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFCView.swift; sourceTree = "<group>"; };
-		2F4AA5BD251FB5F3005A7740 /* PeripheralViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeripheralViewController.swift; sourceTree = "<group>"; };
-		2F4AA5C2251FB791005A7740 /* PeripheralView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PeripheralView.swift; sourceTree = "<group>"; };
 		2F4AA5D02522B23D005A7740 /* PartnerRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartnerRow.swift; sourceTree = "<group>"; };
 		2F4AA5D52522B24C005A7740 /* PartnerPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartnerPage.swift; sourceTree = "<group>"; };
 		2F4AA5DA2522B25B005A7740 /* PartnersPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PartnersPage.swift; sourceTree = "<group>"; };
@@ -164,7 +155,6 @@
 		2F76A01424FAE0D300736326 /* ProgressManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProgressManager.swift; sourceTree = "<group>"; };
 		2F76A02124FAF06700736326 /* ExamplesPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamplesPage.swift; sourceTree = "<group>"; };
 		2F76A02324FAF23F00736326 /* MainPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPage.swift; sourceTree = "<group>"; };
-		2F76A02524FAF2E900736326 /* SettingsPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsPage.swift; sourceTree = "<group>"; };
 		2F76A02724FB006800736326 /* ArtistsPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArtistsPage.swift; sourceTree = "<group>"; };
 		2F76A02B24FB235C00736326 /* AboutPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutPage.swift; sourceTree = "<group>"; };
 		2F76A02D24FB263B00736326 /* MoreInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreInfo.swift; sourceTree = "<group>"; };
@@ -304,7 +294,6 @@
 				2F76A02324FAF23F00736326 /* MainPage.swift */,
 				2F76A00D24FAE0D200736326 /* EnterGroupPassword.swift */,
 				2F76A02D24FB263B00736326 /* MoreInfo.swift */,
-				2F76A02524FAF2E900736326 /* SettingsPage.swift */,
 				2F76A02724FB006800736326 /* ArtistsPage.swift */,
 				2F76A03024FC54DF00736326 /* ArtistPage.swift */,
 				2F76A03224FC54F400736326 /* ArtistRow.swift */,
@@ -322,10 +311,6 @@
 				2F7298EF2504233200FC45FD /* Installations */,
 				2F76A00F24FAE0D200736326 /* Artists.swift */,
 				2F4AA5E22522B58B005A7740 /* Partners.swift */,
-				2F4AA598251E7430005A7740 /* NFCView.swift */,
-				2F4AA4F425181C38005A7740 /* NFCViewController.swift */,
-				2F4AA5C2251FB791005A7740 /* PeripheralView.swift */,
-				2F4AA5BD251FB5F3005A7740 /* PeripheralViewController.swift */,
 				2F76A02124FAF06700736326 /* ExamplesPage.swift */,
 				2F76A00A24FAE0D100736326 /* AssetEnums.swift */,
 				2F7503CA253A312800D0A231 /* ClownPopup.swift */,
@@ -568,7 +553,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				2F76A01624FAE0D400736326 /* AssetEnums.swift in Sources */,
-				2F4AA599251E7430005A7740 /* NFCView.swift in Sources */,
 				2F7298FD2504246300FC45FD /* NolanTredway.swift in Sources */,
 				2F76A02424FAF23F00736326 /* MainPage.swift in Sources */,
 				2F0690E82529063F005DF827 /* SiteWrapper.swift in Sources */,
@@ -582,7 +566,6 @@
 				2F76A03124FC54E000736326 /* ArtistPage.swift in Sources */,
 				2FDC2A03252FDFF200A44ADA /* InstallationPage.swift in Sources */,
 				2F769FBD24FADF6D00736326 /* NoPlaceToGo.xcdatamodeld in Sources */,
-				2F4AA4F525181C38005A7740 /* NFCViewController.swift in Sources */,
 				2F76A03324FC54F400736326 /* ArtistRow.swift in Sources */,
 				2F06910B25292E38005DF827 /* SiteTransition.swift in Sources */,
 				2F769FBF24FADF6D00736326 /* ContentView.swift in Sources */,
@@ -601,7 +584,6 @@
 				2F06910325292AB7005DF827 /* HayleyPhotoPush.swift in Sources */,
 				2FDC29FE252FDFDC00A44ADA /* InstallationRow.swift in Sources */,
 				2F76A01F24FAE0D400736326 /* LamarA.swift in Sources */,
-				2F4AA5C3251FB791005A7740 /* PeripheralView.swift in Sources */,
 				2F4AA5DB2522B25B005A7740 /* PartnersPage.swift in Sources */,
 				2F7299012504248800FC45FD /* NicoleBanowetz.swift in Sources */,
 				2F76A02E24FB263B00736326 /* MoreInfo.swift in Sources */,
@@ -612,13 +594,11 @@
 				2F7298F92504243A00FC45FD /* ReneeHayleyD.swift in Sources */,
 				2F76A01A24FAE0D400736326 /* LamarB.swift in Sources */,
 				2F7ED1432516E5FF00E5546A /* RemoteImage.swift in Sources */,
-				2F4AA5BE251FB5F4005A7740 /* PeripheralViewController.swift in Sources */,
 				2FD25BD52531244E00E924B7 /* NextSitePage.swift in Sources */,
 				2F7298F5250423F200FC45FD /* StevenFrost.swift in Sources */,
 				2F0690DE252902D5005DF827 /* AllCompleted.swift in Sources */,
 				2F7298FB2504245100FC45FD /* EmilyMichaela.swift in Sources */,
 				2FDC29F9252FDFC400A44ADA /* InstallationsPage.swift in Sources */,
-				2F76A02624FAF2E900736326 /* SettingsPage.swift in Sources */,
 				2F7298F3250423D800FC45FD /* ChrissyGrace.swift in Sources */,
 				2F4AA5D12522B23D005A7740 /* PartnerRow.swift in Sources */,
 				2F769FBA24FADF6C00736326 /* SceneDelegate.swift in Sources */,
@@ -795,7 +775,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = NoPlaceToGo/NP2G.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 9;
 				DEVELOPMENT_ASSET_PATHS = "\"NoPlaceToGo/Preview Content\"";
 				DEVELOPMENT_TEAM = CX9A4TZM67;
 				ENABLE_PREVIEWS = YES;
@@ -818,7 +798,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = NoPlaceToGo/NP2G.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 9;
 				DEVELOPMENT_ASSET_PATHS = "\"NoPlaceToGo/Preview Content\"";
 				DEVELOPMENT_TEAM = CX9A4TZM67;
 				ENABLE_PREVIEWS = YES;

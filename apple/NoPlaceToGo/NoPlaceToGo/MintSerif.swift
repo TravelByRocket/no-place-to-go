@@ -16,10 +16,8 @@ struct MintSerif: View {
         VStack{
             if installIndex == 0 {
                 MoeGraham(installIndex: $installIndex)
-//                NextInstallationButton(installIndex: $installIndex, numInstallsAtSite: numInstallsAtSite)
             } else if (installIndex == 1){
-                HayleyKrichels()
-                NextInstallationButton(installIndex: $installIndex, numInstallsAtSite: numInstallsAtSite)
+                HayleyKrichels(installIndex: $installIndex, numInstallsAtSite: numInstallsAtSite)
             } else {
                 NextSitePage()
             }

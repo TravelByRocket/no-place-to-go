@@ -11,7 +11,6 @@ import AVFoundation
 import UserNotifications
 
 struct MoeGraham: View {
-//    private let player = MoePlayer()
     @Binding var installIndex: Int
     @EnvironmentObject private var am: AudioManager
     @State private var isPlaying = false // can show wrong state if leaving the view and coming back but this shouldn't happen anyway
@@ -24,6 +23,9 @@ struct MoeGraham: View {
             Image("clownface")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
+                .onLongPressGesture(minimumDuration: 4) {
+                    installIndex += 1
+                }
             HStack {
                 Spacer()
                 ResetAudio(isPlaying: $isPlaying)
@@ -37,9 +39,6 @@ struct MoeGraham: View {
                     .overlay(RoundedRectangle(cornerRadius: 4)
                             .stroke(Color.secondary, lineWidth: 1))
                     .padding()
-                    .onLongPressGesture(minimumDuration: 4) {
-                        installIndex += 1
-                    }
                 Spacer()
                 PauseAudio(isPlaying: $isPlaying, pausedManually: $pausedManually)
                     .frame(width: 60)

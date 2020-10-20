@@ -106,7 +106,8 @@ struct SiteTransition: View {
             .onReceive(timer, perform: { _ in
                 
                 if let playing = am.audioPlayer?.isPlaying {
-                    if (!playing && !pausedManually && !gotDirections && !AVAudioSession.sharedInstance().isOtherAudioPlaying) {
+                    if (!playing && !pausedManually && !gotDirections &&
+                            (am.audioPlayer?.currentTime == am.audioPlayer?.duration || (am.audioPlayer?.currentTime == 0))) {
                         am.load(filename: addressedSites.siteObjectFromSiteEnum(site: pm.curSite!).loopingAudioFilename, loop: true)
                         am.play()
                     } else if (playing && !pm.hasShownSpyPhoto && !showSpyPhoto) {
@@ -116,6 +117,8 @@ struct SiteTransition: View {
                                 pm.hasShownSpyPhoto = true
                             }
                         }
+                    } else if (!playing && !pausedManually && !AVAudioSession.sharedInstance().isOtherAudioPlaying) {
+                        am.play()
                     }
                 }
             })
