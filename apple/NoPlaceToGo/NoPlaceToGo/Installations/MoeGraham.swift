@@ -23,7 +23,7 @@ struct MoeGraham: View {
             Image("clownface")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
-                .onLongPressGesture(minimumDuration: 4) {
+                .onLongPressGesture(minimumDuration: 3) {
                     installIndex += 1
                 }
             HStack {
