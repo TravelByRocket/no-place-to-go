@@ -95,7 +95,7 @@ struct Screen01BeforeProceeding: View {
             Text("""
                 Stop.
 
-                Before approaching the medium you must you must answer a series of questions.
+                Before approaching the medium you must answer a series of questions.
 
                 We will guide you. The organic medium is fragile. If she is unavailable we hope you will trust us. We are a network of machine mediums she has trained to replace her once her kind are extinct.
                 """)
