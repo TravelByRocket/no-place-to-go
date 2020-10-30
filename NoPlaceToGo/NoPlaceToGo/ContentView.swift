@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @EnvironmentObject var pm: ProgressManager
-    @State private var safeAreaBottom: CGFloat = 0
+    @State private var safeAreaBottom: CGFloat = 0 // changes with .onAppear for actual safeAreaInset
     
     var body: some View {
         GeometryReader {geo in
