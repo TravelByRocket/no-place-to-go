@@ -39,6 +39,8 @@ struct PartnerPage: View {
 
 struct PartnerPage_Previews: PreviewProvider {
     static var previews: some View {
-        PartnerPage(partner: partnerbio.allpartners.randomElement()!)
+        NavigationView {
+            PartnerPage(partner: partnerbio.allpartners.randomElement()!)
+        }
     }
 }
