@@ -104,7 +104,7 @@
 		2F0690E2252903F5005DF827 /* StyledMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyledMap.swift; sourceTree = "<group>"; };
 		2F0690E72529063F005DF827 /* SiteWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiteWrapper.swift; sourceTree = "<group>"; };
 		2F0690EF25292364005DF827 /* NP2G3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = NP2G3.mp3; sourceTree = "<group>"; };
-		2F06910225292AB7005DF827 /* HayleyPhotoPush.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HayleyPhotoPush.swift; sourceTree = "<group>"; };
+		2F06910225292AB7005DF827 /* HayleyPhotoPush.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HayleyPhotoPush.swift; path = NoPlaceToGo/Installations/hayleyk/HayleyPhotoPush.swift; sourceTree = SOURCE_ROOT; };
 		2F06910A25292E38005DF827 /* SiteTransition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SiteTransition.swift; sourceTree = "<group>"; };
 		2F06910F25294AE0005DF827 /* NextInstallationButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextInstallationButton.swift; sourceTree = "<group>"; };
 		2F11A8CF253758B10032B96D /* mintseriffinal.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = mintseriffinal.mp3; path = ../../../../shared/audiomixes/mintseriffinal.mp3; sourceTree = "<group>"; };
