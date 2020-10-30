@@ -14,7 +14,7 @@ struct StevenFrost: View {
             Spacer()
             HStack {
                 Spacer()
-                Text("Please return to the app when Liberaci is finished with you.")
+                Text("Please return to the app when Liberace is finished with you.")
                     .multilineTextAlignment(.center)
                     .font(.custom(fonts.ZCOOL, size: 26))
                     .padding()

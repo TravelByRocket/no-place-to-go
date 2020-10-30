@@ -31,7 +31,7 @@ struct ChrissyGrace: View {
                 VStack {
                     
                     if (counter < 10) {
-                        Text("Please follow the arrows on the floor to the back of Liberaci's dream\n\n\(10-counter)")
+                        Text("Please follow the arrows on the floor to the back of Liberace's dream\n\n\(10-counter)")
                             .multilineTextAlignment(.center)
                             .font(.custom(fonts.ZCOOL, size: 26))
                             .padding()

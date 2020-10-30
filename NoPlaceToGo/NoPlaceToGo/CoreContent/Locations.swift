@@ -36,9 +36,9 @@ struct locations {
         loopingAudioFilename: "jauntyvampire.mp3")
     
     static let lamarB: locations = locations(
-        name: "A Liberaci Dream",
+        name: "A Liberace Dream",
         address: "6579 W Colfax Ave, Lakewood, CO 80214",
-        arrivalConfirmationMessage: "I have arrived at\nA Liberaci Dream",
+        arrivalConfirmationMessage: "I have arrived at\nA Liberace Dream",
         departureConfirmationMessage: "I have exited Liberace's Dream and am ready to walk to The Surveillance Spa!",
         narrativeAudioFilename: "lamarbcut.mp3",
         loopingAudioFilename: "jauntyvampire.mp3")

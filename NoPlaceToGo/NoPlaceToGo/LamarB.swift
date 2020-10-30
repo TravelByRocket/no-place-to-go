@@ -15,7 +15,7 @@ struct LamarB: View {
         VStack{
             if installIndex == 0 {
                 StevenFrost()
-                NextInstallationButton(installIndex: $installIndex, numInstallsAtSite: numInstallsAtSite, messageNext: "Liberaci is\nfinished with me")
+                NextInstallationButton(installIndex: $installIndex, numInstallsAtSite: numInstallsAtSite, messageNext: "Liberace is\nfinished with me")
             } else if (installIndex == 1) {
                 ChrissyGrace(installIndex: $installIndex, numInstallsAtSite: numInstallsAtSite)
             } else {
