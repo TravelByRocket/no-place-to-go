@@ -33,6 +33,7 @@ struct artistbio: Identifiable {
         serena,
         kate
     ]
+    
     static let allartists = [
         nolan,
         emilymichaela,

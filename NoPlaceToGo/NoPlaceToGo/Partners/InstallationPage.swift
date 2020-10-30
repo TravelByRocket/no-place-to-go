@@ -11,14 +11,17 @@ import SwiftUI
 struct InstallationPage: View {
     let installation: installations
     var body: some View {
-        Text(installation.title)
-            .multilineTextAlignment(.center)
-            .font(.custom(fonts.Notable, size: 28))
-            .foregroundColor(Color("PinkHeadings"))
         List {
-            Text(installation.description)
-                .font(.custom(fonts.ZCOOL, size: 20))
-                .padding(.horizontal)
+            VStack {
+                Text(installation.title)
+                    .multilineTextAlignment(.center)
+                    .font(.custom(fonts.Notable, size: 28))
+                    .foregroundColor(Color("PinkHeadings"))
+                    .padding(.bottom)
+                Text(installation.description)
+                    .font(.custom(fonts.ZCOOL, size: 20))
+                    .padding(.horizontal)
+            }
             NavigationLink(
                 destination: ArtistPage(artist: installation.artist),
                 label: {
