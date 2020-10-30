@@ -18,7 +18,7 @@ struct ClownPopup: View {
                 .padding()
             Text("If you have any information about this defected person, please inform The Ectoplasm immediately.\nYour belief will help create the fact!")
                 .multilineTextAlignment(.center)
-                .font(.custom(Fonts.ZCOOL.rawValue, size: 24))
+                .font(.custom(fonts.ZCOOL, size: 24))
                 .padding()
                 .overlay(RoundedRectangle(cornerRadius: 8)
                             .stroke(Color.secondary, lineWidth: 1))

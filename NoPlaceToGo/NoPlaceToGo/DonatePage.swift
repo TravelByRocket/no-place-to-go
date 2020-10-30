@@ -28,7 +28,7 @@ struct DonatePage: View {
                             .padding([.vertical, .leading])
                             .padding(.trailing, 5)
                         Text("Donate at Fractured Atlas")
-                            .font(.custom(Fonts.Notable.rawValue, size: 16))
+                            .font(.custom(fonts.Notable, size: 16))
                             .foregroundColor(Color("PinkHeadings"))
                             .multilineTextAlignment(.center)
                             .padding([.vertical, .trailing])

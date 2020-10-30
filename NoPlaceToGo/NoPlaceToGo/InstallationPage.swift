@@ -13,11 +13,11 @@ struct InstallationPage: View {
     var body: some View {
         Text(installation.title)
             .multilineTextAlignment(.center)
-            .font(.custom(Fonts.Notable.rawValue, size: 28))
+            .font(.custom(fonts.Notable, size: 28))
             .foregroundColor(Color("PinkHeadings"))
         List {
             Text(installation.description)
-                .font(.custom(Fonts.ZCOOL.rawValue, size: 20))
+                .font(.custom(fonts.ZCOOL, size: 20))
                 .padding(.horizontal)
             NavigationLink(
                 destination: ArtistPage(artist: installation.artist),

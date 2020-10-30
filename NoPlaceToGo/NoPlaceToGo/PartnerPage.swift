@@ -18,20 +18,20 @@ struct PartnerPage: View {
                     .aspectRatio(contentMode: .fill)
                 Text(partner.name)
                     .multilineTextAlignment(.center)
-                    .font(.custom(Fonts.Notable.rawValue, size: 28))
+                    .font(.custom(fonts.Notable, size: 28))
                     .foregroundColor(Color("PinkHeadings"))
                 Button(action: {
                     UIApplication.shared.open(URL(string:"http://\(self.partner.url)")!)
                 }) {
                     Text(self.partner.url)
-                        .font(.custom(Fonts.ZCOOL.rawValue, size: 18))
+                        .font(.custom(fonts.ZCOOL, size: 18))
                         .foregroundColor(Color("Gold"))
                         .multilineTextAlignment(.center)
                 }
                 .padding(5)
             }
             Text(partner.bio)
-                .font(.custom(Fonts.ZCOOL.rawValue, size: 20))
+                .font(.custom(fonts.ZCOOL, size: 20))
                 .padding(.horizontal)
         }
     }

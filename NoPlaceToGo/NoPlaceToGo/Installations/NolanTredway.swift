@@ -16,7 +16,7 @@ struct NolanTredway: View {
             Spacer()
             Text("Welcome. Please find the genitals that match your body, and press the corresponding button on the center console.")
                 .multilineTextAlignment(.center)
-                .font(.custom(Fonts.ZCOOL.rawValue, size: 24))
+                .font(.custom(fonts.ZCOOL, size: 24))
                 .padding()
             Spacer()
             Image("nolaninstallationicon")

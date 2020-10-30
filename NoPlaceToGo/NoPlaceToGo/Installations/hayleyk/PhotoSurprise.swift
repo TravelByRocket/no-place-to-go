@@ -34,7 +34,7 @@ struct PhotoSurprise: View {
                 sanitize now.
                 """)
                 .multilineTextAlignment(.center)
-                .font(.custom(Fonts.ZCOOL.rawValue, size: 24))
+                .font(.custom(fonts.ZCOOL, size: 24))
                 .padding()
             RemoteImage(url: photoURL)
                 .aspectRatio(contentMode: .fit)
@@ -43,7 +43,7 @@ struct PhotoSurprise: View {
                 self.presentationMode.wrappedValue.dismiss()
             }) {
                 Text("Dismiss")
-                .font(.custom(Fonts.ZCOOL.rawValue, size: 22))
+                .font(.custom(fonts.ZCOOL, size: 22))
                 .multilineTextAlignment(.center)
                 .foregroundColor(Color(Colors.Gold.rawValue))
                 .padding()

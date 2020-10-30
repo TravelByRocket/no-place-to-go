@@ -40,7 +40,7 @@ struct BackstageButton: View {
             self.showSheet = true
         }) {
             Text("Backstage")
-                .font(.custom(Fonts.Notable.rawValue, size: 24))
+                .font(.custom(fonts.Notable, size: 24))
         }
         .foregroundColor(Color("PinkHeadings"))
         .sheet(isPresented: $showSheet) {

@@ -21,13 +21,13 @@ struct AllCompleted: View {
             if (!showDonation) {
                 Text("Thank you for joining us for No Place to Go! Where will you go next?\n\nYou can visit the NP2G Merch store tonight at Mint & Serif or at our online store at No-Place-To-Go.com!")
                     .padding()
-                    .font(.custom(Fonts.ZCOOL.rawValue, size: 22))
+                    .font(.custom(fonts.ZCOOL, size: 22))
                     .multilineTextAlignment(.center)
                 Button(action: {
                     UIApplication.shared.open(URL(string: "https://www.no-place-to-go.com/shop/")!)
                 }) {
                     Text("NP2G Merch Store")
-                        .font(.custom(Fonts.Notable.rawValue, size: 24))
+                        .font(.custom(fonts.Notable, size: 24))
                         .foregroundColor(Color("PinkHeadings"))
                         .padding()
                 }
@@ -41,7 +41,7 @@ struct AllCompleted: View {
                 showDonation.toggle()
             }) {
                 Text(showDonation ? "Go Back" : "Donate to NP2G")
-                    .font(.custom(Fonts.Notable.rawValue, size: 24))
+                    .font(.custom(fonts.Notable, size: 24))
                     .foregroundColor(Color("PinkHeadings"))
                     .padding()
             }

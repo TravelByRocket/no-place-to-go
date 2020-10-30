@@ -24,7 +24,7 @@ struct HayleyKrichels: View {
                         Spacer()
                         Text("Please find the photo booth inside Mint & Serif across from the coffee bar.")
                             .multilineTextAlignment(.center)
-                            .font(.custom(Fonts.ZCOOL.rawValue, size: 26))
+                            .font(.custom(fonts.ZCOOL, size: 26))
                             .padding()
                             .onAppear{
                                 pm.photoDate = Date()
@@ -35,7 +35,7 @@ struct HayleyKrichels: View {
                         self.hasArrived = true
                     }) {
                         Text("I have arrived at\nthe photo booth")
-                            .font(.custom(Fonts.ZCOOL.rawValue, size: 22))
+                            .font(.custom(fonts.ZCOOL, size: 22))
                             .foregroundColor(Color(Colors.Gold.rawValue))
                             .padding()
                     }
@@ -60,7 +60,7 @@ struct HayleyKrichels: View {
                             Have your Passcode ready.
                             """)
                             .multilineTextAlignment(.center)
-                            .font(.custom(Fonts.ZCOOL.rawValue, size: 26))
+                            .font(.custom(fonts.ZCOOL, size: 26))
                             .padding()
                         Spacer()
                         NextInstallationButton(installIndex: $installIndex, numInstallsAtSite: numInstallsAtSite)

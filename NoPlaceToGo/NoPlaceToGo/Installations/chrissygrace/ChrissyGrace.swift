@@ -33,7 +33,7 @@ struct ChrissyGrace: View {
                     if (counter < 10) {
                         Text("Please follow the arrows on the floor to the back of Liberaci's dream\n\n\(10-counter)")
                             .multilineTextAlignment(.center)
-                            .font(.custom(Fonts.ZCOOL.rawValue, size: 26))
+                            .font(.custom(fonts.ZCOOL, size: 26))
                             .padding()
                             .foregroundColor(.primary)
                     } else if (counter < 16) {

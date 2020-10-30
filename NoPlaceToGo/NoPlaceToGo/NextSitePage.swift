@@ -21,7 +21,7 @@ struct NextSitePage: View {
                         ? addressedSites.finalDepartureConfirmationMessage
                         : addressedSites.siteObjectFromSiteEnum(site: pm.curSite!).departureConfirmationMessage
                 )
-                .font(.custom(Fonts.ZCOOL.rawValue, size: 22))
+                .font(.custom(fonts.ZCOOL, size: 22))
                 .multilineTextAlignment(.center)
                 .foregroundColor(Color(Colors.Gold.rawValue))
                 .padding()
@@ -48,7 +48,7 @@ struct NextSitePage: View {
             if (pm.completions.hasCompletedAllSites) {
                 Text("If you are already at Mint & Serif (No Place), don't go anywhere. Please wait in your car as you listen to the next and final portion of the show.")
                     .multilineTextAlignment(.center)
-                    .font(.custom(Fonts.ZCOOL.rawValue, size: 24))
+                    .font(.custom(fonts.ZCOOL, size: 24))
                     .foregroundColor(Color(Colors.Gold.rawValue))
                     .padding(20)
             }

@@ -79,7 +79,7 @@ struct ScanningBio: View {
                 HStack {
                     Spacer()
                     Text("Thank you.\nData received.\nYou may proceed.")
-                        .font(.custom(Fonts.Notable.rawValue, size: 24))
+                        .font(.custom(fonts.Notable, size: 24))
                         .multilineTextAlignment(.center)
                         .foregroundColor(Color(Colors.AccentColor.rawValue))
                     Spacer()

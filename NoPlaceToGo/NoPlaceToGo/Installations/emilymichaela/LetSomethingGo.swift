@@ -28,7 +28,7 @@ struct LetSomethingGo: View {
     var body: some View {
         if !hasLetSomethingGo {
             Text("You're entering a new world and you must leave something of great value behind. What do you choose?")
-                .font(.custom(Fonts.ZCOOL.rawValue, size: 26))
+                .font(.custom(fonts.ZCOOL, size: 26))
                 .multilineTextAlignment(.center)
                 .padding(.horizontal, 40)
                 .padding(.vertical)
@@ -44,7 +44,7 @@ struct LetSomethingGo: View {
             VStack {
                 Spacer()
                 Text(randomResponse)
-                    .font(.custom(Fonts.ZCOOL.rawValue, size: 30))
+                    .font(.custom(fonts.ZCOOL, size: 30))
                     .onReceive(timer, perform: { _ in
                         if self.secondsCounter < self.secondsToWait {
                             self.secondsCounter += 1
@@ -87,7 +87,7 @@ struct LetGoButton: View {
             self.showingAlert = true
         }) {
             Text("Let it Go")
-                .font(.custom(Fonts.Notable.rawValue, size: 30))
+                .font(.custom(fonts.Notable, size: 30))
                 .padding(20)
                 .background(Color(Colors.PinkHeadings.rawValue))
                 .mask(RoundedRectangle(cornerRadius: 25))

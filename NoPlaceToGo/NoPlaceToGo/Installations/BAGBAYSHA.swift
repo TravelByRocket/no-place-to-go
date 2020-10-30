@@ -16,7 +16,7 @@ struct BAGBAYSHA: View {
                 Spacer()
                 Text("Please enjoy the installation. Come back to the app when you are done in this location.")
                     .multilineTextAlignment(.center)
-                    .font(.custom(Fonts.ZCOOL.rawValue, size: 26))
+                    .font(.custom(fonts.ZCOOL, size: 26))
                     .padding()
                 Spacer()
             }

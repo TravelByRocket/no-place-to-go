@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum Fonts: String {
-    case Notable = "Notable-Regular"
-    case ZCOOL = "ZCOOLXiaoWei-Regular"
+struct fonts {
+    static let Notable = "Notable-Regular"
+    static let ZCOOL = "ZCOOLXiaoWei-Regular"
 }

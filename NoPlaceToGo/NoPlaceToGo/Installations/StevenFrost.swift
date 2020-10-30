@@ -16,7 +16,7 @@ struct StevenFrost: View {
                 Spacer()
                 Text("Please return to the app when Liberaci is finished with you.")
                     .multilineTextAlignment(.center)
-                    .font(.custom(Fonts.ZCOOL.rawValue, size: 26))
+                    .font(.custom(fonts.ZCOOL, size: 26))
                     .padding()
                 Spacer()
             }

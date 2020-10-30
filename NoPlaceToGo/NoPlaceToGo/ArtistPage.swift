@@ -20,16 +20,16 @@ struct ArtistPage: View {
                 }
                 Text(artist.name)
                     .multilineTextAlignment(.center)
-                    .font(.custom(Fonts.Notable.rawValue, size: 28))
+                    .font(.custom(fonts.Notable, size: 28))
                     .foregroundColor(Color("PinkHeadings"))
                 Text(artist.pronouns)
-                    .font(.custom(Fonts.ZCOOL.rawValue, size: 18))
+                    .font(.custom(fonts.ZCOOL, size: 18))
                     .foregroundColor(Color("Gold"))
                     .multilineTextAlignment(.center)
                     .padding(.bottom)
             }
             Text(artist.bio)
-                .font(.custom(Fonts.ZCOOL.rawValue, size: 20))
+                .font(.custom(fonts.ZCOOL, size: 20))
                 .padding(.horizontal)
             ForEach (0 ..< artist.urls.count) {i in
                 Button(action: {

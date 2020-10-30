@@ -148,7 +148,7 @@ struct ReneeHayleyD: View {
                     Spacer()
                     VStack {
                         Text("Goodbye")
-                            .font(.custom(Fonts.Notable.rawValue, size: 20))
+                            .font(.custom(fonts.Notable, size: 20))
                             .foregroundColor(Color("PinkHeadings"))
                         Image("phonecapture")
                             .resizable()

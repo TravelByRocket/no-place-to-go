@@ -26,10 +26,10 @@ struct TravelingToSitePage: View {
             Spacer()
             Text("Next Location Revealed!")
                 .multilineTextAlignment(.center)
-                .font(.custom(Fonts.ZCOOL.rawValue, size: 26))
+                .font(.custom(fonts.ZCOOL, size: 26))
                 .foregroundColor(Color("Gold"))
             Text(addressedSites.siteObjectFromSiteEnum(site: pm.curSite!).name)
-                .font(.custom(Fonts.Notable.rawValue, size: 26))
+                .font(.custom(fonts.Notable, size: 26))
                 .foregroundColor(Color("PinkHeadings"))
                 .multilineTextAlignment(.center)
             Group {
@@ -57,7 +57,7 @@ struct TravelingToSitePage: View {
                     pausedManually.toggle()
                 }) {
                     Image(systemName: pausedManually ? "play" : "pause")
-                        .font(.custom(Fonts.ZCOOL.rawValue, size: 24))
+                        .font(.custom(fonts.ZCOOL, size: 24))
                         .foregroundColor(Color(Colors.Gold.rawValue))
                         .padding()
                         .frame(width: 65)
@@ -72,7 +72,7 @@ struct TravelingToSitePage: View {
                     gotDirections = true
                 }) {
                     Text("Get Directions")
-                        .font(.custom(Fonts.ZCOOL.rawValue, size: 24))
+                        .font(.custom(fonts.ZCOOL, size: 24))
                         .foregroundColor(Color(Colors.Gold.rawValue))
                         .padding()
                 }
@@ -87,7 +87,7 @@ struct TravelingToSitePage: View {
             }) {
                 Text(addressedSites.siteObjectFromSiteEnum(site: pm.curSite!).arrivalConfirmationMessage)
                     .multilineTextAlignment(.center)
-                    .font(.custom(Fonts.ZCOOL.rawValue, size: 24))
+                    .font(.custom(fonts.ZCOOL, size: 24))
                     .foregroundColor(Color(Colors.Gold.rawValue))
                     .padding()
             }

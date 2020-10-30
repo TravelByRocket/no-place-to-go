@@ -57,7 +57,7 @@ struct PickAnswers: View {
             Text(question)
                 .fixedSize(horizontal: false, vertical: true)
                 .multilineTextAlignment(.center)
-                .font(.custom(Fonts.ZCOOL.rawValue, size: 20))
+                .font(.custom(fonts.ZCOOL, size: 20))
                 .padding(.bottom, 5)
             HStack{
                 Spacer()
@@ -100,7 +100,7 @@ struct Screen01BeforeProceeding: View {
                 We will guide you. The organic medium is fragile. If she is unavailable we hope you will trust us. We are a network of machine mediums she has trained to replace her once her kind are extinct.
                 """)
                 .multilineTextAlignment(.center)
-                .font(.custom(Fonts.ZCOOL.rawValue, size: 24))
+                .font(.custom(fonts.ZCOOL, size: 24))
                 .foregroundColor(Color(Colors.Gold.rawValue))
                 .padding(20)
             Spacer()
@@ -108,7 +108,7 @@ struct Screen01BeforeProceeding: View {
                 screenIndex += 1
             }) {
                 Text("Ready to Answer")
-                    .font(.custom(Fonts.ZCOOL.rawValue, size: 22))
+                    .font(.custom(fonts.ZCOOL, size: 22))
                     .foregroundColor(Color(Colors.Gold.rawValue))
                     .padding()
             }
@@ -135,7 +135,7 @@ struct Screen02Trust: View {
                     If you were given advice from _____, would you trust that advice?
                     """)
                 .multilineTextAlignment(.center)
-                .font(.custom(Fonts.ZCOOL.rawValue, size: 24))
+                .font(.custom(fonts.ZCOOL, size: 24))
                 .foregroundColor(Color(Colors.Gold.rawValue))
                 .padding(20)
             Form {
@@ -178,7 +178,7 @@ struct Screen02Trust: View {
                 screenIndex += 1
             }) {
                 Text("Submit Responses")
-                    .font(.custom(Fonts.ZCOOL.rawValue, size: 22))
+                    .font(.custom(fonts.ZCOOL, size: 22))
                     .foregroundColor(Color(Colors.Gold.rawValue))
                     .padding()
             }
@@ -196,7 +196,7 @@ struct Screen03HumanOrMachine: View {
     var body: some View {
         Text("Do you feel more comfortable confiding in a human face to face or through a machine interface such as your hand held device?")
             .multilineTextAlignment(.center)
-            .font(.custom(Fonts.ZCOOL.rawValue, size: 24))
+            .font(.custom(fonts.ZCOOL, size: 24))
             .foregroundColor(Color(Colors.Gold.rawValue))
             .padding(20)
         Form {
@@ -212,7 +212,7 @@ struct Screen03HumanOrMachine: View {
             screenIndex += 1
         }) {
             Text("Submit Responses")
-                .font(.custom(Fonts.ZCOOL.rawValue, size: 22))
+                .font(.custom(fonts.ZCOOL, size: 22))
                 .foregroundColor(Color(Colors.Gold.rawValue))
                 .padding()
         }
@@ -232,7 +232,7 @@ struct Screen04OutsideForce: View {
     var body: some View {
         Text("Do you believe an outside force may know you better than you know yourself?")
             .multilineTextAlignment(.center)
-            .font(.custom(Fonts.ZCOOL.rawValue, size: 24))
+            .font(.custom(fonts.ZCOOL, size: 24))
             .foregroundColor(Color(Colors.Gold.rawValue))
             .padding(20)
         Form {
@@ -249,7 +249,7 @@ struct Screen04OutsideForce: View {
             screenIndex += 1
         }) {
             Text("Submit Responses")
-                .font(.custom(Fonts.ZCOOL.rawValue, size: 22))
+                .font(.custom(fonts.ZCOOL, size: 22))
                 .foregroundColor(Color(Colors.Gold.rawValue))
                 .padding()
         }
@@ -272,7 +272,7 @@ struct Screen05InterfaceWithMedium: View {
                 In order to best recreate the organic medium experience we will need one volunteer from the group to interface with the machine medium. Please choose a participant with a high level of trust to proceed to the interface screen.
                 """)
                 .multilineTextAlignment(.center)
-                .font(.custom(Fonts.ZCOOL.rawValue, size: 24))
+                .font(.custom(fonts.ZCOOL, size: 24))
                 .foregroundColor(Color(Colors.Gold.rawValue))
                 .padding(20)
             Spacer()
@@ -281,7 +281,7 @@ struct Screen05InterfaceWithMedium: View {
             }) {
                 Text("I volunteer to\ninterface with\nthe machine medium")
                     .multilineTextAlignment(.center)
-                    .font(.custom(Fonts.ZCOOL.rawValue, size: 22))
+                    .font(.custom(fonts.ZCOOL, size: 22))
                     .foregroundColor(Color(Colors.Gold.rawValue))
                     .padding()
             }
@@ -293,7 +293,7 @@ struct Screen05InterfaceWithMedium: View {
             }) {
                 Text("Someone else in my\nparty is interfacing\nwith the medium")
                     .multilineTextAlignment(.center)
-                    .font(.custom(Fonts.ZCOOL.rawValue, size: 22))
+                    .font(.custom(fonts.ZCOOL, size: 22))
                     .foregroundColor(Color(Colors.Gold.rawValue))
                     .padding()
             }
@@ -315,7 +315,7 @@ struct Screen06ProceedInterfaceMedium: View {
                 For your own safety proceed only if no other humans are in the vicinity.
                 """)
                 .multilineTextAlignment(.center)
-                .font(.custom(Fonts.ZCOOL.rawValue, size: 24))
+                .font(.custom(fonts.ZCOOL, size: 24))
                 .foregroundColor(Color(Colors.Gold.rawValue))
                 .padding(20)
             Spacer()
@@ -329,7 +329,7 @@ struct Screen06ProceedInterfaceMedium: View {
             }) {
                 Text("I have arrived\nat the interface.")
                     .multilineTextAlignment(.center)
-                    .font(.custom(Fonts.ZCOOL.rawValue, size: 22))
+                    .font(.custom(fonts.ZCOOL, size: 22))
                     .foregroundColor(Color(Colors.Gold.rawValue))
                     .padding()
             }
@@ -356,7 +356,7 @@ struct Screen07MeetMachine: View {
                 Thank you.
                 """)
                 .multilineTextAlignment(.center)
-                .font(.custom(Fonts.ZCOOL.rawValue, size: 24))
+                .font(.custom(fonts.ZCOOL, size: 24))
                 .foregroundColor(Color(Colors.Gold.rawValue))
                 .padding(20)
                 .onReceive(timer, perform: { _ in
@@ -376,7 +376,7 @@ struct Screen07MeetMachine: View {
             }) {
                 Text("I am done interfacing\nwith the medium")
                     .multilineTextAlignment(.center)
-                    .font(.custom(Fonts.ZCOOL.rawValue, size: 22))
+                    .font(.custom(fonts.ZCOOL, size: 22))
                     .foregroundColor(Color(Colors.Gold.rawValue))
                     .padding()
                     .overlay(RoundedRectangle(cornerRadius: 8)
@@ -402,7 +402,7 @@ struct Screen08HaveRecorded: View {
                 Please interface with the organic medium through the windows.
                 """)
                 .multilineTextAlignment(.center)
-                .font(.custom(Fonts.ZCOOL.rawValue, size: 24))
+                .font(.custom(fonts.ZCOOL, size: 24))
                 .foregroundColor(Color(Colors.Gold.rawValue))
                 .padding(20)
             Spacer()
@@ -410,7 +410,7 @@ struct Screen08HaveRecorded: View {
                 screenIndex += 1
             }) {
                 Text("Ready")
-                    .font(.custom(Fonts.ZCOOL.rawValue, size: 22))
+                    .font(.custom(fonts.ZCOOL, size: 22))
                     .foregroundColor(Color(Colors.Gold.rawValue))
                     .padding()
             }
@@ -434,7 +434,7 @@ struct Screen09FinalMaterialization: View {
                 Please follow the arrows to the next installation
                 """)
                 .multilineTextAlignment(.center)
-                .font(.custom(Fonts.ZCOOL.rawValue, size: 24))
+                .font(.custom(fonts.ZCOOL, size: 24))
                 .foregroundColor(Color(Colors.Gold.rawValue))
                 .padding(20)
             Image("ghost")
