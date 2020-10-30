@@ -24,7 +24,7 @@ struct AllCompleted: View {
                     .font(.custom(Fonts.ZCOOL.rawValue, size: 22))
                     .multilineTextAlignment(.center)
                 Button(action: {
-                    UIApplication.shared.open(URL(string: "https://www.no-place-to-go.com")!)
+                    UIApplication.shared.open(URL(string: "https://www.no-place-to-go.com/shop/")!)
                 }) {
                     Text("NP2G Merch Store")
                         .font(.custom(Fonts.Notable.rawValue, size: 24))

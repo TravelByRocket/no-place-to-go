@@ -784,7 +784,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bryancostanza.NoPlaceToGo;
 				PRODUCT_NAME = NP2G;
 				SWIFT_VERSION = 5.0;
@@ -807,7 +807,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.1;
+				MARKETING_VERSION = 1.0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bryancostanza.NoPlaceToGo;
 				PRODUCT_NAME = NP2G;
 				SWIFT_VERSION = 5.0;
