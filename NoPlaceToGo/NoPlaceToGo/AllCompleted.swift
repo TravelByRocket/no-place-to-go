@@ -61,7 +61,7 @@ struct AllCompleted: View {
             }
         }
         .sheet(isPresented: $showSpyPhoto){
-            HayleyPhotoPush()
+            PhotoSurprise()
                 .environmentObject(pm)
         }
 //        .onAppear{

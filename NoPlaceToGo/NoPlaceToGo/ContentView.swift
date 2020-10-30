@@ -14,9 +14,9 @@ struct ContentView: View {
     var body: some View {
         GeometryReader {geo in
             VStack{
-                MainPage()
+                PrimaryContent()
                 Spacer() // keeps the info button at the bottom for less-than-full views
-                MoreInfoButton()
+                BackstageButton()
                     .padding(.bottom, safeAreaBottom) // workaround for .ignoresSafeArea(.keyboard) not available until iOS 14
                     .onAppear {
                         self.safeAreaBottom = geo.safeAreaInsets.bottom
@@ -33,7 +33,7 @@ struct ContentView_Previews: PreviewProvider {
     }
 }
 
-struct MoreInfoButton: View {
+struct BackstageButton: View {
     @State private var showSheet = false
     var body: some View {
         Button(action: {
@@ -44,7 +44,7 @@ struct MoreInfoButton: View {
         }
         .foregroundColor(Color("PinkHeadings"))
         .sheet(isPresented: $showSheet) {
-            MoreInfo()
+            BackstagePage()
         }
     }
 }
