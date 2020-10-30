@@ -39,10 +39,10 @@ struct StartPage: View {
                                      "noplace2go": .e2,
                                      "beanyone!": .e3,
                                      "goanywhere!": .e4,
-                                     "staythecourse!": .d1,
-                                     "soulblueprint": .d2,
-                                     "dataghost": .d3,
-                                     "fearfulphotos": .d4
+                                     "staythecourse!": .f1,
+                                     "soulblueprint": .f2,
+                                     "dataghost": .f3,
+                                     "fearfulphotos": .f4
     ]
     
     var matching: Bool {
