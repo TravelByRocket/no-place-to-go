@@ -36,8 +36,6 @@ struct AllCompleted: View {
                 .padding()
             }
             Button(action: {
-//                showSpyPhotoInstead = false
-//                showSheet = true
                 showDonation.toggle()
             }) {
                 Text(showDonation ? "Go Back" : "Donate to NP2G")
@@ -49,12 +47,7 @@ struct AllCompleted: View {
                         .stroke(Color.secondary, lineWidth: 1))
             .padding()
             .sheet(isPresented: $showSheet, content: {
-    //            if (showSpyPhotoInstead) {
-    //                HayleyPhotoPush()
-    //                    .environmentObject(pm)
-    //            } else {
-                    DonatePage()
-    //            }
+                DonatePage()
             })
             if (showDonation) {
                 DonatePage()
@@ -64,16 +57,9 @@ struct AllCompleted: View {
             PhotoSurprise()
                 .environmentObject(pm)
         }
-//        .onAppear{
-//            if (!pm.hasShownSpyPhoto) {
-//                showSpyPhotoInstead = true
-//                showSheet = true
-//            }
-//        }
         .onReceive(timer, perform: { _ in
             if(!pm.hasShownSpyPhoto) {
                 pm.hasShownSpyPhoto = true
-//                showSpyPhotoInstead = true
                 showSpyPhoto = true
             }
         })

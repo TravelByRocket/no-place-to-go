@@ -22,7 +22,6 @@ struct LamarA: View {
             } else {
                 NextSitePage()
             }
-//            NextInstallationButton(installIndex: $installIndex, numInstallsAtSite: numInstallsAtSite)
         }
     }
 }
