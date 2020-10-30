@@ -15,8 +15,9 @@ struct ArtistRow: View {
             ForEach (0..<artist.images.count) {index in
                 artist.images[index]
                     .resizable()
-                    .aspectRatio(contentMode: .fit)
+                    .aspectRatio(contentMode: .fill)
                     .frame(width: 70)
+                    .clipped()
             }
             Text(artist.name)
                 .padding(.leading)
