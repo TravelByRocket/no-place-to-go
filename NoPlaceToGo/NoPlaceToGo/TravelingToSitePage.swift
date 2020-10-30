@@ -58,7 +58,7 @@ struct TravelingToSitePage: View {
                 }) {
                     Image(systemName: pausedManually ? "play" : "pause")
                         .font(.custom(fonts.ZCOOL, size: 24))
-                        .foregroundColor(Color(Colors.Gold.rawValue))
+                        .foregroundColor(Color("Gold"))
                         .padding()
                         .frame(width: 65)
                 }
@@ -73,7 +73,7 @@ struct TravelingToSitePage: View {
                 }) {
                     Text("Get Directions")
                         .font(.custom(fonts.ZCOOL, size: 24))
-                        .foregroundColor(Color(Colors.Gold.rawValue))
+                        .foregroundColor(Color("Gold"))
                         .padding()
                 }
                 .overlay(RoundedRectangle(cornerRadius: 8)
@@ -88,7 +88,7 @@ struct TravelingToSitePage: View {
                 Text(addressedSites.siteObjectFromSiteEnum(site: pm.curSite!).arrivalConfirmationMessage)
                     .multilineTextAlignment(.center)
                     .font(.custom(fonts.ZCOOL, size: 24))
-                    .foregroundColor(Color(Colors.Gold.rawValue))
+                    .foregroundColor(Color("Gold"))
                     .padding()
             }
 //            .opacity(narrativeFinished ? 1.0 : 0.3)

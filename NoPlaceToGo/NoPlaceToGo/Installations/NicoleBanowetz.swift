@@ -101,7 +101,7 @@ struct Screen01BeforeProceeding: View {
                 """)
                 .multilineTextAlignment(.center)
                 .font(.custom(fonts.ZCOOL, size: 24))
-                .foregroundColor(Color(Colors.Gold.rawValue))
+                .foregroundColor(Color("Gold"))
                 .padding(20)
             Spacer()
             Button(action: {
@@ -109,7 +109,7 @@ struct Screen01BeforeProceeding: View {
             }) {
                 Text("Ready to Answer")
                     .font(.custom(fonts.ZCOOL, size: 22))
-                    .foregroundColor(Color(Colors.Gold.rawValue))
+                    .foregroundColor(Color("Gold"))
                     .padding()
             }
             .overlay(RoundedRectangle(cornerRadius: 8)
@@ -136,7 +136,7 @@ struct Screen02Trust: View {
                     """)
                 .multilineTextAlignment(.center)
                 .font(.custom(fonts.ZCOOL, size: 24))
-                .foregroundColor(Color(Colors.Gold.rawValue))
+                .foregroundColor(Color("Gold"))
                 .padding(20)
             Form {
                 VStack {
@@ -179,7 +179,7 @@ struct Screen02Trust: View {
             }) {
                 Text("Submit Responses")
                     .font(.custom(fonts.ZCOOL, size: 22))
-                    .foregroundColor(Color(Colors.Gold.rawValue))
+                    .foregroundColor(Color("Gold"))
                     .padding()
             }
             .overlay(RoundedRectangle(cornerRadius: 8)
@@ -197,7 +197,7 @@ struct Screen03HumanOrMachine: View {
         Text("Do you feel more comfortable confiding in a human face to face or through a machine interface such as your hand held device?")
             .multilineTextAlignment(.center)
             .font(.custom(fonts.ZCOOL, size: 24))
-            .foregroundColor(Color(Colors.Gold.rawValue))
+            .foregroundColor(Color("Gold"))
             .padding(20)
         Form {
             PickAnswers(question: "I prefer...", hasSelection: $hasAnswer, leftSide : "Face to Face", rightSide: "Handheld Device")
@@ -213,7 +213,7 @@ struct Screen03HumanOrMachine: View {
         }) {
             Text("Submit Responses")
                 .font(.custom(fonts.ZCOOL, size: 22))
-                .foregroundColor(Color(Colors.Gold.rawValue))
+                .foregroundColor(Color("Gold"))
                 .padding()
         }
         .overlay(RoundedRectangle(cornerRadius: 8)
@@ -233,7 +233,7 @@ struct Screen04OutsideForce: View {
         Text("Do you believe an outside force may know you better than you know yourself?")
             .multilineTextAlignment(.center)
             .font(.custom(fonts.ZCOOL, size: 24))
-            .foregroundColor(Color(Colors.Gold.rawValue))
+            .foregroundColor(Color("Gold"))
             .padding(20)
         Form {
             PickAnswers(question: "Spiritual Organic Medium", hasSelection: $hasAnswer1)
@@ -250,7 +250,7 @@ struct Screen04OutsideForce: View {
         }) {
             Text("Submit Responses")
                 .font(.custom(fonts.ZCOOL, size: 22))
-                .foregroundColor(Color(Colors.Gold.rawValue))
+                .foregroundColor(Color("Gold"))
                 .padding()
         }
         .overlay(RoundedRectangle(cornerRadius: 8)
@@ -273,7 +273,7 @@ struct Screen05InterfaceWithMedium: View {
                 """)
                 .multilineTextAlignment(.center)
                 .font(.custom(fonts.ZCOOL, size: 24))
-                .foregroundColor(Color(Colors.Gold.rawValue))
+                .foregroundColor(Color("Gold"))
                 .padding(20)
             Spacer()
             Button(action: {
@@ -282,7 +282,7 @@ struct Screen05InterfaceWithMedium: View {
                 Text("I volunteer to\ninterface with\nthe machine medium")
                     .multilineTextAlignment(.center)
                     .font(.custom(fonts.ZCOOL, size: 22))
-                    .foregroundColor(Color(Colors.Gold.rawValue))
+                    .foregroundColor(Color("Gold"))
                     .padding()
             }
             .overlay(RoundedRectangle(cornerRadius: 8)
@@ -294,7 +294,7 @@ struct Screen05InterfaceWithMedium: View {
                 Text("Someone else in my\nparty is interfacing\nwith the medium")
                     .multilineTextAlignment(.center)
                     .font(.custom(fonts.ZCOOL, size: 22))
-                    .foregroundColor(Color(Colors.Gold.rawValue))
+                    .foregroundColor(Color("Gold"))
                     .padding()
             }
             .overlay(RoundedRectangle(cornerRadius: 8)
@@ -316,7 +316,7 @@ struct Screen06ProceedInterfaceMedium: View {
                 """)
                 .multilineTextAlignment(.center)
                 .font(.custom(fonts.ZCOOL, size: 24))
-                .foregroundColor(Color(Colors.Gold.rawValue))
+                .foregroundColor(Color("Gold"))
                 .padding(20)
             Spacer()
             Image("amp")
@@ -330,7 +330,7 @@ struct Screen06ProceedInterfaceMedium: View {
                 Text("I have arrived\nat the interface.")
                     .multilineTextAlignment(.center)
                     .font(.custom(fonts.ZCOOL, size: 22))
-                    .foregroundColor(Color(Colors.Gold.rawValue))
+                    .foregroundColor(Color("Gold"))
                     .padding()
             }
             .overlay(RoundedRectangle(cornerRadius: 8)
@@ -357,7 +357,7 @@ struct Screen07MeetMachine: View {
                 """)
                 .multilineTextAlignment(.center)
                 .font(.custom(fonts.ZCOOL, size: 24))
-                .foregroundColor(Color(Colors.Gold.rawValue))
+                .foregroundColor(Color("Gold"))
                 .padding(20)
                 .onReceive(timer, perform: { _ in
                     if counter < 30 {
@@ -377,7 +377,7 @@ struct Screen07MeetMachine: View {
                 Text("I am done interfacing\nwith the medium")
                     .multilineTextAlignment(.center)
                     .font(.custom(fonts.ZCOOL, size: 22))
-                    .foregroundColor(Color(Colors.Gold.rawValue))
+                    .foregroundColor(Color("Gold"))
                     .padding()
                     .overlay(RoundedRectangle(cornerRadius: 8)
                                 .stroke(Color.secondary, lineWidth: 1))
@@ -403,7 +403,7 @@ struct Screen08HaveRecorded: View {
                 """)
                 .multilineTextAlignment(.center)
                 .font(.custom(fonts.ZCOOL, size: 24))
-                .foregroundColor(Color(Colors.Gold.rawValue))
+                .foregroundColor(Color("Gold"))
                 .padding(20)
             Spacer()
             Button(action: {
@@ -411,7 +411,7 @@ struct Screen08HaveRecorded: View {
             }) {
                 Text("Ready")
                     .font(.custom(fonts.ZCOOL, size: 22))
-                    .foregroundColor(Color(Colors.Gold.rawValue))
+                    .foregroundColor(Color("Gold"))
                     .padding()
             }
             .overlay(RoundedRectangle(cornerRadius: 8)
@@ -435,7 +435,7 @@ struct Screen09FinalMaterialization: View {
                 """)
                 .multilineTextAlignment(.center)
                 .font(.custom(fonts.ZCOOL, size: 24))
-                .foregroundColor(Color(Colors.Gold.rawValue))
+                .foregroundColor(Color("Gold"))
                 .padding(20)
             Image("ghost")
                 .resizable()

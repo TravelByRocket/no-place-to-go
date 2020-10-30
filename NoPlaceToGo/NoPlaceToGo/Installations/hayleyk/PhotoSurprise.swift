@@ -45,7 +45,7 @@ struct PhotoSurprise: View {
                 Text("Dismiss")
                 .font(.custom(fonts.ZCOOL, size: 22))
                 .multilineTextAlignment(.center)
-                .foregroundColor(Color(Colors.Gold.rawValue))
+                .foregroundColor(Color("Gold"))
                 .padding()
             }
             .overlay(RoundedRectangle(cornerRadius: 8)

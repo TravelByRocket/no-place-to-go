@@ -25,7 +25,7 @@ struct ScanningBio: View {
                 ZStack {
                     VStack {
                         Rectangle()
-                            .foregroundColor(Color(Colors.AccentColor.rawValue))
+                            .foregroundColor(Color("AccentColor"))
                             .frame(height: 8)
                             .edgesIgnoringSafeArea(.all)
                             .offset(x: 0, y: scannerOffset - geo.size.height / 5)
@@ -60,7 +60,7 @@ struct ScanningBio: View {
                             .padding()
                         Rectangle()
                             .frame(width: rectWidth, height: 20, alignment: .center)
-                            .foregroundColor(Color(Colors.PinkHeadings.rawValue))
+                            .foregroundColor(Color("PinkHeadings"))
                             .onAppear{
                                 rectWidth = geo.size.width
                             }
@@ -81,7 +81,7 @@ struct ScanningBio: View {
                     Text("Thank you.\nData received.\nYou may proceed.")
                         .font(.custom(fonts.Notable, size: 24))
                         .multilineTextAlignment(.center)
-                        .foregroundColor(Color(Colors.AccentColor.rawValue))
+                        .foregroundColor(Color("AccentColor"))
                     Spacer()
                 }
                 Spacer()

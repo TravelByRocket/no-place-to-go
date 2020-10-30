@@ -47,7 +47,7 @@ struct MoeGraham: View {
                     .padding()
                 Spacer()
             }
-            .foregroundColor(Color(Colors.Gold.rawValue))
+            .foregroundColor(Color("Gold"))
             Spacer()
         }
         .onAppear{

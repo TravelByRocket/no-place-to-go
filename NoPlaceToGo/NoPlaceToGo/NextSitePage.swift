@@ -23,7 +23,7 @@ struct NextSitePage: View {
                 )
                 .font(.custom(fonts.ZCOOL, size: 22))
                 .multilineTextAlignment(.center)
-                .foregroundColor(Color(Colors.Gold.rawValue))
+                .foregroundColor(Color("Gold"))
                 .padding()
             }
             .overlay(RoundedRectangle(cornerRadius: 8)
@@ -49,7 +49,7 @@ struct NextSitePage: View {
                 Text("If you are already at Mint & Serif (No Place), don't go anywhere. Please wait in your car as you listen to the next and final portion of the show.")
                     .multilineTextAlignment(.center)
                     .font(.custom(fonts.ZCOOL, size: 24))
-                    .foregroundColor(Color(Colors.Gold.rawValue))
+                    .foregroundColor(Color("Gold"))
                     .padding(20)
             }
             Spacer()

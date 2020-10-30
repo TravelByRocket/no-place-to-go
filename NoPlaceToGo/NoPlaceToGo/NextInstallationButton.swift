@@ -23,11 +23,11 @@ struct NextInstallationButton: View {
             VStack {
                 Text(messageNext)
                     .font(.custom(fonts.Notable, size: 20))
-                    .foregroundColor(Color(Colors.Gold.rawValue))
+                    .foregroundColor(Color("Gold"))
                     .multilineTextAlignment(.center)
                 Text("Tap to Advance")
                     .font(.custom(fonts.Notable, size: 14))
-                    .foregroundColor(Color(Colors.Gold.rawValue))
+                    .foregroundColor(Color("Gold"))
             }
             .padding()
             .overlay(RoundedRectangle(cornerRadius: 8)

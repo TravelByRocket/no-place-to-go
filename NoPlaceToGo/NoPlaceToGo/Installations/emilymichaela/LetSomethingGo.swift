@@ -56,7 +56,7 @@ struct LetSomethingGo: View {
                 GeometryReader{geo in
                     Rectangle()
                         .frame(width: rectWidth, height: 20, alignment: .center)
-                        .foregroundColor(Color(Colors.PinkHeadings.rawValue))
+                        .foregroundColor(Color("PinkHeadings"))
                         .onAppear{
                             rectWidth = geo.size.width
                         }
@@ -89,7 +89,7 @@ struct LetGoButton: View {
             Text("Let it Go")
                 .font(.custom(fonts.Notable, size: 30))
                 .padding(20)
-                .background(Color(Colors.PinkHeadings.rawValue))
+                .background(Color("PinkHeadings"))
                 .mask(RoundedRectangle(cornerRadius: 25))
                 .foregroundColor(whatToLeave.count < 3 ? .secondary : .black)
         }

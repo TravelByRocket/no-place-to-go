@@ -36,7 +36,7 @@ struct HayleyKrichels: View {
                     }) {
                         Text("I have arrived at\nthe photo booth")
                             .font(.custom(fonts.ZCOOL, size: 22))
-                            .foregroundColor(Color(Colors.Gold.rawValue))
+                            .foregroundColor(Color("Gold"))
                             .padding()
                     }
                     .overlay(RoundedRectangle(cornerRadius: 8)
