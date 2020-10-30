@@ -27,11 +27,8 @@ struct ArtistRow: View {
 
 struct ArtistRow_Previews: PreviewProvider {
     static var previews: some View {
-        List {
-            ArtistRow(artist: artistbio.allartists.randomElement()!)
-            ArtistRow(artist: artistbio.allartists.randomElement()!)
-            ArtistRow(artist: artistbio.allartists.randomElement()!)
-            ArtistRow(artist: artistbio.allartists.randomElement()!)
+        NavigationView {
+            ArtistsPage()
         }
     }
 }

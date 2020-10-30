@@ -44,6 +44,8 @@ struct ArtistPage: View {
 
 struct ArtistPage_Previews: PreviewProvider {
     static var previews: some View {
-        ArtistPage(artist: artistbio.allartists.randomElement()!)
+        NavigationView {
+            ArtistPage(artist: artistbio.allartists.randomElement()!)
+        }
     }
 }
