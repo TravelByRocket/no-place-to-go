@@ -18,8 +18,8 @@ struct NextSitePage: View {
                 self.pm.setLocation(to: self.pm.nextSite(from: pm.curSite!))
             }) {
                 Text(pm.completions.hasCompletedAllSites
-                        ? addressedSites.finalDepartureConfirmationMessage
-                        : addressedSites.siteObjectFromSiteEnum(site: pm.curSite!).departureConfirmationMessage
+                        ? locations.finalDepartureConfirmationMessage
+                        : locations.siteObjectFromSiteEnum(site: pm.curSite!).departureConfirmationMessage
                 )
                 .font(.custom(fonts.ZCOOL, size: 22))
                 .multilineTextAlignment(.center)

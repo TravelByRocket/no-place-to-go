@@ -28,12 +28,12 @@ struct TravelingToSitePage: View {
                 .multilineTextAlignment(.center)
                 .font(.custom(fonts.ZCOOL, size: 26))
                 .foregroundColor(Color("Gold"))
-            Text(addressedSites.siteObjectFromSiteEnum(site: pm.curSite!).name)
+            Text(locations.siteObjectFromSiteEnum(site: pm.curSite!).name)
                 .font(.custom(fonts.Notable, size: 26))
                 .foregroundColor(Color("PinkHeadings"))
                 .multilineTextAlignment(.center)
             Group {
-                Text(addressedSites.siteObjectFromSiteEnum(site: pm.curSite!).address)
+                Text(locations.siteObjectFromSiteEnum(site: pm.curSite!).address)
                     .multilineTextAlignment(.center)
                     .font(.caption)
                 if pm.curSite == .MusicRange {
@@ -66,7 +66,7 @@ struct TravelingToSitePage: View {
                             .stroke(Color.secondary, lineWidth: 1))
                 Spacer()
                 Button(action: {
-                    addressedSites.siteObjectFromSiteEnum(site: pm.curSite!).getDirections()
+                    locations.siteObjectFromSiteEnum(site: pm.curSite!).getDirections()
                     am.pause()
                     pausedManually = true
                     gotDirections = true
@@ -85,7 +85,7 @@ struct TravelingToSitePage: View {
             Button(action: {
                 self.showingAlert = true
             }) {
-                Text(addressedSites.siteObjectFromSiteEnum(site: pm.curSite!).arrivalConfirmationMessage)
+                Text(locations.siteObjectFromSiteEnum(site: pm.curSite!).arrivalConfirmationMessage)
                     .multilineTextAlignment(.center)
                     .font(.custom(fonts.ZCOOL, size: 24))
                     .foregroundColor(Color("Gold"))
@@ -107,7 +107,7 @@ struct TravelingToSitePage: View {
                 if let playing = am.audioPlayer?.isPlaying {
                     if (!playing && !pausedManually && !gotDirections &&
                             (am.audioPlayer?.currentTime == am.audioPlayer?.duration || (am.audioPlayer?.currentTime == 0))) {
-                        am.load(filename: addressedSites.siteObjectFromSiteEnum(site: pm.curSite!).loopingAudioFilename, loop: true)
+                        am.load(filename: locations.siteObjectFromSiteEnum(site: pm.curSite!).loopingAudioFilename, loop: true)
                         am.play()
                     } else if (playing && !pm.hasShownSpyPhoto && !showSpyPhoto) {
                         if let phototime = pm.photoDate {
@@ -141,7 +141,7 @@ struct TravelingToSitePage: View {
                     pm.inTransitToSite = false
                 }
                 .onAppear{
-                    am.load(filename: addressedSites.siteObjectFromSiteEnum(site: pm.curSite!).narrativeAudioFilename, loop: false)
+                    am.load(filename: locations.siteObjectFromSiteEnum(site: pm.curSite!).narrativeAudioFilename, loop: false)
                     am.play()
                 }
                 .onDisappear{

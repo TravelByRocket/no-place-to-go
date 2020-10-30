@@ -54,7 +54,7 @@
 		2F76A01924FAE0D400736326 /* StartPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F76A00D24FAE0D200736326 /* StartPage.swift */; };
 		2F76A01A24FAE0D400736326 /* LamarB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F76A00E24FAE0D200736326 /* LamarB.swift */; };
 		2F76A01B24FAE0D400736326 /* Artists.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F76A00F24FAE0D200736326 /* Artists.swift */; };
-		2F76A01C24FAE0D400736326 /* AddressedSite.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F76A01024FAE0D200736326 /* AddressedSite.swift */; };
+		2F76A01C24FAE0D400736326 /* Locations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F76A01024FAE0D200736326 /* Locations.swift */; };
 		2F76A01D24FAE0D400736326 /* MintSerif.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F76A01124FAE0D300736326 /* MintSerif.swift */; };
 		2F76A01E24FAE0D400736326 /* MusicRange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F76A01224FAE0D300736326 /* MusicRange.swift */; };
 		2F76A01F24FAE0D400736326 /* LamarA.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F76A01324FAE0D300736326 /* LamarA.swift */; };
@@ -152,7 +152,7 @@
 		2F76A00D24FAE0D200736326 /* StartPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartPage.swift; sourceTree = "<group>"; };
 		2F76A00E24FAE0D200736326 /* LamarB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LamarB.swift; sourceTree = "<group>"; };
 		2F76A00F24FAE0D200736326 /* Artists.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Artists.swift; sourceTree = "<group>"; };
-		2F76A01024FAE0D200736326 /* AddressedSite.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddressedSite.swift; sourceTree = "<group>"; };
+		2F76A01024FAE0D200736326 /* Locations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Locations.swift; sourceTree = "<group>"; };
 		2F76A01124FAE0D300736326 /* MintSerif.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MintSerif.swift; sourceTree = "<group>"; };
 		2F76A01224FAE0D300736326 /* MusicRange.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicRange.swift; sourceTree = "<group>"; };
 		2F76A01324FAE0D300736326 /* LamarA.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LamarA.swift; sourceTree = "<group>"; };
@@ -269,7 +269,7 @@
 				2F76A00F24FAE0D200736326 /* Artists.swift */,
 				2F4AA5E22522B58B005A7740 /* Partners.swift */,
 				2FDC29F3252FDAA700A44ADA /* Installations.swift */,
-				2F76A01024FAE0D200736326 /* AddressedSite.swift */,
+				2F76A01024FAE0D200736326 /* Locations.swift */,
 				2F6911CB254C8CE100845BA4 /* Fonts.swift */,
 			);
 			path = CoreContent;
@@ -573,7 +573,7 @@
 				2F76A01B24FAE0D400736326 /* Artists.swift in Sources */,
 				2F769FB824FADF6C00736326 /* AppDelegate.swift in Sources */,
 				2FD25BD0253112BD00E924B7 /* HelpPage.swift in Sources */,
-				2F76A01C24FAE0D400736326 /* AddressedSite.swift in Sources */,
+				2F76A01C24FAE0D400736326 /* Locations.swift in Sources */,
 				2F4AA5E32522B58B005A7740 /* Partners.swift in Sources */,
 				2F76A01D24FAE0D400736326 /* MintSerif.swift in Sources */,
 				2F76A03124FC54E000736326 /* ArtistPage.swift in Sources */,

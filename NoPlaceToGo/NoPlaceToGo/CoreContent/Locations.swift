@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct addressedSites {
+struct locations {
     let name: String
     let address: String
     let arrivalConfirmationMessage: String
@@ -20,7 +20,7 @@ struct addressedSites {
         address.replacingOccurrences(of: " ", with: "+")
     }
     
-    static let mintSerif: addressedSites = addressedSites(
+    static let mintSerif: locations = locations(
         name: "The Overwhelm",
         address: "7310 W Colfax Ave, Lakewood, CO 80214",
         arrivalConfirmationMessage: "I have arrived at\nThe Overwhelm\nand am on the back\npatio of the\nclown's house",
@@ -30,7 +30,7 @@ struct addressedSites {
         narrativeAudioFilename: "mintseriffull.mp3",
         loopingAudioFilename: "reflections.mp3")
     
-    static let lamarA: addressedSites = addressedSites(
+    static let lamarA: locations = locations(
         name: "The Surveillance Spa",
         address: "6451 W Colfax Ave, Lakewood, CO 80214",
         arrivalConfirmationMessage: "I have arrived at\nThe Surveillance Spa",
@@ -40,7 +40,7 @@ struct addressedSites {
         narrativeAudioFilename: "lamarafull.mp3",
         loopingAudioFilename: "jauntyvampire.mp3")
     
-    static let lamarB: addressedSites = addressedSites(
+    static let lamarB: locations = locations(
         name: "A Liberaci Dream",
         address: "6579 W Colfax Ave, Lakewood, CO 80214",
         arrivalConfirmationMessage: "I have arrived at\nA Liberaci Dream",
@@ -50,7 +50,7 @@ struct addressedSites {
         narrativeAudioFilename: "lamarbcut.mp3",
         loopingAudioFilename: "jauntyvampire.mp3")
     
-    static let tootsies: addressedSites = addressedSites(
+    static let tootsies: locations = locations(
         name: "The Waiting Room",
         address: "6985 W 38th Ave, Wheat Ridge, CO 80033",
         arrivalConfirmationMessage: "I have arrived at\nThe Waiting Room\nand I am waiting inside",
@@ -60,7 +60,7 @@ struct addressedSites {
         narrativeAudioFilename: "tootsiesfullmix.mp3",
         loopingAudioFilename: "tootsiesfullmix.mp3")
     
-    static let musicRange: addressedSites = addressedSites(
+    static let musicRange: locations = locations(
         name: "Data Assimilation Base",
         address: "1520 Iris St, Lakewood, CO 80215",
         arrivalConfirmationMessage: "I have arrived at\nData Assimilation Base",
@@ -70,7 +70,7 @@ struct addressedSites {
         narrativeAudioFilename: "musicrangefull.mp3",
         loopingAudioFilename: "reflections.mp3")
     
-    static let mintSerifFinal: addressedSites = addressedSites(
+    static let mintSerifFinal: locations = locations(
         name: "No Place",
         address: "7310 W Colfax Ave, Lakewood, CO 80214",
         arrivalConfirmationMessage: "I have arrived at\nNo Place",
@@ -79,20 +79,20 @@ struct addressedSites {
         narrativeAudioFilename: "mintseriffinal.mp3",
         loopingAudioFilename: "jauntyvampire.mp3")
     
-    static func siteObjectFromSiteEnum(site: Sites) -> addressedSites {
+    static func siteObjectFromSiteEnum(site: Sites) -> locations {
         switch site {
         case .MintSerif:
-            return addressedSites.mintSerif
+            return locations.mintSerif
         case .LamarA:
-            return addressedSites.lamarA
+            return locations.lamarA
         case .LamarB:
-            return addressedSites.lamarB
+            return locations.lamarB
         case .Tootsies:
-            return addressedSites.tootsies
+            return locations.tootsies
         case .MusicRange:
-            return addressedSites.musicRange
+            return locations.musicRange
         case .MintSerifFinal:
-            return addressedSites.mintSerifFinal
+            return locations.mintSerifFinal
         }
     }
     
