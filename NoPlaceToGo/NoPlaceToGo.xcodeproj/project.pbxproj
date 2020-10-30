@@ -70,14 +70,14 @@
 		2FDC29FE252FDFDC00A44ADA /* InstallationRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDC29FD252FDFDC00A44ADA /* InstallationRow.swift */; };
 		2FDC2A03252FDFF200A44ADA /* InstallationPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDC2A02252FDFF200A44ADA /* InstallationPage.swift */; };
 		2FDC2A0B2530D1C100A44ADA /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDC2A0A2530D1BE00A44ADA /* AudioManager.swift */; };
-		2FF5296A254C99F80041123D /* mintseriffinal.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2FF52962254C99F70041123D /* mintseriffinal.mp3 */; };
-		2FF5296B254C99F80041123D /* lamarbcut.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2FF52963254C99F80041123D /* lamarbcut.mp3 */; };
-		2FF5296C254C99F80041123D /* reflections.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2FF52964254C99F80041123D /* reflections.mp3 */; };
-		2FF5296D254C99F80041123D /* mintseriffull.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2FF52965254C99F80041123D /* mintseriffull.mp3 */; };
-		2FF5296E254C99F80041123D /* musicrangefull.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2FF52966254C99F80041123D /* musicrangefull.mp3 */; };
-		2FF5296F254C99F80041123D /* tootsiesfullmix.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2FF52967254C99F80041123D /* tootsiesfullmix.mp3 */; };
-		2FF52970254C99F80041123D /* jauntyvampire.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2FF52968254C99F80041123D /* jauntyvampire.mp3 */; };
-		2FF52971254C99F80041123D /* lamarafull.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2FF52969254C99F80041123D /* lamarafull.mp3 */; };
+		2FF52981254C9A860041123D /* reflections.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2FF52979254C9A860041123D /* reflections.mp3 */; };
+		2FF52982254C9A860041123D /* mintseriffull.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2FF5297A254C9A860041123D /* mintseriffull.mp3 */; };
+		2FF52983254C9A860041123D /* mintseriffinal.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2FF5297B254C9A860041123D /* mintseriffinal.mp3 */; };
+		2FF52984254C9A860041123D /* jauntyvampire.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2FF5297C254C9A860041123D /* jauntyvampire.mp3 */; };
+		2FF52985254C9A860041123D /* lamarbcut.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2FF5297D254C9A860041123D /* lamarbcut.mp3 */; };
+		2FF52986254C9A860041123D /* musicrangefull.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2FF5297E254C9A860041123D /* musicrangefull.mp3 */; };
+		2FF52987254C9A860041123D /* lamarafull.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2FF5297F254C9A860041123D /* lamarafull.mp3 */; };
+		2FF52988254C9A860041123D /* tootsiesfullmix.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2FF52980254C9A860041123D /* tootsiesfullmix.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -168,14 +168,14 @@
 		2FDC29FD252FDFDC00A44ADA /* InstallationRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstallationRow.swift; sourceTree = "<group>"; };
 		2FDC2A02252FDFF200A44ADA /* InstallationPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstallationPage.swift; sourceTree = "<group>"; };
 		2FDC2A0A2530D1BE00A44ADA /* AudioManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
-		2FF52962254C99F70041123D /* mintseriffinal.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = mintseriffinal.mp3; sourceTree = "<group>"; };
-		2FF52963254C99F80041123D /* lamarbcut.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = lamarbcut.mp3; sourceTree = "<group>"; };
-		2FF52964254C99F80041123D /* reflections.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = reflections.mp3; sourceTree = "<group>"; };
-		2FF52965254C99F80041123D /* mintseriffull.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = mintseriffull.mp3; sourceTree = "<group>"; };
-		2FF52966254C99F80041123D /* musicrangefull.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = musicrangefull.mp3; sourceTree = "<group>"; };
-		2FF52967254C99F80041123D /* tootsiesfullmix.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = tootsiesfullmix.mp3; sourceTree = "<group>"; };
-		2FF52968254C99F80041123D /* jauntyvampire.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = jauntyvampire.mp3; sourceTree = "<group>"; };
-		2FF52969254C99F80041123D /* lamarafull.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = lamarafull.mp3; sourceTree = "<group>"; };
+		2FF52979254C9A860041123D /* reflections.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = reflections.mp3; sourceTree = "<group>"; };
+		2FF5297A254C9A860041123D /* mintseriffull.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = mintseriffull.mp3; sourceTree = "<group>"; };
+		2FF5297B254C9A860041123D /* mintseriffinal.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = mintseriffinal.mp3; sourceTree = "<group>"; };
+		2FF5297C254C9A860041123D /* jauntyvampire.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = jauntyvampire.mp3; sourceTree = "<group>"; };
+		2FF5297D254C9A860041123D /* lamarbcut.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = lamarbcut.mp3; sourceTree = "<group>"; };
+		2FF5297E254C9A860041123D /* musicrangefull.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = musicrangefull.mp3; sourceTree = "<group>"; };
+		2FF5297F254C9A860041123D /* lamarafull.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = lamarafull.mp3; sourceTree = "<group>"; };
+		2FF52980254C9A860041123D /* tootsiesfullmix.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = tootsiesfullmix.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -334,9 +334,9 @@
 				2F6911D8254C8D4B00845BA4 /* Managers */,
 				2F7298EF2504233200FC45FD /* Installations */,
 				2F76A02F24FC10E400736326 /* Sites */,
-				2FDC2A0F2530D92700A44ADA /* Audio */,
 				2F769FC024FADF7900736326 /* Assets.xcassets */,
 				2F769FEA24FADFDC00736326 /* Fonts */,
+				2FF52978254C9A860041123D /* Audio */,
 				2F769FC524FADF7900736326 /* LaunchScreen.storyboard */,
 				2F769FC824FADF7900736326 /* Info.plist */,
 				2F769FBB24FADF6D00736326 /* NoPlaceToGo.xcdatamodeld */,
@@ -408,17 +408,17 @@
 			path = emilymichaela;
 			sourceTree = "<group>";
 		};
-		2FDC2A0F2530D92700A44ADA /* Audio */ = {
+		2FF52978254C9A860041123D /* Audio */ = {
 			isa = PBXGroup;
 			children = (
-				2FF52968254C99F80041123D /* jauntyvampire.mp3 */,
-				2FF52969254C99F80041123D /* lamarafull.mp3 */,
-				2FF52963254C99F80041123D /* lamarbcut.mp3 */,
-				2FF52962254C99F70041123D /* mintseriffinal.mp3 */,
-				2FF52965254C99F80041123D /* mintseriffull.mp3 */,
-				2FF52966254C99F80041123D /* musicrangefull.mp3 */,
-				2FF52964254C99F80041123D /* reflections.mp3 */,
-				2FF52967254C99F80041123D /* tootsiesfullmix.mp3 */,
+				2FF52979254C9A860041123D /* reflections.mp3 */,
+				2FF5297A254C9A860041123D /* mintseriffull.mp3 */,
+				2FF5297B254C9A860041123D /* mintseriffinal.mp3 */,
+				2FF5297C254C9A860041123D /* jauntyvampire.mp3 */,
+				2FF5297D254C9A860041123D /* lamarbcut.mp3 */,
+				2FF5297E254C9A860041123D /* musicrangefull.mp3 */,
+				2FF5297F254C9A860041123D /* lamarafull.mp3 */,
+				2FF52980254C9A860041123D /* tootsiesfullmix.mp3 */,
 			);
 			path = Audio;
 			sourceTree = "<group>";
@@ -527,22 +527,22 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2FF52987254C9A860041123D /* lamarafull.mp3 in Resources */,
+				2FF52981254C9A860041123D /* reflections.mp3 in Resources */,
+				2FF52982254C9A860041123D /* mintseriffull.mp3 in Resources */,
 				2F0690F525292365005DF827 /* NP2G3.mp3 in Resources */,
+				2FF52986254C9A860041123D /* musicrangefull.mp3 in Resources */,
 				2F769FC724FADF7900736326 /* LaunchScreen.storyboard in Resources */,
-				2FF5296B254C99F80041123D /* lamarbcut.mp3 in Resources */,
-				2FF5296D254C99F80041123D /* mintseriffull.mp3 in Resources */,
+				2FF52983254C9A860041123D /* mintseriffinal.mp3 in Resources */,
 				2F4D8DE22511A82E00FA814E /* phonetree.csv in Resources */,
+				2FF52985254C9A860041123D /* lamarbcut.mp3 in Resources */,
 				2F769FEE24FAE02C00736326 /* ZCOOLXiaoWei-Regular.ttf in Resources */,
-				2FF5296E254C99F80041123D /* musicrangefull.mp3 in Resources */,
 				2F769FC424FADF7900736326 /* Preview Assets.xcassets in Resources */,
-				2FF5296C254C99F80041123D /* reflections.mp3 in Resources */,
 				2F769FC124FADF7900736326 /* Assets.xcassets in Resources */,
-				2FF52970254C99F80041123D /* jauntyvampire.mp3 in Resources */,
+				2FF52988254C9A860041123D /* tootsiesfullmix.mp3 in Resources */,
 				2FDC29E7252FBBDD00A44ADA /* RedHeartbeat.mp4 in Resources */,
+				2FF52984254C9A860041123D /* jauntyvampire.mp3 in Resources */,
 				2F769FEC24FAE00400736326 /* Notable-Regular.ttf in Resources */,
-				2FF52971254C99F80041123D /* lamarafull.mp3 in Resources */,
-				2FF5296F254C99F80041123D /* tootsiesfullmix.mp3 in Resources */,
-				2FF5296A254C99F80041123D /* mintseriffinal.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
