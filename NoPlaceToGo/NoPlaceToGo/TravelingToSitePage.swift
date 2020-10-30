@@ -91,8 +91,6 @@ struct TravelingToSitePage: View {
                     .foregroundColor(Color("Gold"))
                     .padding()
             }
-//            .opacity(narrativeFinished ? 1.0 : 0.3)
-//            .disabled(!narrativeFinished)
             .overlay(RoundedRectangle(cornerRadius: 8)
                         .stroke(Color.secondary, lineWidth: 1))
             .sheet(isPresented: $showClownAlert, content: {
