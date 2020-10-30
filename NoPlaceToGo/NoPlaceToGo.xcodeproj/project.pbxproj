@@ -430,9 +430,9 @@
 		2FF5298D254C9C5A0041123D /* Partners */ = {
 			isa = PBXGroup;
 			children = (
+				2F4AA5DA2522B25B005A7740 /* PartnersPage.swift */,
 				2F4AA5D02522B23D005A7740 /* PartnerRow.swift */,
 				2F4AA5D52522B24C005A7740 /* PartnerPage.swift */,
-				2F4AA5DA2522B25B005A7740 /* PartnersPage.swift */,
 			);
 			path = Partners;
 			sourceTree = "<group>";
@@ -440,9 +440,9 @@
 		2FF5298E254C9C600041123D /* Installations */ = {
 			isa = PBXGroup;
 			children = (
+				2FDC29F8252FDFC400A44ADA /* InstallationsPage.swift */,
 				2FDC29FD252FDFDC00A44ADA /* InstallationRow.swift */,
 				2FDC2A02252FDFF200A44ADA /* InstallationPage.swift */,
-				2FDC29F8252FDFC400A44ADA /* InstallationsPage.swift */,
 			);
 			name = Installations;
 			path = Partners;

@@ -24,6 +24,8 @@ struct PartnerRow: View {
 
 struct PartnerRow_Previews: PreviewProvider {
     static var previews: some View {
-        PartnerRow(partner: partnerbio.redline)
+        NavigationView {
+            PartnersPage()
+        }
     }
 }

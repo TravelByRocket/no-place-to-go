@@ -118,4 +118,17 @@ struct installations {
                 For the music in NP2G, my idea was to match the artists' visions with my favorite parts of the horror and Halloween worlds like old John Carpenter movies, the Munsters, and menacing undertones, all through the filter of today's unstable and chaotic world.
                 """)
     
+    static let allinstallations = [
+        liberace,
+        sleepparalysis,
+        saltpepperghosts,
+        interveningsubstance,
+        solidsjustfluids,
+        waitingroom,
+        dreamsoldwholesale,
+        clownhouse,
+        photobooth,
+        musicscore
+    ]
+    
 }

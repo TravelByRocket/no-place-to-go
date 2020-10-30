@@ -21,6 +21,8 @@ struct PartnersPage: View {
 
 struct PartnersPage_Previews: PreviewProvider {
     static var previews: some View {
-        PartnersPage()
+        NavigationView {
+            PartnersPage()
+        }
     }
 }

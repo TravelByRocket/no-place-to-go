@@ -84,6 +84,8 @@ struct InstallationsPage: View {
 
 struct InstallationsPage_Previews: PreviewProvider {
     static var previews: some View {
-        InstallationsPage()
+        NavigationView {
+            InstallationsPage()
+        }
     }
 }

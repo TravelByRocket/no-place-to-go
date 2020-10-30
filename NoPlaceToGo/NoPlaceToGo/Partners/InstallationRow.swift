@@ -17,6 +17,8 @@ struct InstallationRow: View {
 
 struct InstallationRow_Previews: PreviewProvider {
     static var previews: some View {
-        InstallationRow(installation: installations.clownhouse)
+        NavigationView {
+            InstallationsPage()
+        }
     }
 }

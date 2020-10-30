@@ -30,6 +30,8 @@ struct InstallationPage: View {
 
 struct InstallationPage_Previews: PreviewProvider {
     static var previews: some View {
-        InstallationPage(installation: installations.clownhouse)
+        NavigationView {
+            InstallationPage(installation: installations.allinstallations.randomElement()!)
+        }
     }
 }
