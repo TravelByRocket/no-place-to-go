@@ -246,15 +246,9 @@
 			isa = PBXGroup;
 			children = (
 				2F76A02D24FB263B00736326 /* BackstagePage.swift */,
-				2F76A02724FB006800736326 /* ArtistsPage.swift */,
-				2F76A03024FC54DF00736326 /* ArtistPage.swift */,
-				2F76A03224FC54F400736326 /* ArtistRow.swift */,
-				2F4AA5D02522B23D005A7740 /* PartnerRow.swift */,
-				2F4AA5D52522B24C005A7740 /* PartnerPage.swift */,
-				2F4AA5DA2522B25B005A7740 /* PartnersPage.swift */,
-				2FDC29FD252FDFDC00A44ADA /* InstallationRow.swift */,
-				2FDC2A02252FDFF200A44ADA /* InstallationPage.swift */,
-				2FDC29F8252FDFC400A44ADA /* InstallationsPage.swift */,
+				2FF5298C254C9C540041123D /* Artists */,
+				2FF5298E254C9C600041123D /* Installations */,
+				2FF5298D254C9C5A0041123D /* Partners */,
 				2FD25BE12532230300E924B7 /* DonatePage.swift */,
 				2F76A02B24FB235C00736326 /* AboutPage.swift */,
 				2FD25BCF253112BD00E924B7 /* HelpPage.swift */,
@@ -421,6 +415,37 @@
 				2FF52980254C9A860041123D /* tootsiesfullmix.mp3 */,
 			);
 			path = Audio;
+			sourceTree = "<group>";
+		};
+		2FF5298C254C9C540041123D /* Artists */ = {
+			isa = PBXGroup;
+			children = (
+				2F76A02724FB006800736326 /* ArtistsPage.swift */,
+				2F76A03224FC54F400736326 /* ArtistRow.swift */,
+				2F76A03024FC54DF00736326 /* ArtistPage.swift */,
+			);
+			name = Artists;
+			sourceTree = "<group>";
+		};
+		2FF5298D254C9C5A0041123D /* Partners */ = {
+			isa = PBXGroup;
+			children = (
+				2F4AA5D02522B23D005A7740 /* PartnerRow.swift */,
+				2F4AA5D52522B24C005A7740 /* PartnerPage.swift */,
+				2F4AA5DA2522B25B005A7740 /* PartnersPage.swift */,
+			);
+			path = Partners;
+			sourceTree = "<group>";
+		};
+		2FF5298E254C9C600041123D /* Installations */ = {
+			isa = PBXGroup;
+			children = (
+				2FDC29FD252FDFDC00A44ADA /* InstallationRow.swift */,
+				2FDC2A02252FDFF200A44ADA /* InstallationPage.swift */,
+				2FDC29F8252FDFC400A44ADA /* InstallationsPage.swift */,
+			);
+			name = Installations;
+			path = Partners;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
