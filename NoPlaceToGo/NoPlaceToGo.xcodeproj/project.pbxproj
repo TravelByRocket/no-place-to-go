@@ -32,15 +32,10 @@
 		2F7503CB253A312800D0A231 /* ClownPopup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7503CA253A312800D0A231 /* ClownPopup.swift */; };
 		2F769FB824FADF6C00736326 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F769FB724FADF6C00736326 /* AppDelegate.swift */; };
 		2F769FBA24FADF6C00736326 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F769FB924FADF6C00736326 /* SceneDelegate.swift */; };
-		2F769FBD24FADF6D00736326 /* NoPlaceToGo.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2F769FBB24FADF6D00736326 /* NoPlaceToGo.xcdatamodeld */; };
 		2F769FBF24FADF6D00736326 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F769FBE24FADF6D00736326 /* ContentView.swift */; };
 		2F769FC124FADF7900736326 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F769FC024FADF7900736326 /* Assets.xcassets */; };
 		2F769FC424FADF7900736326 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F769FC324FADF7900736326 /* Preview Assets.xcassets */; };
 		2F769FC724FADF7900736326 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2F769FC524FADF7900736326 /* LaunchScreen.storyboard */; };
-		2F769FD224FADF7A00736326 /* NoPlaceToGoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F769FD124FADF7A00736326 /* NoPlaceToGoTests.swift */; };
-		2F769FDD24FADF7A00736326 /* NoPlaceToGoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F769FDC24FADF7A00736326 /* NoPlaceToGoUITests.swift */; };
-		2F769FEC24FAE00400736326 /* Notable-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2F769FEB24FAE00400736326 /* Notable-Regular.ttf */; };
-		2F769FEE24FAE02C00736326 /* ZCOOLXiaoWei-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2F769FED24FAE02C00736326 /* ZCOOLXiaoWei-Regular.ttf */; };
 		2F76A01524FAE0D400736326 /* Sites.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F76A00924FAE0D100736326 /* Sites.swift */; };
 		2F76A01824FAE0D400736326 /* Tootsies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F76A00C24FAE0D200736326 /* Tootsies.swift */; };
 		2F76A01924FAE0D400736326 /* StartPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F76A00D24FAE0D200736326 /* StartPage.swift */; };
@@ -70,6 +65,7 @@
 		2FDC29FE252FDFDC00A44ADA /* InstallationRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDC29FD252FDFDC00A44ADA /* InstallationRow.swift */; };
 		2FDC2A03252FDFF200A44ADA /* InstallationPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDC2A02252FDFF200A44ADA /* InstallationPage.swift */; };
 		2FDC2A0B2530D1C100A44ADA /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDC2A0A2530D1BE00A44ADA /* AudioManager.swift */; };
+		2FE868AF2793CA4700C66E63 /* Fonts in Resources */ = {isa = PBXBuildFile; fileRef = 2FE868AE2793CA4700C66E63 /* Fonts */; };
 		2FF52981254C9A860041123D /* reflections.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2FF52979254C9A860041123D /* reflections.mp3 */; };
 		2FF52982254C9A860041123D /* mintseriffull.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2FF5297A254C9A860041123D /* mintseriffull.mp3 */; };
 		2FF52983254C9A860041123D /* mintseriffinal.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2FF5297B254C9A860041123D /* mintseriffinal.mp3 */; };
@@ -79,23 +75,6 @@
 		2FF52987254C9A860041123D /* lamarafull.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2FF5297F254C9A860041123D /* lamarafull.mp3 */; };
 		2FF52988254C9A860041123D /* tootsiesfullmix.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 2FF52980254C9A860041123D /* tootsiesfullmix.mp3 */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		2F769FCE24FADF7A00736326 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2F769FAC24FADF6C00736326 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 2F769FB324FADF6C00736326;
-			remoteInfo = NoPlaceToGo;
-		};
-		2F769FD924FADF7A00736326 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 2F769FAC24FADF6C00736326 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 2F769FB324FADF6C00736326;
-			remoteInfo = NoPlaceToGo;
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		2F0690DD252902D5005DF827 /* AllCompleted.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllCompleted.swift; sourceTree = "<group>"; };
@@ -125,20 +104,11 @@
 		2F769FB424FADF6C00736326 /* NP2G.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NP2G.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F769FB724FADF6C00736326 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2F769FB924FADF6C00736326 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		2F769FBC24FADF6D00736326 /* NoPlaceToGo.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = NoPlaceToGo.xcdatamodel; sourceTree = "<group>"; };
 		2F769FBE24FADF6D00736326 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2F769FC024FADF7900736326 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2F769FC324FADF7900736326 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		2F769FC624FADF7900736326 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2F769FC824FADF7900736326 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2F769FCD24FADF7A00736326 /* NoPlaceToGoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NoPlaceToGoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2F769FD124FADF7A00736326 /* NoPlaceToGoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoPlaceToGoTests.swift; sourceTree = "<group>"; };
-		2F769FD324FADF7A00736326 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2F769FD824FADF7A00736326 /* NoPlaceToGoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NoPlaceToGoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2F769FDC24FADF7A00736326 /* NoPlaceToGoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoPlaceToGoUITests.swift; sourceTree = "<group>"; };
-		2F769FDE24FADF7A00736326 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2F769FEB24FAE00400736326 /* Notable-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Notable-Regular.ttf"; path = "../../shared/Notable/Notable-Regular.ttf"; sourceTree = "<group>"; };
-		2F769FED24FAE02C00736326 /* ZCOOLXiaoWei-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ZCOOLXiaoWei-Regular.ttf"; path = "../../shared/ZCOOL_XiaoWei/ZCOOLXiaoWei-Regular.ttf"; sourceTree = "<group>"; };
 		2F76A00924FAE0D100736326 /* Sites.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sites.swift; sourceTree = "<group>"; };
 		2F76A00C24FAE0D200736326 /* Tootsies.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Tootsies.swift; sourceTree = "<group>"; };
 		2F76A00D24FAE0D200736326 /* StartPage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StartPage.swift; sourceTree = "<group>"; };
@@ -168,6 +138,7 @@
 		2FDC29FD252FDFDC00A44ADA /* InstallationRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstallationRow.swift; sourceTree = "<group>"; };
 		2FDC2A02252FDFF200A44ADA /* InstallationPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstallationPage.swift; sourceTree = "<group>"; };
 		2FDC2A0A2530D1BE00A44ADA /* AudioManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
+		2FE868AE2793CA4700C66E63 /* Fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Fonts; sourceTree = "<group>"; };
 		2FF52979254C9A860041123D /* reflections.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = reflections.mp3; sourceTree = "<group>"; };
 		2FF5297A254C9A860041123D /* mintseriffull.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = mintseriffull.mp3; sourceTree = "<group>"; };
 		2FF5297B254C9A860041123D /* mintseriffinal.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = mintseriffinal.mp3; sourceTree = "<group>"; };
@@ -180,20 +151,6 @@
 
 /* Begin PBXFrameworksBuildPhase section */
 		2F769FB124FADF6C00736326 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2F769FCA24FADF7A00736326 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2F769FD524FADF7A00736326 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -298,8 +255,6 @@
 			isa = PBXGroup;
 			children = (
 				2F769FB624FADF6C00736326 /* NoPlaceToGo */,
-				2F769FD024FADF7A00736326 /* NoPlaceToGoTests */,
-				2F769FDB24FADF7A00736326 /* NoPlaceToGoUITests */,
 				2F769FB524FADF6C00736326 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -308,8 +263,6 @@
 			isa = PBXGroup;
 			children = (
 				2F769FB424FADF6C00736326 /* NP2G.app */,
-				2F769FCD24FADF7A00736326 /* NoPlaceToGoTests.xctest */,
-				2F769FD824FADF7A00736326 /* NoPlaceToGoUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -329,11 +282,10 @@
 				2F7298EF2504233200FC45FD /* Installations */,
 				2F76A02F24FC10E400736326 /* Sites */,
 				2F769FC024FADF7900736326 /* Assets.xcassets */,
-				2F769FEA24FADFDC00736326 /* Fonts */,
 				2FF52978254C9A860041123D /* Audio */,
 				2F769FC524FADF7900736326 /* LaunchScreen.storyboard */,
 				2F769FC824FADF7900736326 /* Info.plist */,
-				2F769FBB24FADF6D00736326 /* NoPlaceToGo.xcdatamodeld */,
+				2FE868AE2793CA4700C66E63 /* Fonts */,
 				2F769FC224FADF7900736326 /* Preview Content */,
 			);
 			path = NoPlaceToGo;
@@ -345,33 +297,6 @@
 				2F769FC324FADF7900736326 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		2F769FD024FADF7A00736326 /* NoPlaceToGoTests */ = {
-			isa = PBXGroup;
-			children = (
-				2F769FD124FADF7A00736326 /* NoPlaceToGoTests.swift */,
-				2F769FD324FADF7A00736326 /* Info.plist */,
-			);
-			path = NoPlaceToGoTests;
-			sourceTree = "<group>";
-		};
-		2F769FDB24FADF7A00736326 /* NoPlaceToGoUITests */ = {
-			isa = PBXGroup;
-			children = (
-				2F769FDC24FADF7A00736326 /* NoPlaceToGoUITests.swift */,
-				2F769FDE24FADF7A00736326 /* Info.plist */,
-			);
-			path = NoPlaceToGoUITests;
-			sourceTree = "<group>";
-		};
-		2F769FEA24FADFDC00736326 /* Fonts */ = {
-			isa = PBXGroup;
-			children = (
-				2F769FEB24FAE00400736326 /* Notable-Regular.ttf */,
-				2F769FED24FAE02C00736326 /* ZCOOLXiaoWei-Regular.ttf */,
-			);
-			name = Fonts;
 			sourceTree = "<group>";
 		};
 		2F76A02F24FC10E400736326 /* Sites */ = {
@@ -468,42 +393,6 @@
 			productReference = 2F769FB424FADF6C00736326 /* NP2G.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2F769FCC24FADF7A00736326 /* NoPlaceToGoTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 2F769FE424FADF7A00736326 /* Build configuration list for PBXNativeTarget "NoPlaceToGoTests" */;
-			buildPhases = (
-				2F769FC924FADF7A00736326 /* Sources */,
-				2F769FCA24FADF7A00736326 /* Frameworks */,
-				2F769FCB24FADF7A00736326 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				2F769FCF24FADF7A00736326 /* PBXTargetDependency */,
-			);
-			name = NoPlaceToGoTests;
-			productName = NoPlaceToGoTests;
-			productReference = 2F769FCD24FADF7A00736326 /* NoPlaceToGoTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		2F769FD724FADF7A00736326 /* NoPlaceToGoUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 2F769FE724FADF7A00736326 /* Build configuration list for PBXNativeTarget "NoPlaceToGoUITests" */;
-			buildPhases = (
-				2F769FD424FADF7A00736326 /* Sources */,
-				2F769FD524FADF7A00736326 /* Frameworks */,
-				2F769FD624FADF7A00736326 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				2F769FDA24FADF7A00736326 /* PBXTargetDependency */,
-			);
-			name = NoPlaceToGoUITests;
-			productName = NoPlaceToGoUITests;
-			productReference = 2F769FD824FADF7A00736326 /* NoPlaceToGoUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -516,14 +405,6 @@
 				TargetAttributes = {
 					2F769FB324FADF6C00736326 = {
 						CreatedOnToolsVersion = 11.6;
-					};
-					2F769FCC24FADF7A00736326 = {
-						CreatedOnToolsVersion = 11.6;
-						TestTargetID = 2F769FB324FADF6C00736326;
-					};
-					2F769FD724FADF7A00736326 = {
-						CreatedOnToolsVersion = 11.6;
-						TestTargetID = 2F769FB324FADF6C00736326;
 					};
 				};
 			};
@@ -541,8 +422,6 @@
 			projectRoot = "";
 			targets = (
 				2F769FB324FADF6C00736326 /* NoPlaceToGo */,
-				2F769FCC24FADF7A00736326 /* NoPlaceToGoTests */,
-				2F769FD724FADF7A00736326 /* NoPlaceToGoUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -552,6 +431,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2FE868AF2793CA4700C66E63 /* Fonts in Resources */,
 				2FF52987254C9A860041123D /* lamarafull.mp3 in Resources */,
 				2FF52981254C9A860041123D /* reflections.mp3 in Resources */,
 				2FF52982254C9A860041123D /* mintseriffull.mp3 in Resources */,
@@ -561,27 +441,11 @@
 				2FF52983254C9A860041123D /* mintseriffinal.mp3 in Resources */,
 				2F4D8DE22511A82E00FA814E /* phonetree.csv in Resources */,
 				2FF52985254C9A860041123D /* lamarbcut.mp3 in Resources */,
-				2F769FEE24FAE02C00736326 /* ZCOOLXiaoWei-Regular.ttf in Resources */,
 				2F769FC424FADF7900736326 /* Preview Assets.xcassets in Resources */,
 				2F769FC124FADF7900736326 /* Assets.xcassets in Resources */,
 				2FF52988254C9A860041123D /* tootsiesfullmix.mp3 in Resources */,
 				2FDC29E7252FBBDD00A44ADA /* RedHeartbeat.mp4 in Resources */,
 				2FF52984254C9A860041123D /* jauntyvampire.mp3 in Resources */,
-				2F769FEC24FAE00400736326 /* Notable-Regular.ttf in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2F769FCB24FADF7A00736326 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2F769FD624FADF7A00736326 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -603,7 +467,6 @@
 				2F76A01D24FAE0D400736326 /* MintSerif.swift in Sources */,
 				2F76A03124FC54E000736326 /* ArtistPage.swift in Sources */,
 				2FDC2A03252FDFF200A44ADA /* InstallationPage.swift in Sources */,
-				2F769FBD24FADF6D00736326 /* NoPlaceToGo.xcdatamodeld in Sources */,
 				2F76A03324FC54F400736326 /* ArtistRow.swift in Sources */,
 				2F06910B25292E38005DF827 /* TravelingToSitePage.swift in Sources */,
 				2F769FBF24FADF6D00736326 /* ContentView.swift in Sources */,
@@ -648,36 +511,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2F769FC924FADF7A00736326 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2F769FD224FADF7A00736326 /* NoPlaceToGoTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2F769FD424FADF7A00736326 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2F769FDD24FADF7A00736326 /* NoPlaceToGoUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		2F769FCF24FADF7A00736326 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 2F769FB324FADF6C00736326 /* NoPlaceToGo */;
-			targetProxy = 2F769FCE24FADF7A00736326 /* PBXContainerItemProxy */;
-		};
-		2F769FDA24FADF7A00736326 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 2F769FB324FADF6C00736326 /* NoPlaceToGo */;
-			targetProxy = 2F769FD924FADF7A00736326 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		2F769FC524FADF7900736326 /* LaunchScreen.storyboard */ = {
@@ -853,90 +687,6 @@
 			};
 			name = Release;
 		};
-		2F769FE524FADF7A00736326 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = CX9A4TZM67;
-				INFOPLIST_FILE = NoPlaceToGoTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.bryancostanza.NoPlaceToGoTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NoPlaceToGo.app/NoPlaceToGo";
-			};
-			name = Debug;
-		};
-		2F769FE624FADF7A00736326 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = CX9A4TZM67;
-				INFOPLIST_FILE = NoPlaceToGoTests/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.bryancostanza.NoPlaceToGoTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NoPlaceToGo.app/NoPlaceToGo";
-			};
-			name = Release;
-		};
-		2F769FE824FADF7A00736326 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = CX9A4TZM67;
-				INFOPLIST_FILE = NoPlaceToGoUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.bryancostanza.NoPlaceToGoUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = NoPlaceToGo;
-			};
-			name = Debug;
-		};
-		2F769FE924FADF7A00736326 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = CX9A4TZM67;
-				INFOPLIST_FILE = NoPlaceToGoUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.bryancostanza.NoPlaceToGoUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = NoPlaceToGo;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -958,38 +708,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2F769FE424FADF7A00736326 /* Build configuration list for PBXNativeTarget "NoPlaceToGoTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				2F769FE524FADF7A00736326 /* Debug */,
-				2F769FE624FADF7A00736326 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		2F769FE724FADF7A00736326 /* Build configuration list for PBXNativeTarget "NoPlaceToGoUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				2F769FE824FADF7A00736326 /* Debug */,
-				2F769FE924FADF7A00736326 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		2F769FBB24FADF6D00736326 /* NoPlaceToGo.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				2F769FBC24FADF6D00736326 /* NoPlaceToGo.xcdatamodel */,
-			);
-			currentVersion = 2F769FBC24FADF6D00736326 /* NoPlaceToGo.xcdatamodel */;
-			path = NoPlaceToGo.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 2F769FAC24FADF6C00736326 /* Project object */;
 }
