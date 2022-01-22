@@ -55,6 +55,8 @@
 		2F7ED1362516E2B600E5546A /* LetSomethingGo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7ED1352516E2B600E5546A /* LetSomethingGo.swift */; };
 		2F7ED13E2516E2C700E5546A /* ScanningBio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7ED13D2516E2C700E5546A /* ScanningBio.swift */; };
 		2F7ED1432516E5FF00E5546A /* RemoteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7ED1422516E5FF00E5546A /* RemoteImage.swift */; };
+		2FBA289F279658C7004A6097 /* ZCOOLXiaoWei-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2FBA289D279658C7004A6097 /* ZCOOLXiaoWei-Regular.ttf */; };
+		2FBA28A0279658C7004A6097 /* Notable-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 2FBA289E279658C7004A6097 /* Notable-Regular.ttf */; };
 		2FD25BD0253112BD00E924B7 /* HelpPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD25BCF253112BD00E924B7 /* HelpPage.swift */; };
 		2FD25BD52531244E00E924B7 /* NextSitePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD25BD42531244E00E924B7 /* NextSitePage.swift */; };
 		2FD25BE22532230300E924B7 /* DonatePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD25BE12532230300E924B7 /* DonatePage.swift */; };
@@ -128,6 +130,8 @@
 		2F7ED1352516E2B600E5546A /* LetSomethingGo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetSomethingGo.swift; sourceTree = "<group>"; };
 		2F7ED13D2516E2C700E5546A /* ScanningBio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScanningBio.swift; sourceTree = "<group>"; };
 		2F7ED1422516E5FF00E5546A /* RemoteImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImage.swift; sourceTree = "<group>"; };
+		2FBA289D279658C7004A6097 /* ZCOOLXiaoWei-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ZCOOLXiaoWei-Regular.ttf"; path = "NoPlaceToGo/Fonts/ZCOOLXiaoWei-Regular.ttf"; sourceTree = "<group>"; };
+		2FBA289E279658C7004A6097 /* Notable-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Notable-Regular.ttf"; path = "NoPlaceToGo/Fonts/Notable-Regular.ttf"; sourceTree = "<group>"; };
 		2FD25BCF253112BD00E924B7 /* HelpPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpPage.swift; sourceTree = "<group>"; };
 		2FD25BD42531244E00E924B7 /* NextSitePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NextSitePage.swift; sourceTree = "<group>"; };
 		2FD25BE12532230300E924B7 /* DonatePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonatePage.swift; sourceTree = "<group>"; };
@@ -254,6 +258,8 @@
 		2F769FAB24FADF6C00736326 = {
 			isa = PBXGroup;
 			children = (
+				2FBA289E279658C7004A6097 /* Notable-Regular.ttf */,
+				2FBA289D279658C7004A6097 /* ZCOOLXiaoWei-Regular.ttf */,
 				2F769FB624FADF6C00736326 /* NoPlaceToGo */,
 				2F769FB524FADF6C00736326 /* Products */,
 			);
@@ -431,6 +437,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2FBA289F279658C7004A6097 /* ZCOOLXiaoWei-Regular.ttf in Resources */,
+				2FBA28A0279658C7004A6097 /* Notable-Regular.ttf in Resources */,
 				2FE868AF2793CA4700C66E63 /* Fonts in Resources */,
 				2FF52987254C9A860041123D /* lamarafull.mp3 in Resources */,
 				2FF52981254C9A860041123D /* reflections.mp3 in Resources */,
