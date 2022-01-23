@@ -10,6 +10,7 @@ import SwiftUI
 class ProgressManager: ObservableObject {
     @Published private(set) var curSite: Sites? = nil
     @Published var inTransitToSite = true
+    
     var carGroup: CarGroup! = nil
     var date: Date? = nil
     var photoDate: Date? = nil
@@ -41,17 +42,18 @@ class ProgressManager: ObservableObject {
             }
         }
     }
-}
-
-struct Completions {
-    var lamarb = false
-    var lamara = false
-    var tootsies = false
-    var musicrange = false
-    var mintserif = false
-    var mintseriffinal = false
     
-    var hasCompletedAllSites: Bool {
-        musicrange && tootsies && lamara && lamarb && mintserif
+    struct Completions {
+        var lamarb = false
+        var lamara = false
+        var tootsies = false
+        var musicrange = false
+        var mintserif = false
+        var mintseriffinal = false
+
+        var hasCompletedAllSites: Bool {
+            musicrange && tootsies && lamara && lamarb && mintserif
+        }
     }
 }
+

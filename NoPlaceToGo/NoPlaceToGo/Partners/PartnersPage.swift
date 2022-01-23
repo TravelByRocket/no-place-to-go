@@ -11,7 +11,9 @@ import SwiftUI
 struct PartnersPage: View {
     var body: some View {
         List(partnerbio.allpartners) {partner in
-            NavigationLink(destination: PartnerPage(partner: partner)) {
+            NavigationLink {
+                PartnerPage(partner: partner)
+            } label: {
                 PartnerRow(partner: partner)
             }
         }

@@ -10,11 +10,12 @@ import SwiftUI
 import AVFoundation
 
 struct ChrissyGrace: View {
-    @State var counter = 0
     @Binding var installIndex: Int
     var numInstallsAtSite: Int
-    
-    let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+
+    private let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+
+    @State private var counter = 0
     
     private var formatter: DateFormatter {
         let formatter = DateFormatter()
@@ -29,7 +30,6 @@ struct ChrissyGrace: View {
             HStack {
                 Spacer()
                 VStack {
-                    
                     if (counter < 10) {
                         Text("Please follow the arrows on the floor to the back of Liberace's dream\n\n\(10-counter)")
                             .multilineTextAlignment(.center)
@@ -44,17 +44,6 @@ struct ChrissyGrace: View {
                         PlayerView()
                         NextInstallationButton(installIndex: $installIndex, numInstallsAtSite: numInstallsAtSite)
                     }
-//                    else {
-//                        Image(systemName: "speaker.zzz")
-//                            .font(.largeTitle)
-//                            .foregroundColor(Color("PinkHeadings"))
-//                            .onAppear {
-//                                self.player.play()
-//                            }
-//                            .onDisappear {
-//                                self.player.stop()
-//                            }
-//                    }
                 }
                 Spacer()
             }
@@ -68,8 +57,8 @@ struct ChrissyGrace: View {
     
 }
 
-//struct ChrissyGrace_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ChrissyGrace()
-//    }
-//}
+struct ChrissyGrace_Previews: PreviewProvider {
+    static var previews: some View {
+        ChrissyGrace(installIndex: .constant(1), numInstallsAtSite: 1)
+    }
+}

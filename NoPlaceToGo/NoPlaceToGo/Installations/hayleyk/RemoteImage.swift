@@ -47,7 +47,7 @@ struct RemoteImage: View {
             .resizable()
     }
 
-    init(url: String, loading: Image = Image(systemName: "photo"), failure: Image = Image(systemName: "multiply.circle")) {
+    init(url: String, loading: Image = Image(systemName: "photo"), failure: Image = Image("photoboothexample")) {
         _loader = ObservedObject(wrappedValue: Loader(url: url))
         self.loading = loading
         self.failure = failure

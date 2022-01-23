@@ -10,6 +10,7 @@ import SwiftUI
 
 struct ArtistPage: View {
     let artist: artistbio
+    
     var body: some View {
         List {
             VStack(alignment: .center) {
@@ -31,11 +32,11 @@ struct ArtistPage: View {
             Text(artist.bio)
                 .font(.custom(fonts.ZCOOL, size: 20))
                 .padding(.horizontal)
-            ForEach (0 ..< artist.urls.count) {i in
-                Button(action: {
-                    UIApplication.shared.open(URL(string:"http://\(self.artist.urls[i])")!)
-                }) {
-                    Text(self.artist.urls[i])
+            ForEach (artist.urls, id: \.self) {url in
+                Button {
+                    UIApplication.shared.open(URL(string:"http://\(url)")!)
+                } label: {
+                    Text(url)
                 }
             }
         }

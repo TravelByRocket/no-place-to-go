@@ -23,6 +23,12 @@ struct PhotoSurprise: View {
         let sourceURL = domain + "oct\(date)/" + pm.carGroup.asString + ".jpg"
         return sourceURL
     }
+
+    var isAfterEventDemo: Bool {
+        let month = Calendar.current.component(.month, from: Date())
+        let year = Calendar.current.component(.year, from: Date())
+        return (month > 10 || year > 2020)
+    }
     
     var body: some View {
         VStack {
@@ -36,12 +42,18 @@ struct PhotoSurprise: View {
                 .multilineTextAlignment(.center)
                 .font(.custom(fonts.ZCOOL, size: 24))
                 .padding()
-            RemoteImage(url: photoURL)
-                .aspectRatio(contentMode: .fit)
+            if !isAfterEventDemo {
+                RemoteImage(url: photoURL)
+                    .aspectRatio(contentMode: .fit)
+            } else {
+                Image("photoboothexample")
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+            }
             Spacer()
-            Button(action: {
+            Button {
                 self.presentationMode.wrappedValue.dismiss()
-            }) {
+            } label: {
                 Text("Dismiss")
                 .font(.custom(fonts.ZCOOL, size: 22))
                 .multilineTextAlignment(.center)

@@ -16,9 +16,9 @@ struct DonatePage: View {
             Text("Kate Speer is a sponsored project of Fractured Atlas, a non-profit arts service organization. Contributions for the charitable purposes of Kate Speer must be made payable to Fractured Atlas only and are tax-deductible to the extent permitted by law.")
                 .padding()
             HStack {
-                Button(action: {
+                Button {
                     UIApplication.shared.open(URL(string: "https://fundraising.fracturedatlas.org/kate-speer/general_support")!)
-                }) {
+                } label: {
                     HStack {
                         Image("FracturedAtlas")
                             .renderingMode(.original)
@@ -33,10 +33,10 @@ struct DonatePage: View {
                             .padding([.vertical, .trailing])
                             .padding(.leading, 5)
                     }
-                    
                 }
-                .overlay(RoundedRectangle(cornerRadius: 8)
-                        .stroke(Color.secondary, lineWidth: 1))
+                .overlay(
+                    RoundedRectangle(cornerRadius: 8)
+                            .stroke(Color.secondary, lineWidth: 1))
                 .padding()
             }
         }
@@ -46,6 +46,8 @@ struct DonatePage: View {
 
 struct DonatePage_Previews: PreviewProvider {
     static var previews: some View {
-        DonatePage()
+        NavigationView {
+            DonatePage()
+        }
     }
 }

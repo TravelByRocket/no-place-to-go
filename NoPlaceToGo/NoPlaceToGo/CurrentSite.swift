@@ -33,5 +33,6 @@ struct CurrentSite: View {
 struct SiteWrapper_Previews: PreviewProvider {
     static var previews: some View {
         CurrentSite()
+            .environmentObject(ProgressManager())
     }
 }

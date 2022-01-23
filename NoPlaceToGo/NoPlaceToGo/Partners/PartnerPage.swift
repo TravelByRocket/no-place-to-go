@@ -20,9 +20,9 @@ struct PartnerPage: View {
                     .multilineTextAlignment(.center)
                     .font(.custom(fonts.Notable, size: 28))
                     .foregroundColor(Color("PinkHeadings"))
-                Button(action: {
+                Button {
                     UIApplication.shared.open(URL(string:"http://\(self.partner.url)")!)
-                }) {
+                } label: {
                     Text(self.partner.url)
                         .font(.custom(fonts.ZCOOL, size: 18))
                         .foregroundColor(Color("Gold"))

@@ -54,7 +54,9 @@ struct ReneeHayleyD: View {
     var body: some View {
         
         if (callStatus == .incoming) {
-            Button(action: {callStatus = .active}) {
+            Button {
+                callStatus = .active
+            } label: {
                 VStack {
                     Spacer()
                     Text("Incoming Call... touch to answer")
@@ -81,7 +83,7 @@ struct ReneeHayleyD: View {
                 }
                 .padding()
             }
-        } else if (callStatus == .active || callStatus == .completed){
+        } else if (callStatus == .active || callStatus == .completed) {
             HStack {
                 Spacer()
                 VStack {
@@ -217,22 +219,13 @@ struct ReneeHayleyD: View {
         case completed
         case ended
     }
-    
-    //    func disableAVSession() {
-    //        do {
-    //            try AVAudioSession.sharedInstance().setActive(false, options: .notifyOthersOnDeactivation)
-    //        } catch {
-    //            print("audioSession properties weren't disable.")
-    //        }
-    //    }
 }
 
-//struct ReneeHayleyD_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ReneeHayleyD()
-//            .environment(\.colorScheme, .light)
-//    }
-//}
+struct ReneeHayleyD_Previews: PreviewProvider {
+    static var previews: some View {
+        ReneeHayleyD(installIndex: .constant(1), numInstallsAtSite: 1)
+    }
+}
 
 struct phoneTreeNode {
     let content: String

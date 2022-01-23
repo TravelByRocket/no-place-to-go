@@ -19,7 +19,7 @@ struct LamarB: View {
             } else if (installIndex == 1) {
                 ChrissyGrace(installIndex: $installIndex, numInstallsAtSite: numInstallsAtSite)
             } else {
-                NextSitePage()
+                ReadyForNextSiteView()
             }
         }
     }

@@ -8,29 +8,29 @@
 
 import SwiftUI
 
-struct NextSitePage: View {
+struct ReadyForNextSiteView: View {
     @EnvironmentObject private var pm: ProgressManager
+
     var body: some View {
         VStack {
             Spacer()
-            Button(action: {
+            Button {
                 self.pm.inTransitToSite = true
-                self.pm.setLocation(to: self.pm.nextSite(from: pm.curSite!))
-            }) {
+                self.pm.setLocation(to: self.pm.nextSite(from: pm.curSite ?? Sites.LamarA))
+            } label: {
                 Text(pm.completions.hasCompletedAllSites
-                        ? locations.finalDepartureConfirmationMessage
-                        : locations.siteObjectFromSiteEnum(site: pm.curSite!).departureConfirmationMessage
-                )
-                .font(.custom(fonts.ZCOOL, size: 22))
-                .multilineTextAlignment(.center)
-                .foregroundColor(Color("Gold"))
-                .padding()
+                     ? locations.finalDepartureConfirmationMessage
+                     : locations.siteObjectFromSiteEnum(site: pm.curSite ?? Sites.LamarA).departureConfirmationMessage)
+                    .font(.custom(fonts.ZCOOL, size: 22))
+                    .multilineTextAlignment(.center)
+                    .foregroundColor(Color("Gold"))
+                    .padding()
             }
             .overlay(RoundedRectangle(cornerRadius: 8)
                         .stroke(Color.secondary, lineWidth: 1))
             .padding(.horizontal, 40)
             .onAppear{
-                switch pm.curSite! {
+                switch pm.curSite {
                 case .LamarB:
                     pm.completions.lamarb = true
                 case .LamarA:
@@ -43,6 +43,8 @@ struct NextSitePage: View {
                     pm.completions.mintserif = true
                 case .MintSerifFinal:
                     pm.completions.mintseriffinal = true
+                default: // when previewing
+                    print("Invalid case")
                 }
             }
             if (pm.completions.hasCompletedAllSites) {
@@ -59,6 +61,7 @@ struct NextSitePage: View {
 
 struct NextSitePage_Previews: PreviewProvider {
     static var previews: some View {
-        NextSitePage()
+        ReadyForNextSiteView()
+            .environmentObject(ProgressManager())
     }
 }

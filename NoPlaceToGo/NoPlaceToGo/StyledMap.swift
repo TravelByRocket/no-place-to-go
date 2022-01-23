@@ -10,6 +10,7 @@ import SwiftUI
 
 struct StyledMap: View {
     @EnvironmentObject var pm: ProgressManager
+    
     var body: some View {
         ZStack {
             Image("blankmap")
@@ -56,5 +57,6 @@ struct StyledMap: View {
 struct StyledMap_Previews: PreviewProvider {
     static var previews: some View {
         StyledMap()
+            .environmentObject(ProgressManager())
     }
 }

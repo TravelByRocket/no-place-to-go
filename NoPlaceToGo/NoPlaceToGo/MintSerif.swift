@@ -10,16 +10,15 @@ import SwiftUI
 struct MintSerif: View {
     @State private var installIndex = 0
     private var numInstallsAtSite = 3
-    @EnvironmentObject private var pm: ProgressManager
     
     var body: some View {
         VStack{
             if installIndex == 0 {
                 MoeGraham(installIndex: $installIndex)
-            } else if (installIndex == 1){
+            } else if (installIndex == 1) {
                 HayleyKrichels(installIndex: $installIndex, numInstallsAtSite: numInstallsAtSite)
             } else {
-                NextSitePage()
+                ReadyForNextSiteView()
             }
         }
     }

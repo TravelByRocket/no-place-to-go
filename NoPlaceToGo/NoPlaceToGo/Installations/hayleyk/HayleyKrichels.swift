@@ -31,9 +31,9 @@ struct HayleyKrichels: View {
                             }
                         Spacer()
                     }
-                    Button(action: {
+                    Button {
                         self.hasArrived = true
-                    }) {
+                    } label: {
                         Text("I have arrived at\nthe photo booth")
                             .font(.custom(fonts.ZCOOL, size: 22))
                             .foregroundColor(Color("Gold"))

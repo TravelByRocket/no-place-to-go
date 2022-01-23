@@ -12,6 +12,7 @@ import UserNotifications
 
 struct MoeGraham: View {
     @Binding var installIndex: Int
+
     @EnvironmentObject private var am: AudioManager
     @State private var isPlaying = false // can show wrong state if leaving the view and coming back but this shouldn't happen anyway
     @State private var pausedManually = true
@@ -27,25 +28,15 @@ struct MoeGraham: View {
                     installIndex += 1
                 }
             HStack {
-                Spacer()
-                ResetAudio(isPlaying: $isPlaying)
-                    .frame(width: 60)
-                    .overlay(RoundedRectangle(cornerRadius: 4)
+                Group {
+                    ResetAudioButton(isPlaying: $isPlaying)
+                    PlayAudioButton(isPlaying: $isPlaying, pausedManually: $pausedManually)
+                    PauseAudioButton(isPlaying: $isPlaying, pausedManually: $pausedManually)
+                }
+                .frame(width: 60, height: 60)
+                .overlay(RoundedRectangle(cornerRadius: 4)
                             .stroke(Color.secondary, lineWidth: 1))
-                    .padding()
-                Spacer()
-                PlayAudio(isPlaying: $isPlaying, pausedManually: $pausedManually)
-                    .frame(width: 60)
-                    .overlay(RoundedRectangle(cornerRadius: 4)
-                            .stroke(Color.secondary, lineWidth: 1))
-                    .padding()
-                Spacer()
-                PauseAudio(isPlaying: $isPlaying, pausedManually: $pausedManually)
-                    .frame(width: 60)
-                    .overlay(RoundedRectangle(cornerRadius: 4)
-                            .stroke(Color.secondary, lineWidth: 1))
-                    .padding()
-                Spacer()
+                .padding(.horizontal, 20)
             }
             .foregroundColor(Color("Gold"))
             Spacer()
@@ -66,64 +57,9 @@ struct MoeGraham: View {
     }
 }
 
-//struct MoeGraham_Previews: PreviewProvider {
-//    static var previews: some View {
-//        MoeGraham()
-//    }
-//}
-
-fileprivate struct ResetAudio: View {
-    @EnvironmentObject private var am: AudioManager
-    @Binding var isPlaying: Bool
-    var body: some View {
-        Button(action: {
-            am.audioPlayer?.currentTime = 0
-        }, label: {
-            Image(systemName: "backward.end")
-                .font(.title)
-                .padding()
-        })
-    }
-}
-
-fileprivate struct PlayAudio: View {
-    @EnvironmentObject private var am: AudioManager
-    @Binding var isPlaying: Bool
-    @Binding var pausedManually: Bool
-    var body: some View {
-        Button(action: {
-            if !self.isPlaying {
-                self.am.play()
-                self.isPlaying = true
-                self.pausedManually = false
-            }
-        }) {
-            Image(systemName: "play")
-                .font(.largeTitle)
-                .padding()
-        }
-        .disabled(isPlaying)
-        .opacity(isPlaying ? 0.3 : 1.0)
-    }
-}
-
-fileprivate struct PauseAudio: View {
-    @EnvironmentObject private var am: AudioManager
-    @Binding var isPlaying: Bool
-    @Binding var pausedManually: Bool
-    var body: some View {
-        Button(action: {
-            if self.isPlaying {
-                self.am.pause()
-                self.isPlaying = false
-                self.pausedManually = true
-            }
-        }) {
-            Image(systemName: "pause")
-                .font(.largeTitle)
-                .padding()
-        }
-        .disabled(!isPlaying)
-        .opacity(!isPlaying ? 0.3 : 1.0)
+struct MoeGraham_Previews: PreviewProvider {
+    static var previews: some View {
+        MoeGraham(installIndex: .constant(1))
+            .environmentObject(AudioManager())
     }
 }

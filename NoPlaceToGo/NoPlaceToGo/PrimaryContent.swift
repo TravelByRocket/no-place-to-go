@@ -22,6 +22,7 @@ struct PrimaryContent: View {
 
 struct HomePage_Previews: PreviewProvider {
     static var previews: some View {
-        PrimaryContent().environmentObject(ProgressManager())
+        PrimaryContent()
+            .environmentObject(ProgressManager())
     }
 }

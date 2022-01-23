@@ -33,8 +33,8 @@ struct EmilyMichaela: View {
     }
 }
 
-//struct EmilyMichaela_Previews: PreviewProvider {
-//    static var previews: some View {
-//        EmilyMichaela()
-//    }
-//}
+struct EmilyMichaela_Previews: PreviewProvider {
+    static var previews: some View {
+        EmilyMichaela(installIndex: .constant(1), numInstallsAtSite: 1)
+    }
+}

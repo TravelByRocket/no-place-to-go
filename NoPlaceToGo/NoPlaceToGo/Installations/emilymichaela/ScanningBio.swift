@@ -65,7 +65,7 @@ struct ScanningBio: View {
                                 rectWidth = geo.size.width
                             }
                             .onReceive(timer, perform: { _ in
-                                withAnimation(.linear(duration: 1)){
+                                withAnimation(.linear(duration: 1)) {
                                     rectWidth = geo.size.width * CGFloat(19 - counter) / CGFloat(20)
                                 }
                             })
@@ -91,9 +91,8 @@ struct ScanningBio: View {
     }
 }
 
-
-//struct PhaseTwo_Previews: PreviewProvider {
-//    static var previews: some View {
-//        PhaseTwo()
-//    }
-//}
+struct ScanningBio_Previews: PreviewProvider {
+    static var previews: some View {
+        ScanningBio(installIndex: .constant(1), numInstallsAtSite: 1)
+    }
+}

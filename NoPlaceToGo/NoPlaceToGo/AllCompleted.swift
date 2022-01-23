@@ -23,9 +23,9 @@ struct AllCompleted: View {
                     .padding()
                     .font(.custom(fonts.ZCOOL, size: 22))
                     .multilineTextAlignment(.center)
-                Button(action: {
+                Button {
                     UIApplication.shared.open(URL(string: "https://www.no-place-to-go.com/shop/")!)
-                }) {
+                } label: {
                     Text("NP2G Merch Store")
                         .font(.custom(fonts.Notable, size: 24))
                         .foregroundColor(Color("PinkHeadings"))
@@ -35,9 +35,9 @@ struct AllCompleted: View {
                             .stroke(Color.secondary, lineWidth: 1))
                 .padding()
             }
-            Button(action: {
+            Button {
                 showDonation.toggle()
-            }) {
+            } label: {
                 Text(showDonation ? "Go Back" : "Donate to NP2G")
                     .font(.custom(fonts.Notable, size: 24))
                     .foregroundColor(Color("PinkHeadings"))
@@ -46,14 +46,14 @@ struct AllCompleted: View {
             .overlay(RoundedRectangle(cornerRadius: 8)
                         .stroke(Color.secondary, lineWidth: 1))
             .padding()
-            .sheet(isPresented: $showSheet, content: {
+            .sheet(isPresented: $showSheet) {
                 DonatePage()
-            })
+            }
             if (showDonation) {
                 DonatePage()
             }
         }
-        .sheet(isPresented: $showSpyPhoto){
+        .sheet(isPresented: $showSpyPhoto) {
             PhotoSurprise()
                 .environmentObject(pm)
         }

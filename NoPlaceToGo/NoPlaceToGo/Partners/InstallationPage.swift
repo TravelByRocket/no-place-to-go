@@ -22,11 +22,11 @@ struct InstallationPage: View {
                     .font(.custom(fonts.ZCOOL, size: 20))
                     .padding(.horizontal)
             }
-            NavigationLink(
-                destination: ArtistPage(artist: installation.artist),
-                label: {
-                    Text(installation.artist.name)
-                })
+            NavigationLink {
+                ArtistPage(artist: installation.artist)
+            } label: {
+                Text(installation.artist.name)
+            }
         }
     }
 }

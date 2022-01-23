@@ -143,7 +143,7 @@ struct artistbio: Identifiable {
         name: "Frankie Toan",
         pronouns: "they/them/theirs",
         bio: "Based in Denver, Frankie Toan is an artist working mostly with craft and DIY materials and techniques to create large plush sculptures, interactive works, and immersive installations. Frankie holds a BFA in Craft/Material studies from Virginia Commonwealth University, with a minor in Gender, Sexuality, and Women’s studies. Their current body of work consists of elongated or engorged body parts tied, arranged, and installed in conversation with each other, creating fantasy bodies. Frankie has participated in many group shows and collaborations nationwide. Recent projects include a commission for Meow Wolf’s Kaleidoscape immersive ride at Elitch Gardens and their public art installation “Public Bodies” for Between Us Alleys, a citywide art intervention. They have had residencies at RedLine (CO) and Arrowmont School of Arts and Crafts (TN). An avid mystery theatre fan, Frankie has written 3 mystery theatre plots, including the collaborative production [Colony 933]. ",
-        urls: ["fetaon.com",
+        urls: ["fetoan.com",
                "instagram.com/fetoan"],
         images: [Image("FrankieToan")]
     )
@@ -197,4 +197,3 @@ struct artistbio: Identifiable {
     )
     
 }
-

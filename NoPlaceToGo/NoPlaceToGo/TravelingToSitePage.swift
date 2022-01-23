@@ -12,6 +12,7 @@ import AVFoundation
 struct TravelingToSitePage: View {
     @EnvironmentObject private var pm: ProgressManager
     @EnvironmentObject private var am: AudioManager
+
     @State private var showingAlert = false
     @State private var narrativeFinished = false
     @State private var showClownAlert = false
@@ -20,6 +21,14 @@ struct TravelingToSitePage: View {
     @State private var gotDirections = false
     
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+
+    var playheadAtEnd: Bool {
+        am.audioPlayer?.currentTime == am.audioPlayer?.duration
+    }
+
+    var playheadAtStart: Bool {
+        am.audioPlayer?.currentTime == 0
+    }
     
     var body: some View {
         VStack {
@@ -47,7 +56,7 @@ struct TravelingToSitePage: View {
             Spacer()
             HStack {
                 Spacer()
-                Button(action: {
+                Button {
                     if pausedManually {
                         am.play()
                         gotDirections = false
@@ -55,22 +64,23 @@ struct TravelingToSitePage: View {
                         am.pause()
                     }
                     pausedManually.toggle()
-                }) {
+                } label: {
                     Image(systemName: pausedManually ? "play" : "pause")
                         .font(.custom(fonts.ZCOOL, size: 24))
                         .foregroundColor(Color("Gold"))
                         .padding()
                         .frame(width: 65)
                 }
-                .overlay(RoundedRectangle(cornerRadius: 8)
-                            .stroke(Color.secondary, lineWidth: 1))
+                .overlay(
+                    RoundedRectangle(cornerRadius: 8)
+                        .stroke(Color.secondary, lineWidth: 1))
                 Spacer()
-                Button(action: {
+                Button {
                     locations.siteObjectFromSiteEnum(site: pm.curSite!).getDirections()
                     am.pause()
                     pausedManually = true
                     gotDirections = true
-                }) {
+                } label: {
                     Text("Get Directions")
                         .font(.custom(fonts.ZCOOL, size: 24))
                         .foregroundColor(Color("Gold"))
@@ -80,11 +90,10 @@ struct TravelingToSitePage: View {
                             .stroke(Color.secondary, lineWidth: 1))
                 Spacer()
             }
-            
             Spacer()
-            Button(action: {
+            Button {
                 self.showingAlert = true
-            }) {
+            } label: {
                 Text(locations.siteObjectFromSiteEnum(site: pm.curSite!).arrivalConfirmationMessage)
                     .multilineTextAlignment(.center)
                     .font(.custom(fonts.ZCOOL, size: 24))
@@ -93,18 +102,17 @@ struct TravelingToSitePage: View {
             }
             .overlay(RoundedRectangle(cornerRadius: 8)
                         .stroke(Color.secondary, lineWidth: 1))
-            .sheet(isPresented: $showClownAlert, content: {
+            .sheet(isPresented: $showClownAlert) {
                 ClownPopup()
-            })
-            .sheet(isPresented: $showSpyPhoto, content: {
+            }
+            .sheet(isPresented: $showSpyPhoto) {
                 PhotoSurprise()
                     .environmentObject(pm)
-            })
+            }
             .onReceive(timer, perform: { _ in
-                
                 if let playing = am.audioPlayer?.isPlaying {
                     if (!playing && !pausedManually && !gotDirections &&
-                            (am.audioPlayer?.currentTime == am.audioPlayer?.duration || (am.audioPlayer?.currentTime == 0))) {
+                            (playheadAtEnd || playheadAtStart)) {
                         am.load(filename: locations.siteObjectFromSiteEnum(site: pm.curSite!).loopingAudioFilename, loop: true)
                         am.play()
                     } else if (playing && !pm.hasShownSpyPhoto && !showSpyPhoto) {
@@ -133,7 +141,6 @@ struct TravelingToSitePage: View {
                 )
             }
             Spacer()
-            
             StyledMap()
                 .onLongPressGesture(minimumDuration: 2) {
                     pm.inTransitToSite = false
@@ -152,5 +159,7 @@ struct TravelingToSitePage: View {
 struct SiteTransition_Previews: PreviewProvider {
     static var previews: some View {
         TravelingToSitePage()
+            .environmentObject(ProgressManager())
+            .environmentObject(AudioManager())
     }
 }

@@ -9,8 +9,8 @@
 import SwiftUI
 
 struct NolanTredway: View {
-    let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
-    @State var angle = 0.0
+    @State private var angle = 0.0
+
     var body: some View {
         VStack {
             Spacer()
@@ -24,14 +24,9 @@ struct NolanTredway: View {
                 .aspectRatio(contentMode: .fit)
                 .padding()
                 .rotationEffect(.degrees(angle))
-                .onAppear{
-                    withAnimation(.linear(duration: 1.0)) {
-                        angle += 20
-                    }
-                }
-                .onReceive(timer) { _ in
-                    withAnimation(.linear(duration: 1.0)) {
-                        angle += 20
+                .onAppear {
+                    withAnimation(.linear(duration: 18.0).repeatForever(autoreverses: false)) {
+                        angle += 360
                     }
                 }
             Spacer()

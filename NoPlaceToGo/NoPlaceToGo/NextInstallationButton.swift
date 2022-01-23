@@ -14,12 +14,10 @@ struct NextInstallationButton: View {
     var messageNext: String = "Section Completed"
     @State private var showingAlert = false
     
-    @EnvironmentObject private var pm: ProgressManager
-    
     var body: some View {
-        Button(action: {
+        Button {
             showingAlert = true
-        }) {
+        } label: {
             VStack {
                 Text(messageNext)
                     .font(.custom(fonts.Notable, size: 20))

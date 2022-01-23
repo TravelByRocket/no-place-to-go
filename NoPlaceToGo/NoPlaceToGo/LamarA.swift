@@ -10,7 +10,6 @@ import SwiftUI
 struct LamarA: View {
     @State private var installIndex = 0
     private var numInstallsAtSite = 3
-    @EnvironmentObject private var pm: ProgressManager
     
     var body: some View {
         VStack{
@@ -20,7 +19,7 @@ struct LamarA: View {
                 NolanTredway()
                 NextInstallationButton(installIndex: $installIndex, numInstallsAtSite: numInstallsAtSite)
             } else {
-                NextSitePage()
+                ReadyForNextSiteView()
             }
         }
     }

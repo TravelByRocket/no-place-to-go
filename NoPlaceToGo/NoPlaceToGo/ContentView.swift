@@ -9,42 +9,29 @@ import SwiftUI
 
 struct ContentView: View {
     @EnvironmentObject var pm: ProgressManager
-    @State private var safeAreaBottom: CGFloat = 0 // changes with .onAppear for actual safeAreaInset
+    @State private var safeAreaBottom: CGFloat = 0.0 // changes with .onAppear
     
     var body: some View {
         GeometryReader {geo in
             VStack{
                 PrimaryContent()
-                Spacer() // keeps the info button at the bottom for less-than-full views
+                Spacer()
                 BackstageButton()
-                    .padding(.bottom, safeAreaBottom) // workaround for .ignoresSafeArea(.keyboard) not available until iOS 14
-                    .onAppear {
-                        self.safeAreaBottom = geo.safeAreaInsets.bottom
-                    }
             }
+            // The next two lines are to not resize around the keyboard
+            // .ignoresSafeArea(.keyboard) is not available until iOS 14
+            .padding(.bottom, safeAreaBottom)
             .edgesIgnoringSafeArea(.bottom) // .ignoresSafeArea(.keyboard) better but only iOS 14
+            .onAppear {
+                self.safeAreaBottom = geo.safeAreaInsets.bottom
+            }
         }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView().environmentObject(ProgressManager())
-    }
-}
-
-struct BackstageButton: View {
-    @State private var showSheet = false
-    var body: some View {
-        Button(action: {
-            self.showSheet = true
-        }) {
-            Text("Backstage")
-                .font(.custom(fonts.Notable, size: 24))
-        }
-        .foregroundColor(Color("PinkHeadings"))
-        .sheet(isPresented: $showSheet) {
-            BackstagePage()
-        }
+        ContentView()
+            .environmentObject(ProgressManager())
     }
 }

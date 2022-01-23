@@ -1,10 +1,14 @@
 # No Place to Go (NP2G)
 
-[No Place to Go](https://www.no-place-to-go.com) was a socially distanced haunted house running in October 2020. I was commisioned to develop the iOS app to coordinate the motion of single-car groups rotating through five sites and incorporate installation-specific content. I worked with the project directors and all 15 artists (and artist groups) to realize their visions of a unique immersive experience.
+[No Place to Go](https://www.no-place-to-go.com) was a socially distanced haunted house running in October 2020. I was commisioned to develop the iOS app to incorporate installation-specific content and coordinate the motion of single-car groups rotating through five sites. I worked with the project directors and all 15 artists (and artist groups) to realize their visions for a unique immersive experience.
 
-This was my first paid iOS development project; I thoroughly enjoyed it then and I fondly remember it now. I have been enjoying app development for years at this point but what I uniquely remember about this project while thinking "I am so glad that this is my job" was calling all of the artists and, despite initial hesitation and maybe nervousness from most of the artists, I relished in getting them to quickly warming up to 'the tech person' and brainstorming on what could be possible in the context of the app suporting the experience that they were creating. Sure, some artists had little to ask of me, while I was thrilled to work closely with the artists that saw the app doing something special for their creation.
+I vividly remember calling every artist group early on in the project. Almost everyone was initially unsure, even intimidated, by the idea of the app and the tech involved but I quickly broke through the ice and we had rich discussions about the project that made me say to myself, "I am so glad that this is my job."
 
-Target iOS 13.6
+The app targeted iOS 13.6 and was written exclusively in Swift and SwiftUI. Some of the main technical considerations were:
+
+- Playing audio tracks while traveling between locations that would pause if controled by the user or if leaving the app to get directions. Utilizes `AVAudioPlayer` from `AVFoundation`.
+- Working with an artist to quickly upload photos via FTP to a server that would ultimately be shown to the corresponding group after an in-app trigger. Utilizes `URLSession`.
+- Using a matrix of "passwords" for each night of the event to unlock the app and start each group in the appropriate pre-planned location.  
 
 ## In Others' Words
 
@@ -25,7 +29,6 @@ Target iOS 13.6
 
 > The No Place to Go **App** designed by Bryan Costanza provides each car with a unique show route as well as a sound score designed by Mike Clark to accompany the audience as they drive between sites. The **App** also provides additional show information and custom-made interactions with the installations to create a contactless experience. -- [NP2G Press Release](https://www.no-place-to-go.com/2020/09/18/press-release-no-place-to-go-in-fearful-times/)
 
-https://www.instagram.com/p/CE8S-iPlUag/
 
 
 Intro

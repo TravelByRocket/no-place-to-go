@@ -13,16 +13,16 @@ struct HelpPage: View {
         List {
             Section(header: Text("App Usage")) {
                 Text("If you made a mistake with the group password or app permissions, delete the app and reinstall it.")
-                Button(action: {
+                Button {
                     UIApplication.shared.open(URL(string: "mailto:support@synodic.co")!)
-                }) {
+                } label: {
                     Text("For app issues, write to support@synodic.co")
                 }
             }
             Section(header: Text("Urgent Issues")) {
-                Button(action: {
+                Button {
                     UIApplication.shared.open(URL(string: "tel:1-720-675-7901")!)
-                }) {
+                } label: {
                     Text("Call (720) 675-7901")
                 }
             }
@@ -33,6 +33,8 @@ struct HelpPage: View {
 
 struct HelpPage_Previews: PreviewProvider {
     static var previews: some View {
-        HelpPage()
+        NavigationView{
+            HelpPage()
+        }
     }
 }
