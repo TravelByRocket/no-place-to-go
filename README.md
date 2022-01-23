@@ -13,7 +13,7 @@ The app targeted iOS 13.6 and was written exclusively in Swift and SwiftUI. Some
 
 ## Highlights
 
-![](/Documentation/ReadmeContent/enterpassword.gif)
+![](Documentation/ReadmeContent/enterpassword.gif)
 
 ## In Others' Words
 
