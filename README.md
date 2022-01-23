@@ -7,8 +7,13 @@ I vividly remember calling every artist group early on in the project. Almost ev
 The app targeted iOS 13.6 and was written exclusively in Swift and SwiftUI. Some of the main technical considerations were:
 
 - Playing audio tracks while traveling between locations that would pause if controled by the user or if leaving the app to get directions. Utilizes `AVAudioPlayer` from `AVFoundation`.
+- Navigating an on-device (simulated) phone tree with instructions read with `AVSpeechSynthesizer` from `AVFoundation`.
 - Working with an artist to quickly upload photos via FTP to a server that would ultimately be shown to the corresponding group after an in-app trigger. Utilizes `URLSession`.
-- Using a matrix of "passwords" for each night of the event to unlock the app and start each group in the appropriate pre-planned location.  
+- Using a matrix of "passwords" for each night of the event to unlock the app and start each group in the appropriate pre-planned location.
+
+## Highlights
+
+![](Documentation/ReadmeContent/enterpassword.gif)
 
 ## In Others' Words
 
@@ -28,24 +33,3 @@ The app targeted iOS 13.6 and was written exclusively in Swift and SwiftUI. Some
 ...
 
 > The No Place to Go **App** designed by Bryan Costanza provides each car with a unique show route as well as a sound score designed by Mike Clark to accompany the audience as they drive between sites. The **App** also provides additional show information and custom-made interactions with the installations to create a contactless experience. -- [NP2G Press Release](https://www.no-place-to-go.com/2020/09/18/press-release-no-place-to-go-in-fearful-times/)
-
-
-
-Intro
-	What the project is
-	Who the team members are
-	Your role and contribution on the team
-Situation
-	How/why the problem exists
-	Why the problem matters
-Action
-	The process you and your team took to get there
-	UX Deliverables/activities done to help solve problem.
-		Personas
-		user research
-		wireframes, etc
-Results
-	Stats, analytics
-	User testing feedback
-	Survey scores
-	What you learned from the project
