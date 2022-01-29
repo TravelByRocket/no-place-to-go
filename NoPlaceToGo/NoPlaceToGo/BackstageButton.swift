@@ -27,5 +27,6 @@ struct BackstageButton: View {
 struct BackstageButton_Previews: PreviewProvider {
     static var previews: some View {
         BackstageButton()
+            .previewLayout(.sizeThatFits)
     }
 }
