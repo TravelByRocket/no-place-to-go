@@ -1,5 +1,7 @@
 # No Place to Go (NP2G)
 
+[Available for iOS on the App Store](https://apps.apple.com/us/app/no-place-to-go/id1535357331).
+
 [No Place to Go](https://www.no-place-to-go.com) was a socially distanced haunted house running in October 2020. I was commisioned to develop the iOS app to incorporate installation-specific content and coordinate the motion of single-car groups rotating through five sites. I worked with the project directors and all 15 artists (and artist groups) to realize their visions for a unique immersive experience.
 
 I vividly remember calling every artist group early on in the project. Almost everyone was initially unsure, even intimidated, by the idea of the app and the tech involved but I quickly broke through the ice and we had rich discussions about the project that made me say to myself, "I am so glad that this is my job."
@@ -13,9 +15,9 @@ The app targeted iOS 13.6 and was written exclusively in Swift and SwiftUI. Some
 - Working with an artist to quickly upload photos via FTP to a server that would ultimately be shown to the corresponding group after an in-app trigger. Utilizes `URLSession`.
 - Using a matrix of "passwords" for each night of the event to unlock the app and start each group in the appropriate pre-planned location.
 
-## "Password" Entry (Group Assignment)
+## Code Phrase Entry (Group Assignment)
 
-There were four car groups for each of six time slots per night, each of which (all 24 groups) had a unique code that would assign their starting location.
+There were four car groups and six time slots per night, each of which (all 24 groups) had a unique code that would assign their starting location within the app.
 
 ![Short sequence showing password entry animation](Documentation/ReadmeContent/enterpassword.gif)
 
@@ -31,7 +33,7 @@ After asking the user to let something of great importance go, they are asked to
 - "Great choice!"
 - "Are you sure? ... very well"
 
-Afterward, there is an "eye scan" animation before this portion of the interaction completes.
+Afterward, there is an "eye scan" animation before this portion of the interaction completes. The eye scan is completely fictional and no scan is actually performed.
 
 ![Prompt to let go of something import. Confirmation. Random response message. "Eye scan" process.](Documentation/ReadmeContent/lettinggo.gif)
 
@@ -65,7 +67,7 @@ Guests would answer questions in the app as they approached the installation whe
 
 ## Surveillance Spa -- Nolan Tredway
 
-![A spinning x and circle like a person's body in a pink circle that is spinning](Documentation/ReadmeContent/nolantredway.gif)
+![A spinning x and circle like a person's body in a pink circle that is spinning](Documentation/ReadmeContent/nolantredway.gif). The "genders" are related to four alien figures presented in this location. Again, no information is collected in the app.
 
 ## Phone Tree -- Renee & Hayley D.
 
