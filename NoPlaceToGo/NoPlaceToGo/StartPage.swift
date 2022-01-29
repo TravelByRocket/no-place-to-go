@@ -59,45 +59,33 @@ struct StartPage: View {
                 .autocapitalization(.none)
                 .disableAutocorrection(true)
                 .padding()
-            if matching {
-                Button {
-                    let carGroup = self.passDict[self.passwordEntry.lowercased()]!
-                    let siteEnum = carGroup.startingLocation // force unwrap OK because being check by `matching`
-                    self.pm.setLocation(to: siteEnum)
-                    self.pm.carGroup = carGroup
-                    self.pm.date = Date()
-                    if (passwordEntry.lowercased() == "allcomplete") {
-                        self.pm.setLocation(to: .MintSerifFinal)
-                        self.pm.inTransitToSite = false
-                    } else if (passwordEntry.lowercased() == "tofinal") {
-                        self.pm.setLocation(to: .MintSerifFinal)
-                        self.pm.inTransitToSite = true
-                    }
-                } label: {
-                    HStack {
-                        Spacer()
-                        Text("Try this out...")
-                            .padding()
-                            .foregroundColor(Color("Gold"))
-                        Spacer()
-                    }
-                    .overlay(RoundedRectangle(cornerRadius: 8)
-                                .stroke(Color.secondary, lineWidth: 1))
-                    .padding()
+            Button {
+                // can force unwrap because protected by `matching`
+                let carGroup = self.passDict[self.passwordEntry.lowercased()]!
+                let siteEnum = carGroup.startingLocation
+                self.pm.setLocation(to: siteEnum)
+                self.pm.carGroup = carGroup
+                self.pm.date = Date()
+                if (passwordEntry.lowercased() == "allcomplete") {
+                    self.pm.setLocation(to: .MintSerifFinal)
+                    self.pm.inTransitToSite = false
+                } else if (passwordEntry.lowercased() == "tofinal") {
+                    self.pm.setLocation(to: .MintSerifFinal)
+                    self.pm.inTransitToSite = true
                 }
-            } else {
+            } label: {
                 HStack {
                     Spacer()
-                    Text("You're not going anywhere")
+                    Text(matching ? "Try this out..." : "You're not going anywhere")
+                        .foregroundColor(matching ? Color("Gold") : .secondary)
                         .padding()
-                        .foregroundColor(.secondary)
                     Spacer()
                 }
                 .overlay(RoundedRectangle(cornerRadius: 8)
-                            .stroke(Color.primary, lineWidth: 1)
-                )
+                            .stroke(matching ? Color.primary : Color.secondary, lineWidth: 1))
                 .padding()
             }
+            .disabled(!matching)
         }
     }
 }
