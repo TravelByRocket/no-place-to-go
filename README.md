@@ -81,7 +81,15 @@ At any time before, during, or after the event, users can bpull up additional "B
 
 ![Going through multiple pages of information about the artists, installations, and sponsors.](Documentation/ReadmeContent/backstage.gif)
 
-## In Others' Words
+## In the Artists' Words
+
+> [Y]ou're awesome. This is going to be SO integral to the experience for everyone and we SO appreciate you!!
+
+...
+
+> This is all great. Thank you so much for taking the time to do this. You are appreciated!!
+
+## In the Press
 
 > [T]ech master Bryan Costanza came on board to design an **app** to help audience members navigate their vehicles through the interactive elements of the individual installations. -- [Westword](https://www.westword.com/arts/no-place-to-go-is-a-queer-immersive-drive-through-haunted-house-11825848)
 
