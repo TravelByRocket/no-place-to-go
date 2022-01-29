@@ -13,7 +13,7 @@ The app targeted iOS 13.6 and was written exclusively in Swift and SwiftUI. Some
 - Playing audio tracks while traveling between locations that would pause if controled by the user or if leaving the app to get directions. Utilizes `AVAudioPlayer` from `AVFoundation`.
 - Navigating an on-device (simulated) phone tree with instructions read with `AVSpeechSynthesizer` from `AVFoundation`.
 - Working with an artist to quickly upload photos via FTP to a server that would ultimately be shown to the corresponding group after an in-app trigger. Utilizes `URLSession`.
-- Using a matrix of "passwords" for each night of the event to unlock the app and start each group in the appropriate pre-planned location.
+- Using a matrix of code phrases ("passwords") for each night of the event to unlock the app and start each group in the appropriate pre-planned location.
 
 ## Code Phrase Entry (Group Assignment)
 
