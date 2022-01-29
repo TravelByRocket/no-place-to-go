@@ -78,7 +78,7 @@
 		2FD25BE22532230300E924B7 /* DonatePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD25BE12532230300E924B7 /* DonatePage.swift */; };
 		2FDC29E7252FBBDD00A44ADA /* RedHeartbeat.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 2FDC29E6252FBBDD00A44ADA /* RedHeartbeat.mp4 */; };
 		2FDC29EC252FBDB400A44ADA /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDC29EB252FBDB400A44ADA /* PlayerView.swift */; };
-		2FDC29F4252FDAA800A44ADA /* Installations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDC29F3252FDAA700A44ADA /* Installations.swift */; };
+		2FDC29F4252FDAA800A44ADA /* Installation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDC29F3252FDAA700A44ADA /* Installation.swift */; };
 		2FDC29F9252FDFC400A44ADA /* InstallationsPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDC29F8252FDFC400A44ADA /* InstallationsPage.swift */; };
 		2FDC29FE252FDFDC00A44ADA /* InstallationRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDC29FD252FDFDC00A44ADA /* InstallationRow.swift */; };
 		2FDC2A03252FDFF200A44ADA /* InstallationPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FDC2A02252FDFF200A44ADA /* InstallationPage.swift */; };
@@ -168,7 +168,7 @@
 		2FD25BE12532230300E924B7 /* DonatePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonatePage.swift; sourceTree = "<group>"; };
 		2FDC29E6252FBBDD00A44ADA /* RedHeartbeat.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = RedHeartbeat.mp4; sourceTree = "<group>"; };
 		2FDC29EB252FBDB400A44ADA /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
-		2FDC29F3252FDAA700A44ADA /* Installations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Installations.swift; sourceTree = "<group>"; };
+		2FDC29F3252FDAA700A44ADA /* Installation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Installation.swift; sourceTree = "<group>"; };
 		2FDC29F8252FDFC400A44ADA /* InstallationsPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstallationsPage.swift; sourceTree = "<group>"; };
 		2FDC29FD252FDFDC00A44ADA /* InstallationRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstallationRow.swift; sourceTree = "<group>"; };
 		2FDC2A02252FDFF200A44ADA /* InstallationPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstallationPage.swift; sourceTree = "<group>"; };
@@ -274,7 +274,7 @@
 				2F76A00924FAE0D100736326 /* Sites.swift */,
 				2F76A00F24FAE0D200736326 /* Artists.swift */,
 				2F4AA5E22522B58B005A7740 /* Partners.swift */,
-				2FDC29F3252FDAA700A44ADA /* Installations.swift */,
+				2FDC29F3252FDAA700A44ADA /* Installation.swift */,
 				2F76A01024FAE0D200736326 /* Locations.swift */,
 				2F6911CB254C8CE100845BA4 /* Fonts.swift */,
 				2FADC617279BAA4B008A45DA /* CarGroup.swift */,
@@ -434,8 +434,8 @@
 			isa = PBXGroup;
 			children = (
 				2FDC29F8252FDFC400A44ADA /* InstallationsPage.swift */,
-				2FDC29FD252FDFDC00A44ADA /* InstallationRow.swift */,
 				2FDC2A02252FDFF200A44ADA /* InstallationPage.swift */,
+				2FDC29FD252FDFDC00A44ADA /* InstallationRow.swift */,
 			);
 			name = Installations;
 			path = Partners;
@@ -448,6 +448,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2F769FE124FADF7A00736326 /* Build configuration list for PBXNativeTarget "NoPlaceToGo" */;
 			buildPhases = (
+				2FB4DD6D27A5ABFF008FC77A /* SwiftLint */,
 				2F769FB024FADF6C00736326 /* Sources */,
 				2F769FB124FADF6C00736326 /* Frameworks */,
 				2F769FB224FADF6C00736326 /* Resources */,
@@ -520,6 +521,27 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2FB4DD6D27A5ABFF008FC77A /* SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = SwiftLint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if test -d \"/opt/homebrew/bin/\"; then\n  PATH=\"/opt/homebrew/bin/:${PATH}\"\nfi\n\nexport PATH\n\nif which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2F769FB024FADF6C00736326 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -546,7 +568,7 @@
 				2FADC618279BAA4B008A45DA /* CarGroup.swift in Sources */,
 				2F61E818279DC00B008AEEC6 /* Screen04OutsideForce.swift in Sources */,
 				2F06911025294AE0005DF827 /* NextInstallationButton.swift in Sources */,
-				2FDC29F4252FDAA800A44ADA /* Installations.swift in Sources */,
+				2FDC29F4252FDAA800A44ADA /* Installation.swift in Sources */,
 				2F7ED1362516E2B600E5546A /* LetSomethingGo.swift in Sources */,
 				2F61E824279DC1A9008AEEC6 /* PickAnswers.swift in Sources */,
 				2F4AA5D62522B24C005A7740 /* PartnerPage.swift in Sources */,

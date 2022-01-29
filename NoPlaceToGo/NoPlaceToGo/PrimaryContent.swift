@@ -9,10 +9,10 @@
 import SwiftUI
 
 struct PrimaryContent: View {
-    @EnvironmentObject var pm: ProgressManager
-    
+    @EnvironmentObject var pm: ProgressManager // swiftlint:disable:this identifier_name
+
     var body: some View {
-        if (pm.carGroup == nil) {
+        if pm.carGroup == nil {
             StartPage()
         } else {
             CurrentSite()

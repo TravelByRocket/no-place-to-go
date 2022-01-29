@@ -13,10 +13,10 @@ import UserNotifications
 struct MoeGraham: View {
     @Binding var installIndex: Int
 
-    @EnvironmentObject private var am: AudioManager
-    @State private var isPlaying = false // can show wrong state if leaving the view and coming back but this shouldn't happen anyway
+    @EnvironmentObject private var am: AudioManager // swiftlint:disable:this identifier_name
+    @State private var isPlaying = false // state is wrong if leaving the view and returning but this shouldn't happen
     @State private var pausedManually = true
-    
+
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     var body: some View {
         VStack {
@@ -41,15 +41,15 @@ struct MoeGraham: View {
             .foregroundColor(Color("Gold"))
             Spacer()
         }
-        .onAppear{
+        .onAppear {
             am.load(filename: "NP2G3.mp3", loop: false)
         }
-        .onDisappear{
+        .onDisappear {
             am.stop()
         }
         .onReceive(timer, perform: { _ in
             if let playing = am.audioPlayer?.isPlaying {
-                if (isPlaying && !playing) {
+                if isPlaying && !playing {
                     installIndex += 1
                 }
             }

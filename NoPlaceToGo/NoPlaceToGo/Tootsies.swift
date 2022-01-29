@@ -10,10 +10,10 @@ import SwiftUI
 struct Tootsies: View {
     @State private var installIndex = 0
     private var numInstallsAtSite = 2
-    
+
     var body: some View {
-        VStack{
-            if (installIndex == 0) {
+        VStack {
+            if installIndex == 0 {
                 ReneeHayleyD(installIndex: $installIndex, numInstallsAtSite: numInstallsAtSite)
             } else {
                 ReadyForNextSiteView()

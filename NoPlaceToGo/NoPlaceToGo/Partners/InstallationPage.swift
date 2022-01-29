@@ -9,7 +9,8 @@
 import SwiftUI
 
 struct InstallationPage: View {
-    let installation: installations
+    let installation: Installation
+
     var body: some View {
         List {
             VStack {
@@ -34,7 +35,7 @@ struct InstallationPage: View {
 struct InstallationPage_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            InstallationPage(installation: installations.allinstallations.randomElement()!)
+            InstallationPage(installation: Installation.allinstallations.randomElement()!)
         }
     }
 }

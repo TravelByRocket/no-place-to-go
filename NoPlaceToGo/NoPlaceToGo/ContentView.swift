@@ -8,12 +8,12 @@
 import SwiftUI
 
 struct ContentView: View {
-    @EnvironmentObject var pm: ProgressManager
+    @EnvironmentObject var pm: ProgressManager // swiftlint:disable:this identifier_name
     @State private var safeAreaBottom: CGFloat = 0.0 // changes with .onAppear
-    
+
     var body: some View {
         GeometryReader {geo in
-            VStack{
+            VStack {
                 PrimaryContent()
                 Spacer()
                 BackstageButton()

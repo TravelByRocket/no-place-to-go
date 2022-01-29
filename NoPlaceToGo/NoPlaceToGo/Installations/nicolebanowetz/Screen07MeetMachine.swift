@@ -5,13 +5,14 @@
 //  Created by Bryan Costanza on 23 Jan 2022.
 //  Copyright © 2022 Bryan Costanza. All rights reserved.
 //
+// swiftlint:disable line_length
 
 import SwiftUI
 
 struct Screen07MeetMachine: View {
     @Binding var screenIndex: Int
     @State private var counter = 0
-    
+
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
 
     var body: some View {

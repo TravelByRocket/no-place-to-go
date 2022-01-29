@@ -11,11 +11,11 @@ import SwiftUI
 struct PlayAudioButton: View {
     @Binding var isPlaying: Bool
     @Binding var pausedManually: Bool
-    
-    @EnvironmentObject private var am: AudioManager
+
+    @EnvironmentObject private var am: AudioManager // swiftlint:disable:this identifier_name
 
     var body: some View {
-        Button  {
+        Button {
             if !self.isPlaying {
                 self.am.play()
                 self.isPlaying = true
@@ -34,7 +34,7 @@ struct PlayAudioButton: View {
 struct PlayAudioButton_Previews: PreviewProvider {
     @State private static var isPlaying = false
     @State private static var pausedManually = false
-    
+
     static var previews: some View {
         PlayAudioButton(isPlaying: $isPlaying, pausedManually: $pausedManually)
             .environmentObject(AudioManager())

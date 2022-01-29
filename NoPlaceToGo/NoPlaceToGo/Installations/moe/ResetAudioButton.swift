@@ -11,7 +11,7 @@ import SwiftUI
 struct ResetAudioButton: View {
     @Binding var isPlaying: Bool
 
-    @EnvironmentObject private var am: AudioManager
+    @EnvironmentObject private var am: AudioManager // swiftlint:disable:this identifier_name
 
     var body: some View {
         Button {
@@ -23,7 +23,6 @@ struct ResetAudioButton: View {
         }
     }
 }
-
 
 struct ResetAudioButton_Previews: PreviewProvider {
     @State private static var isPlaying = false

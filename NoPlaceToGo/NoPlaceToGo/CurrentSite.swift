@@ -9,22 +9,22 @@
 import SwiftUI
 
 struct CurrentSite: View {
-    @EnvironmentObject private var pm: ProgressManager
-    
+    @EnvironmentObject private var pm: ProgressManager // swiftlint:disable:this identifier_name
+
     var body: some View {
-        if (pm.inTransitToSite) {
+        if pm.inTransitToSite {
             TravelingToSitePage()
-        } else if (pm.curSite == .LamarA) {
+        } else if pm.curSite == .LamarA {
             LamarA()
-        } else if (pm.curSite == .LamarB) {
+        } else if pm.curSite == .LamarB {
             LamarB()
-        } else if (pm.curSite == .MintSerif) {
+        } else if pm.curSite == .MintSerif {
             MintSerif()
-        } else if (pm.curSite == .MusicRange) {
+        } else if pm.curSite == .MusicRange {
             MusicRange()
-        } else if (pm.curSite == .Tootsies) {
+        } else if pm.curSite == .Tootsies {
             Tootsies()
-        } else if (pm.curSite == .MintSerifFinal) {
+        } else if pm.curSite == .MintSerifFinal {
             AllCompleted()
         }
     }

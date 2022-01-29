@@ -5,18 +5,19 @@
 //  Created by Bryan Costanza on 9/28/20.
 //  Copyright © 2020 Bryan Costanza. All rights reserved.
 //
+// swiftlint:disable line_length
 
 import SwiftUI
 
-struct partnerbio: Identifiable {
+struct Partners: Identifiable {
     let name: String
     let url: String
     let bio: String
     let image: Image
-    
+
     var id: String {name}
-    
-    static let redline = partnerbio(
+
+    static let redline = Partners(
         name: "RedLine",
         url: "redlineart.com",
         bio: """
@@ -24,8 +25,8 @@ struct partnerbio: Identifiable {
         """,
         image: Image("redline")
     )
-    
-    static let fortywest = partnerbio(
+
+    static let fortywest = Partners(
         name: "40 West Arts",
         url: "40westarts.org",
         bio: """
@@ -33,8 +34,8 @@ struct partnerbio: Identifiable {
         """,
         image: Image("fortywest")
     )
-    
-    static let bestonhomes = partnerbio(
+
+    static let bestonhomes = Partners(
         name: "Beston Homes Team",
         url: "bestonhomesteam.kw.com",
         bio: """
@@ -44,8 +45,8 @@ struct partnerbio: Identifiable {
         """,
         image: Image("bestonhomes")
     )
-    
-    static let mintserif = partnerbio(
+
+    static let mintserif = Partners(
         name: "Mint & Serif",
         url: "mintandserif.com",
         bio: """
@@ -53,8 +54,8 @@ struct partnerbio: Identifiable {
         """,
         image: Image("mintserif")
     )
-    
-    static let scfd = partnerbio(
+
+    static let scfd = Partners(
         name: "Scientific and Cultural Facilities District",
         url: "scfd.org",
         bio: """
@@ -62,8 +63,8 @@ struct partnerbio: Identifiable {
         """,
         image: Image("scfd_hor")
     )
-    
-    static let npn = partnerbio(
+
+    static let npn = Partners(
         name: "National Performance Network",
         url: "npnweb.org",
         bio: """
@@ -71,8 +72,8 @@ struct partnerbio: Identifiable {
         """,
         image: Image("npn")
     )
-    
-    static let musicrange = partnerbio(
+
+    static let musicrange = Partners(
         name: "The Music Range",
         url: "themusicrange.com",
         bio: """
@@ -80,15 +81,15 @@ struct partnerbio: Identifiable {
         """,
         image: Image("musicrange")
     )
-    
-    static let tootsies = partnerbio(
+
+    static let tootsies = Partners(
         name: "Tootsies the Nail Shoppe",
         url: "tootsiesnailshoppe.com",
         bio: "Tootsies the Nail Shoppe is a salon for extremely sanitary, manicures, pedicures, and waxing.",
         image: Image("tootsies")
     )
-    
-    static let allpartners: [partnerbio] = [
+
+    static let allpartners: [Partners] = [
         redline,
         fortywest,
         bestonhomes,

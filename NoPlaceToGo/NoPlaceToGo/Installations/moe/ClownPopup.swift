@@ -16,18 +16,17 @@ struct ClownPopup: View {
                 .aspectRatio(contentMode: .fit)
             Text("From: Surveillance Spa\nMessage: Timely Warning Notification of Suspicious Person")
                 .padding()
-            Text("If you have any information about this defected person, please inform The Ectoplasm immediately.\nYour belief will help create the fact!")
+            Text("If you have any information about this defected person, please inform The Ectoplasm immediately.\nYour belief will help create the fact!") // swiftlint:disable:this line_length
                 .multilineTextAlignment(.center)
                 .font(.custom(fonts.ZCOOL, size: 24))
                 .padding()
                 .overlay(RoundedRectangle(cornerRadius: 8)
                             .stroke(Color.secondary, lineWidth: 1))
-            
         }
     }
 }
 
-struct clownPopup_Previews: PreviewProvider {
+struct ClownPopup_Previews: PreviewProvider {
     static var previews: some View {
         ClownPopup()
     }

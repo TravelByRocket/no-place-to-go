@@ -11,7 +11,7 @@ import AVFoundation
 
 class AudioManager: ObservableObject {
     var audioPlayer: AVAudioPlayer?
-    
+
     init() {
         // Get the audio session singleton instance.
         let audioSession = AVAudioSession.sharedInstance()
@@ -25,9 +25,9 @@ class AudioManager: ObservableObject {
             print("Failed to set audio session category.")
         }
     }
-    
+
     func load(filename: String, loop: Bool) {
-        let path = Bundle.main.path(forResource: filename, ofType:nil)!
+        let path = Bundle.main.path(forResource: filename, ofType: nil)!
         let url = URL(fileURLWithPath: path)
 
         do {
@@ -37,15 +37,15 @@ class AudioManager: ObservableObject {
             print("couldn't load file")
         }
     }
-    
+
     func play() {
         audioPlayer?.play()
     }
-    
+
     func pause() {
         audioPlayer?.pause()
     }
-    
+
     func stop() {
         audioPlayer?.stop()
     }

@@ -30,7 +30,10 @@ struct Screen09FinalMaterialization: View {
                 .aspectRatio(contentMode: .fit)
                 .padding(.horizontal, 80)
             Spacer()
-            NextInstallationButton(installIndex: $installIndex, numInstallsAtSite: numInstallsAtSite, messageNext: "I have arrived at\nthe next installation")
+            NextInstallationButton(
+                installIndex: $installIndex,
+                numInstallsAtSite: numInstallsAtSite,
+                messageNext: "I have arrived at\nthe next installation")
         }
     }
 }

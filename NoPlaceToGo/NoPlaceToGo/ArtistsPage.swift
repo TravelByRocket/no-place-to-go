@@ -9,47 +9,47 @@
 import SwiftUI
 
 struct ArtistsPage: View {
-    @EnvironmentObject var pm: ProgressManager
-    
+    @EnvironmentObject var pm: ProgressManager // swiftlint:disable:this identifier_name
+
     var body: some View {
         List {
             Section(header: Text("Co-Directors")) {
-                ForEach (artistbio.alldirectors) {director in
+                ForEach(ArtistBio.alldirectors) {director in
                     NavigationLink(destination: ArtistPage(artist: director)) {
                         ArtistRow(artist: director)
                     }
                 }
             }
-            
+
             Section(header: Text("Artists")) {
-                ForEach (artistbio.allartists) {artist in
+                ForEach(ArtistBio.allartists) {artist in
                     NavigationLink(destination: ArtistPage(artist: artist)) {
                         ArtistRow(artist: artist)
                     }
                 }
             }
-            
+
             Section(header: Text("Sound Design")) {
-                NavigationLink(destination: ArtistPage(artist: artistbio.mike)) {
-                    ArtistRow(artist: artistbio.mike)
+                NavigationLink(destination: ArtistPage(artist: ArtistBio.mike)) {
+                    ArtistRow(artist: ArtistBio.mike)
                 }
             }
-            
+
             Section(header: Text("App Design")) {
-                NavigationLink(destination: ArtistPage(artist: artistbio.bryan)) {
-                    ArtistRow(artist: artistbio.bryan)
+                NavigationLink(destination: ArtistPage(artist: ArtistBio.bryan)) {
+                    ArtistRow(artist: ArtistBio.bryan)
                 }
             }
-            
+
             Section(header: Text("Narration")) {
-                NavigationLink(destination: ArtistPage(artist: artistbio.james)) {
-                    ArtistRow(artist: artistbio.james)
+                NavigationLink(destination: ArtistPage(artist: ArtistBio.james)) {
+                    ArtistRow(artist: ArtistBio.james)
                 }
             }
-            
+
             Section(header: Text("360 Degree Video Editing")) {
-                NavigationLink(destination: ArtistPage(artist: artistbio.max)) {
-                    ArtistRow(artist: artistbio.max)
+                NavigationLink(destination: ArtistPage(artist: ArtistBio.max)) {
+                    ArtistRow(artist: ArtistBio.max)
                 }
             }
         }

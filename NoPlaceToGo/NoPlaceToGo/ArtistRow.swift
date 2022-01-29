@@ -9,11 +9,12 @@
 import SwiftUI
 
 struct ArtistRow: View {
-    let artist: artistbio
+    let artist: ArtistBio
 
     var body: some View {
         HStack {
-            ForEach (0..<artist.images.count) {index in // workaround since image not Hashable or Identifiable 
+            // workaround since image not Hashable or Identifiable 
+            ForEach(0..<artist.images.count) {index in
                 artist.images[index]
                     .resizable()
                     .aspectRatio(contentMode: .fill)
@@ -31,8 +32,8 @@ struct ArtistRow_Previews: PreviewProvider {
         NavigationView {
             List {
                 Section(header: Text("Section")) {
-                    NavigationLink(destination: ArtistPage(artist: artistbio.bryan)) {
-                        ArtistRow(artist: artistbio.bryan)
+                    NavigationLink(destination: ArtistPage(artist: ArtistBio.bryan)) {
+                        ArtistRow(artist: ArtistBio.bryan)
                     }
                 }
             }

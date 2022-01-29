@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct ReadyForNextSiteView: View {
-    @EnvironmentObject private var pm: ProgressManager
+    @EnvironmentObject private var pm: ProgressManager // swiftlint:disable:this identifier_name
 
     var body: some View {
         VStack {
@@ -19,8 +19,8 @@ struct ReadyForNextSiteView: View {
                 self.pm.setLocation(to: self.pm.nextSite(from: pm.curSite ?? Sites.LamarA))
             } label: {
                 Text(pm.completions.hasCompletedAllSites
-                     ? locations.finalDepartureConfirmationMessage
-                     : locations.siteObjectFromSiteEnum(site: pm.curSite ?? Sites.LamarA).departureConfirmationMessage)
+                     ? Location.finalDepartureConfirmationMessage
+                     : Location.siteObjectFromSiteEnum(site: pm.curSite ?? Sites.LamarA).departureConfirmationMessage)
                     .font(.custom(fonts.ZCOOL, size: 22))
                     .multilineTextAlignment(.center)
                     .foregroundColor(Color("Gold"))
@@ -29,7 +29,7 @@ struct ReadyForNextSiteView: View {
             .overlay(RoundedRectangle(cornerRadius: 8)
                         .stroke(Color.secondary, lineWidth: 1))
             .padding(.horizontal, 40)
-            .onAppear{
+            .onAppear {
                 switch pm.curSite {
                 case .LamarB:
                     pm.completions.lamarb = true
@@ -47,8 +47,8 @@ struct ReadyForNextSiteView: View {
                     print("Invalid case")
                 }
             }
-            if (pm.completions.hasCompletedAllSites) {
-                Text("If you are already at Mint & Serif (No Place), don't go anywhere. Please wait in your car as you listen to the next and final portion of the show.")
+            if pm.completions.hasCompletedAllSites {
+                Text("If you are already at Mint & Serif (No Place), don't go anywhere. Please wait in your car as you listen to the next and final portion of the show.") // swiftlint:disable:this line_length
                     .multilineTextAlignment(.center)
                     .font(.custom(fonts.ZCOOL, size: 24))
                     .foregroundColor(Color("Gold"))

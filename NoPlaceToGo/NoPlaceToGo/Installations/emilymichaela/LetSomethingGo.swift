@@ -10,25 +10,27 @@ import SwiftUI
 
 struct LetSomethingGo: View {
     @Binding var canProceed: Bool
-    
-    // Properties below should be private but caused initializer access issue
-    
-    var randomResponse: String = ["How heartless of you",
-                                          "Great choice!",
-                                          "Are you sure? ... very well"].randomElement()!
-    
-    @State var whatToLeave: String = ""
-    @State var hasLetSomethingGo = false
-    
-    let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     var secondsToWait: Int = 5
-    @State var secondsCounter: Int = 0
-    @State var rectWidth: CGFloat = 0
-    
+
+    @State private var whatToLeave: String = ""
+    @State private var hasLetSomethingGo = false
+    @State private var secondsCounter: Int = 0
+    @State private var rectWidth: CGFloat = 0
+
+    private let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+
+    private var randomResponse: String {
+        let messages = [
+            "How heartless of you",
+            "Great choice!",
+            "Are you sure? ... very well"]
+        return messages.randomElement()!
+    }
+
     var body: some View {
         VStack {
             if !hasLetSomethingGo {
-                Text("You're entering a new world and you must leave something of great value behind. What do you choose?")
+                Text("You're entering a new world and you must leave something of great value behind. What do you choose?") // swiftlint:disable:this line_length
                     .font(.custom(fonts.ZCOOL, size: 26))
                     .multilineTextAlignment(.center)
                     .padding(.horizontal, 40)
@@ -54,11 +56,11 @@ struct LetSomethingGo: View {
                             }
                         })
                     Spacer()
-                    GeometryReader{geo in
+                    GeometryReader { geo in
                         Rectangle()
                             .frame(width: rectWidth, height: 20, alignment: .center)
                             .foregroundColor(Color("PinkHeadings"))
-                            .onAppear{
+                            .onAppear {
                                 rectWidth = geo.size.width
                             }
                             .onReceive(timer, perform: { _ in

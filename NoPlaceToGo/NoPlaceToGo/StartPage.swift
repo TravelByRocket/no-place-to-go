@@ -10,12 +10,12 @@ import SwiftUI
 struct StartPage: View {
     @State private var textEntry = ""
 
-    @EnvironmentObject var pm: ProgressManager
-    
+    @EnvironmentObject var pm: ProgressManager // swiftlint:disable:this identifier_name
+
     var matching: Bool {
         CarGroup.codePhrases[textEntry.lowercased()] != nil
     }
-    
+
     var body: some View {
         VStack {
             Image("nptg_transparent")
@@ -33,10 +33,10 @@ struct StartPage: View {
                 pm.setLocation(to: siteEnum)
                 pm.carGroup = carGroup
                 pm.date = Date()
-                if (textEntry.lowercased() == "allcomplete") {
+                if textEntry.lowercased() == "allcomplete" {
                     pm.setLocation(to: .MintSerifFinal)
                     pm.inTransitToSite = false
-                } else if (textEntry.lowercased() == "tofinal") {
+                } else if textEntry.lowercased() == "tofinal" {
                     pm.setLocation(to: .MintSerifFinal)
                     pm.inTransitToSite = true
                 }

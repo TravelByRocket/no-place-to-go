@@ -13,69 +13,69 @@ struct InstallationsPage: View {
         List {
             Section(header: Text("A Liberace Dream")) {
                 NavigationLink {
-                    InstallationPage(installation: installations.liberace)
+                    InstallationPage(installation: Installation.liberace)
                 } label: {
-                    Text(installations.liberace.title)
+                    Text(Installation.liberace.title)
                 }
-                
+
                 NavigationLink {
-                    InstallationPage(installation: installations.sleepparalysis)
+                    InstallationPage(installation: Installation.sleepparalysis)
                 } label: {
-                    Text(installations.sleepparalysis.title)
+                    Text(Installation.sleepparalysis.title)
                 }
-                
+
                 NavigationLink {
-                    InstallationPage(installation: installations.saltpepperghosts)
+                    InstallationPage(installation: Installation.saltpepperghosts)
                 } label: {
-                    Text(installations.saltpepperghosts.title)
+                    Text(Installation.saltpepperghosts.title)
                 }
             }
+
             Section(header: Text("The Surveillance Spa")) {
                 NavigationLink {
-                    InstallationPage(installation: installations.interveningsubstance)
+                    InstallationPage(installation: Installation.interveningsubstance)
                 } label: {
-                    Text(installations.interveningsubstance.title)
+                    Text(Installation.interveningsubstance.title)
                 }
-                
                 NavigationLink {
-                    InstallationPage(installation: installations.solidsjustfluids)
+                    InstallationPage(installation: Installation.solidsjustfluids)
                 } label: {
-                    Text(installations.solidsjustfluids.title)
+                    Text(Installation.solidsjustfluids.title)
                 }
             }
             Section(header: Text("The Waiting Room")) {
                 NavigationLink {
-                    InstallationPage(installation: installations.waitingroom)
+                    InstallationPage(installation: Installation.waitingroom)
                 } label: {
-                    Text(installations.waitingroom.title)
+                    Text(Installation.waitingroom.title)
                 }
             }
             Section(header: Text("Data Assimilation Base")) {
                 NavigationLink {
-                    InstallationPage(installation: installations.dreamsoldwholesale)
+                    InstallationPage(installation: Installation.dreamsoldwholesale)
                 } label: {
-                    Text(installations.dreamsoldwholesale.title)
+                    Text(Installation.dreamsoldwholesale.title)
                 }
             }
             Section(header: Text("The Overwhelm")) {
                 NavigationLink {
-                    InstallationPage(installation: installations.clownhouse)
+                    InstallationPage(installation: Installation.clownhouse)
                 } label: {
-                    Text(installations.clownhouse.title)
+                    Text(Installation.clownhouse.title)
                 }
 
                 NavigationLink {
-                    InstallationPage(installation: installations.photobooth)
+                    InstallationPage(installation: Installation.photobooth)
                 } label: {
-                    Text(installations.photobooth.title)
+                    Text(Installation.photobooth.title)
                 }
 
             }
             Section(header: Text("NP2G Musical Score")) {
                 NavigationLink {
-                    InstallationPage(installation: installations.musicscore)
+                    InstallationPage(installation: Installation.musicscore)
                 } label: {
-                    Text(installations.musicscore.title)
+                    Text(Installation.musicscore.title)
                 }
             }
         }

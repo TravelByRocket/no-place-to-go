@@ -14,7 +14,7 @@ struct NolanTredway: View {
     var body: some View {
         VStack {
             Spacer()
-            Text("Welcome. Please find the genitals that match your body, and press the corresponding button on the center console.")
+            Text("Welcome. Please find the genitals that match your body, and press the corresponding button on the center console.") // swiftlint:disable:this line_length
                 .multilineTextAlignment(.center)
                 .font(.custom(fonts.ZCOOL, size: 24))
                 .padding()

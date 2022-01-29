@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct fonts {
+struct fonts { // swiftlint:disable:this type_name
     static let Notable = "Notable-Regular"
     static let ZCOOL = "ZCOOLXiaoWei-Regular"
 }

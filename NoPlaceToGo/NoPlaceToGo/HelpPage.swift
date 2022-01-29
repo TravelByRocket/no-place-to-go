@@ -12,7 +12,7 @@ struct HelpPage: View {
     var body: some View {
         List {
             Section(header: Text("App Usage")) {
-                Text("If you made a mistake with the group password or app permissions, delete the app and reinstall it.")
+                Text("If you made a mistake with the group password or app permissions, delete the app and reinstall it.") // swiftlint:disable:this line_length
                 Button {
                     UIApplication.shared.open(URL(string: "mailto:support@synodic.co")!)
                 } label: {
@@ -33,7 +33,7 @@ struct HelpPage: View {
 
 struct HelpPage_Previews: PreviewProvider {
     static var previews: some View {
-        NavigationView{
+        NavigationView {
             HelpPage()
         }
     }

@@ -10,12 +10,12 @@ import SwiftUI
 struct LamarA: View {
     @State private var installIndex = 0
     private var numInstallsAtSite = 3
-    
+
     var body: some View {
-        VStack{
+        VStack {
             if installIndex == 0 {
                 NicoleBanowetz(installIndex: $installIndex, numInstallsAtSite: numInstallsAtSite)
-            } else if (installIndex == 1) {
+            } else if installIndex == 1 {
                 NolanTredway()
                 NextInstallationButton(installIndex: $installIndex, numInstallsAtSite: numInstallsAtSite)
             } else {

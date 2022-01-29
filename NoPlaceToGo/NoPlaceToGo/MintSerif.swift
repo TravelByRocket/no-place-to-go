@@ -10,12 +10,12 @@ import SwiftUI
 struct MintSerif: View {
     @State private var installIndex = 0
     private var numInstallsAtSite = 3
-    
+
     var body: some View {
-        VStack{
+        VStack {
             if installIndex == 0 {
                 MoeGraham(installIndex: $installIndex)
-            } else if (installIndex == 1) {
+            } else if installIndex == 1 {
                 HayleyKrichels(installIndex: $installIndex, numInstallsAtSite: numInstallsAtSite)
             } else {
                 ReadyForNextSiteView()

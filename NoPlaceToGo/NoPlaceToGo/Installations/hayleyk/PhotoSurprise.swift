@@ -9,15 +9,15 @@
 import SwiftUI
 
 struct PhotoSurprise: View {
-    @EnvironmentObject var pm: ProgressManager
+    @EnvironmentObject var pm: ProgressManager // swiftlint:disable:this identifier_name
     @Environment(\.presentationMode) var presentationMode
-    
+
     var photoURL: String {
         let domain = "https://files.synodic.co/np2g/"
         let exactDate = Date()
         let calendar = Calendar.current
         var date = calendar.component(.day, from: exactDate)
-        if (date < 16 || date > 31) {
+        if date < 16 || date > 31 {
             date = 16
         }
         let sourceURL = domain + "oct\(date)/" + pm.carGroup.asString + ".jpg"
@@ -29,10 +29,9 @@ struct PhotoSurprise: View {
         let year = Calendar.current.component(.year, from: Date())
         return (month > 10 || year > 2020)
     }
-    
+
     var body: some View {
         VStack {
-//            Text("Send notification later, maybe after next site complete, shows photo taken at site. URL root is \(photoURL)")
             Text("""
                 We are so happy to see you!
                 Please report any anxious

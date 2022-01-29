@@ -11,10 +11,11 @@ import SwiftUI
 struct HayleyKrichels: View {
     @Binding var installIndex: Int
     var numInstallsAtSite: Int
-    
+
     @State private var hasArrived = false
-    
-    @EnvironmentObject private var pm: ProgressManager
+
+    @EnvironmentObject private var pm: ProgressManager // swiftlint:disable:this identifier_name
+
     var body: some View {
         VStack {
             if !hasArrived {
@@ -26,7 +27,7 @@ struct HayleyKrichels: View {
                             .multilineTextAlignment(.center)
                             .font(.custom(fonts.ZCOOL, size: 26))
                             .padding()
-                            .onAppear{
+                            .onAppear {
                                 pm.photoDate = Date()
                             }
                         Spacer()
@@ -72,8 +73,9 @@ struct HayleyKrichels: View {
     }
 }
 
-//struct HayleyKrichels_Previews: PreviewProvider {
-//    static var previews: some View {
-//        HayleyKrichels()
-//    }
-//}
+struct HayleyKrichels_Previews: PreviewProvider {
+    static var previews: some View {
+        HayleyKrichels(installIndex: .constant(1), numInstallsAtSite: 1)
+            .environmentObject(ProgressManager())
+    }
+}

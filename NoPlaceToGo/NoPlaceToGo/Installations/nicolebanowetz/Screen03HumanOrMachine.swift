@@ -5,6 +5,7 @@
 //  Created by Bryan Costanza on 23 Jan 2022.
 //  Copyright © 2022 Bryan Costanza. All rights reserved.
 //
+// swiftlint:disable line_length
 
 import SwiftUI
 
@@ -20,7 +21,11 @@ struct Screen03HumanOrMachine: View {
                 .foregroundColor(Color("Gold"))
             .padding(20)
             Form {
-                PickAnswers(question: "I prefer...", hasSelection: $hasAnswer, leftSide : "Face to Face", rightSide: "Handheld Device")
+                PickAnswers(
+                    question: "I prefer...",
+                    hasSelection: $hasAnswer,
+                    leftSide: "Face to Face",
+                    rightSide: "Handheld Device")
             }
             Spacer()
             Image("hands")

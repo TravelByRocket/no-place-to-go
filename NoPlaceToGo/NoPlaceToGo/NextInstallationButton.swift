@@ -13,7 +13,7 @@ struct NextInstallationButton: View {
     var numInstallsAtSite: Int
     var messageNext: String = "Section Completed"
     @State private var showingAlert = false
-    
+
     var body: some View {
         Button {
             showingAlert = true
@@ -38,14 +38,14 @@ struct NextInstallationButton: View {
                     secondaryButton: .default(
                         Text("Proceed"),
                         action: {
-                            let _ = nextInstallation()
+                            _ = nextInstallation()
                         }
                     )
                 )
             }
         }
     }
-    
+
     func nextInstallation() -> Bool {
         if installIndex < numInstallsAtSite - 1 {
             installIndex += 1

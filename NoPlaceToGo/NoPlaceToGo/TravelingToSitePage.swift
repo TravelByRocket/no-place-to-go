@@ -10,8 +10,8 @@ import SwiftUI
 import AVFoundation
 
 struct TravelingToSitePage: View {
-    @EnvironmentObject private var pm: ProgressManager
-    @EnvironmentObject private var am: AudioManager
+    @EnvironmentObject private var pm: ProgressManager // swiftlint:disable:this identifier_name
+    @EnvironmentObject private var am: AudioManager // swiftlint:disable:this identifier_name
 
     @State private var showingAlert = false
     @State private var narrativeFinished = false
@@ -19,7 +19,7 @@ struct TravelingToSitePage: View {
     @State private var showSpyPhoto = false
     @State private var pausedManually = false
     @State private var gotDirections = false
-    
+
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
 
     var playheadAtEnd: Bool {
@@ -29,7 +29,7 @@ struct TravelingToSitePage: View {
     var playheadAtStart: Bool {
         am.audioPlayer?.currentTime == 0
     }
-    
+
     var body: some View {
         VStack {
             Spacer()
@@ -37,22 +37,23 @@ struct TravelingToSitePage: View {
                 .multilineTextAlignment(.center)
                 .font(.custom(fonts.ZCOOL, size: 26))
                 .foregroundColor(Color("Gold"))
-            Text(locations.siteObjectFromSiteEnum(site: pm.curSite!).name)
+            Text(Location.siteObjectFromSiteEnum(site: pm.curSite!).name)
                 .font(.custom(fonts.Notable, size: 26))
                 .foregroundColor(Color("PinkHeadings"))
                 .multilineTextAlignment(.center)
             Group {
-                Text(locations.siteObjectFromSiteEnum(site: pm.curSite!).address)
+                Text(Location.siteObjectFromSiteEnum(site: pm.curSite!).address)
                     .multilineTextAlignment(.center)
                     .font(.caption)
                 if pm.curSite == .MusicRange {
+                    // swiftlint:disable:next line_length
                     Text("Warning: Data Assimilation Base contains light nudity. In order to keep NP2G pandemic-safe, if you choose to skip this installation please remain in your car for 8 minutes before moving on to The Overwhelm.")
                         .multilineTextAlignment(.center)
                         .font(.caption)
                         .foregroundColor(.red)
                 }
             }
-            .padding([.horizontal,.bottom])
+            .padding([.horizontal, .bottom])
             Spacer()
             HStack {
                 Spacer()
@@ -76,7 +77,7 @@ struct TravelingToSitePage: View {
                         .stroke(Color.secondary, lineWidth: 1))
                 Spacer()
                 Button {
-                    locations.siteObjectFromSiteEnum(site: pm.curSite!).getDirections()
+                    Location.siteObjectFromSiteEnum(site: pm.curSite!).getDirections()
                     am.pause()
                     pausedManually = true
                     gotDirections = true
@@ -94,7 +95,7 @@ struct TravelingToSitePage: View {
             Button {
                 self.showingAlert = true
             } label: {
-                Text(locations.siteObjectFromSiteEnum(site: pm.curSite!).arrivalConfirmationMessage)
+                Text(Location.siteObjectFromSiteEnum(site: pm.curSite!).arrivalConfirmationMessage)
                     .multilineTextAlignment(.center)
                     .font(.custom(fonts.ZCOOL, size: 24))
                     .foregroundColor(Color("Gold"))
@@ -111,18 +112,21 @@ struct TravelingToSitePage: View {
             }
             .onReceive(timer, perform: { _ in
                 if let playing = am.audioPlayer?.isPlaying {
-                    if (!playing && !pausedManually && !gotDirections &&
-                            (playheadAtEnd || playheadAtStart)) {
-                        am.load(filename: locations.siteObjectFromSiteEnum(site: pm.curSite!).loopingAudioFilename, loop: true)
+                    if !playing && !pausedManually && !gotDirections &&
+                            (playheadAtEnd || playheadAtStart) {
+                        am.load(
+                            filename: Location.siteObjectFromSiteEnum(
+                                site: pm.curSite!).loopingAudioFilename,
+                            loop: true)
                         am.play()
-                    } else if (playing && !pm.hasShownSpyPhoto && !showSpyPhoto) {
+                    } else if playing && !pm.hasShownSpyPhoto && !showSpyPhoto {
                         if let phototime = pm.photoDate {
-                            if (Date().timeIntervalSince(phototime) > 20 * 60) {
+                            if Date().timeIntervalSince(phototime) > 20 * 60 {
                                 showSpyPhoto = true
                                 pm.hasShownSpyPhoto = true
                             }
                         }
-                    } else if (!playing && !pausedManually && !AVAudioSession.sharedInstance().isOtherAudioPlaying) {
+                    } else if !playing && !pausedManually && !AVAudioSession.sharedInstance().isOtherAudioPlaying {
                         am.play()
                     }
                 }
@@ -130,6 +134,7 @@ struct TravelingToSitePage: View {
             .alert(isPresented: $showingAlert) {
                 Alert(
                     title: Text("Are you sure?"),
+                    // swiftlint:disable:next line_length
                     message: Text("Are you at the entrance to the installation at this location? Once you proceed you will not be able to go back."),
                     primaryButton: .cancel(),
                     secondaryButton: .default(
@@ -145,11 +150,14 @@ struct TravelingToSitePage: View {
                 .onLongPressGesture(minimumDuration: 2) {
                     pm.inTransitToSite = false
                 }
-                .onAppear{
-                    am.load(filename: locations.siteObjectFromSiteEnum(site: pm.curSite!).narrativeAudioFilename, loop: false)
+                .onAppear {
+                    am.load(
+                        filename: Location.siteObjectFromSiteEnum(
+                            site: pm.curSite!).narrativeAudioFilename,
+                        loop: false)
                     am.play()
                 }
-                .onDisappear{
+                .onDisappear {
                     am.stop()
                 }
         }

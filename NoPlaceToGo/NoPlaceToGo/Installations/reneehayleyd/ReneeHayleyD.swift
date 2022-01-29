@@ -12,48 +12,47 @@ import AVFoundation
 struct ReneeHayleyD: View {
     @Binding var installIndex: Int
     var numInstallsAtSite: Int
-    
+
     @State private var treeIndex: Int = 0
-    
+
     @State private var accent = EnglishAccents.us
     @State private var callStatus = CallStatus.incoming
-    
-    private let pt: [phoneTreeNode] = treeFromCSV(filename: "phonetree.csv")
+
+    private let phoneTreeNodes: [PhoneTreeNode] = treeFromCSV(filename: "phonetree.csv")
     private let synthesizer = AVSpeechSynthesizer()
-    private var node: phoneTreeNode {
-        pt[treeIndex]
+    private var node: PhoneTreeNode {
+        phoneTreeNodes[treeIndex]
     }
-    
+
     private var canHangup: Bool {
         !synthesizer.isSpeaking && callStatus == .completed
     }
-    
+
     func readMessage() {
         if self.synthesizer.isSpeaking {
             self.synthesizer.stopSpeaking(at: .immediate)
         }
-        
-        let utterance = AVSpeechUtterance(string: self.pt[self.treeIndex].content)
+
+        let utterance = AVSpeechUtterance(string: self.phoneTreeNodes[self.treeIndex].content)
         utterance.voice = AVSpeechSynthesisVoice(language: accent.rawValue)
         utterance.rate = 0.50
         self.synthesizer.speak(utterance)
     }
-    
+
     func processKeyPress(for number: Int) {
         if let newIndex = self.node.keypress[number > 0 ? number - 1 : 9] {
-            print(pt[newIndex].keypress[0] == nil)
+            print(phoneTreeNodes[newIndex].keypress[0] == nil)
             self.treeIndex = newIndex
             readMessage()
-            if pt[newIndex].keypress[0] == nil{ // isTerminal does not seem to be working
+            if phoneTreeNodes[newIndex].keypress[0] == nil { // isTerminal does not seem to be working
                 callStatus = .completed
                 print("call is set to completed")
             }
         }
     }
-    
+
     var body: some View {
-        
-        if (callStatus == .incoming) {
+        if callStatus == .incoming {
             Button {
                 callStatus = .active
             } label: {
@@ -83,7 +82,7 @@ struct ReneeHayleyD: View {
                 }
                 .padding()
             }
-        } else if (callStatus == .active || callStatus == .completed) {
+        } else if callStatus == .active || callStatus == .completed {
             HStack {
                 Spacer()
                 VStack {
@@ -116,7 +115,7 @@ struct ReneeHayleyD: View {
                                 .onTapGesture { processKeyPress(for: 9) }
                         }
                         .opacity(callStatus == .active ? 1.0 : 0.2)
-                        HStack{
+                        HStack {
                             RepeatKey()
                                 .onTapGesture { readMessage() }
                             NumKey(number: 0, treeIndex: $treeIndex, node: node)
@@ -136,14 +135,14 @@ struct ReneeHayleyD: View {
                     .padding()
                     .overlay(RoundedRectangle(cornerRadius: 8)
                                 .stroke(Color.secondary, lineWidth: 2))
-                    .onAppear{
+                    .onAppear {
                         readMessage()
                     }
                     Spacer()
                 }
                 Spacer()
             }
-        } else if (callStatus == .ended) {
+        } else if callStatus == .ended {
             VStack {
                 Spacer()
                 HStack {
@@ -163,15 +162,15 @@ struct ReneeHayleyD: View {
             }
         }
     }
-    
+
     struct NumKey: View {
         let number: Int
         @Binding var treeIndex: Int
-        let node: phoneTreeNode
-        
+        let node: PhoneTreeNode
+
         var body: some View {
             Text("\(number)")
-                .frame(width: 50, height:50)
+                .frame(width: 50, height: 50)
                 .font(.largeTitle)
                 .padding()
                 .background(Color.blue)
@@ -179,11 +178,11 @@ struct ReneeHayleyD: View {
                 .padding(4)
         }
     }
-    
+
     struct RepeatKey: View {
         var body: some View {
             Image(systemName: "gobackward")
-                .frame(width: 50, height:50)
+                .frame(width: 50, height: 50)
                 .font(.largeTitle)
                 .padding()
                 .background(Color.blue)
@@ -191,11 +190,11 @@ struct ReneeHayleyD: View {
                 .padding(4)
         }
     }
-    
+
     struct HangupKey: View {
         var body: some View {
             Image(systemName: "phone.arrow.up.right")
-                .frame(width: 50, height:50)
+                .frame(width: 50, height: 50)
                 .font(.largeTitle)
                 .padding()
                 .background(Color.white)
@@ -204,15 +203,15 @@ struct ReneeHayleyD: View {
                 .padding(4)
         }
     }
-    
-    enum EnglishAccents: String {
+
+    enum EnglishAccents: String { // swiftlint:disable identifier_name
         case au = "en-AU"
         case gb = "en-GB"
         case ie = "en-IE"
         case us = "en-US"
         case za = "en-ZA"
-    }
-    
+    } // swiftlint:enable identifier_name
+
     enum CallStatus: String {
         case incoming
         case active
@@ -227,7 +226,7 @@ struct ReneeHayleyD_Previews: PreviewProvider {
     }
 }
 
-struct phoneTreeNode {
+struct PhoneTreeNode {
     let content: String
     let isTerminal: Bool
     let keypress: [Int?]
@@ -244,7 +243,7 @@ func csv(data: String) -> [[String]] {
     return result
 }
 
-func arrayOfStringsToTreeNode(_ row: [String]) -> phoneTreeNode {
+func arrayOfStringsToTreeNode(_ row: [String]) -> PhoneTreeNode {
     var content: String = ""
     var isTerminal: Bool = false
     var keyMap: [Int?] = Array(repeating: nil, count: 10)
@@ -257,16 +256,16 @@ func arrayOfStringsToTreeNode(_ row: [String]) -> phoneTreeNode {
             keyMap[index - 2] = Int(row[index])
         }
     }
-    return phoneTreeNode(content: content, isTerminal: isTerminal, keypress: keyMap)
+    return PhoneTreeNode(content: content, isTerminal: isTerminal, keypress: keyMap)
 }
 
-func treeFromCSV(filename: String) -> [phoneTreeNode] {
+func treeFromCSV(filename: String) -> [PhoneTreeNode] {
     if let filepath = Bundle.main.path(forResource: filename, ofType: nil) {
         do {
             let contents = try String(contentsOfFile: filepath)
             print(contents)
             let parsed = csv(data: contents)
-            var results: [phoneTreeNode] = []
+            var results: [PhoneTreeNode] = []
             for item in parsed {
                 let result = arrayOfStringsToTreeNode(item)
                 results.append(result)
@@ -276,8 +275,8 @@ func treeFromCSV(filename: String) -> [phoneTreeNode] {
             // contents could not be loaded
         }
     } else {
-        // example.txt not found!
+        // file not found
     }
-    
-    return [phoneTreeNode(content: "content", isTerminal: false, keypress: [nil])]
+
+    return [PhoneTreeNode(content: "content", isTerminal: false, keypress: [nil])]
 }

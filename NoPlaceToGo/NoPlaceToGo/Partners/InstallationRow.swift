@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct InstallationRow: View {
-    let installation: installations
+    let installation: Installation
     var body: some View {
         Text(installation.title)
     }

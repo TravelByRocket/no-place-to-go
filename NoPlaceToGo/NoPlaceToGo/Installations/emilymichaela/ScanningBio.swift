@@ -11,15 +11,15 @@ import SwiftUI
 struct ScanningBio: View {
     @Binding var installIndex: Int
     var numInstallsAtSite: Int
+
     @State private var scannerOffset: CGFloat = -50
-    
-    private let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     @State private var counter = -1
     @State private var dataRecorded = false
     @State private var rectWidth: CGFloat = 5
-        
+
+    private let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+
     var body: some View {
-        
         if !dataRecorded {
             GeometryReader {geo in
                 ZStack {
@@ -30,17 +30,17 @@ struct ScanningBio: View {
                             .edgesIgnoringSafeArea(.all)
                             .offset(x: 0, y: scannerOffset - geo.size.height / 5)
                             .onReceive(timer) {_ in
-                                if (counter % 5 == 0) {
+                                if counter % 5 == 0 {
                                     withAnimation(.linear(duration: 1)) {
                                         self.scannerOffset = -geo.size.height * 0.1
                                     }
-                                } else if (counter % 5 == 1) {
+                                } else if counter % 5 == 1 {
                                     withAnimation(.linear(duration: 4)) {
                                         self.scannerOffset = geo.size.height * 1.4
                                     }
                                 }
                                 counter += 1
-                                if (counter >= 20) {
+                                if counter >= 20 {
                                     dataRecorded = true
                                 }
                             }
@@ -61,7 +61,7 @@ struct ScanningBio: View {
                         Rectangle()
                             .frame(width: rectWidth, height: 20, alignment: .center)
                             .foregroundColor(Color("PinkHeadings"))
-                            .onAppear{
+                            .onAppear {
                                 rectWidth = geo.size.width
                             }
                             .onReceive(timer, perform: { _ in

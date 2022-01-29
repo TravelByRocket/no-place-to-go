@@ -9,12 +9,13 @@
 import SwiftUI
 
 struct ArtistPage: View {
-    let artist: artistbio
-    
+    let artist: ArtistBio
+
     var body: some View {
         List {
             VStack(alignment: .center) {
-                ForEach (0..<artist.images.count) {index in
+                // workaround since image not Hashable or Identifiable
+                ForEach(0..<artist.images.count) {index in
                     artist.images[index]
                         .resizable()
                         .aspectRatio(contentMode: .fill)
@@ -24,17 +25,17 @@ struct ArtistPage: View {
                     .font(.custom(fonts.Notable, size: 28))
                     .foregroundColor(Color("PinkHeadings"))
                 Text(artist.pronouns)
+                    .multilineTextAlignment(.center)
                     .font(.custom(fonts.ZCOOL, size: 18))
                     .foregroundColor(Color("Gold"))
-                    .multilineTextAlignment(.center)
                     .padding(.bottom)
             }
             Text(artist.bio)
                 .font(.custom(fonts.ZCOOL, size: 20))
                 .padding(.horizontal)
-            ForEach (artist.urls, id: \.self) {url in
+            ForEach(artist.urls, id: \.self) {url in
                 Button {
-                    UIApplication.shared.open(URL(string:"http://\(url)")!)
+                    UIApplication.shared.open(URL(string: "http://\(url)")!)
                 } label: {
                     Text(url)
                 }
@@ -46,7 +47,7 @@ struct ArtistPage: View {
 struct ArtistPage_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            ArtistPage(artist: artistbio.allartists.randomElement()!)
+            ArtistPage(artist: ArtistBio.allartists.randomElement()!)
         }
     }
 }

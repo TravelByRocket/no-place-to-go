@@ -11,9 +11,9 @@ import SwiftUI
 struct EmilyMichaela: View {
     @Binding var installIndex: Int
     var numInstallsAtSite: Int
-    
-   @State private var canProceed = false
-    
+
+    @State private var canProceed = false
+
     var body: some View {
         VStack {
             if !canProceed {

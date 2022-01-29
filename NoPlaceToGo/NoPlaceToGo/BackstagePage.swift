@@ -10,8 +10,8 @@ import SwiftUI
 
 struct BackstagePage: View {
     var body: some View {
-        NavigationView{
-            List{
+        NavigationView {
+            List {
                 NavigationLink(destination: ArtistsPage()) {
                     Text("Artists")
                 }

@@ -8,20 +8,20 @@
 import SwiftUI
 
 class ProgressManager: ObservableObject {
-    @Published private(set) var curSite: Sites? = nil
+    @Published private(set) var curSite: Sites?
     @Published var inTransitToSite = true
-    
-    var carGroup: CarGroup! = nil
-    var date: Date? = nil
-    var photoDate: Date? = nil
+
+    var carGroup: CarGroup!
+    var date: Date?
+    var photoDate: Date?
     var hasShownSpyPhoto = false
-    
+
     @Published var completions = Completions()
-    
+
     func setLocation(to site: Sites?) {
         curSite = site
     }
-    
+
     func nextSite(from site: Sites) -> Sites? {
         if completions.hasCompletedAllSites {
             return .MintSerifFinal
@@ -42,7 +42,7 @@ class ProgressManager: ObservableObject {
             }
         }
     }
-    
+
     struct Completions {
         var lamarb = false
         var lamara = false
@@ -56,4 +56,3 @@ class ProgressManager: ObservableObject {
         }
     }
 }
-

@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct PartnerPage: View {
-    let partner: partnerbio
+    let partner: Partners
     var body: some View {
         List {
             VStack(alignment: .center) {
@@ -21,7 +21,7 @@ struct PartnerPage: View {
                     .font(.custom(fonts.Notable, size: 28))
                     .foregroundColor(Color("PinkHeadings"))
                 Button {
-                    UIApplication.shared.open(URL(string:"http://\(self.partner.url)")!)
+                    UIApplication.shared.open(URL(string: "http://\(self.partner.url)")!)
                 } label: {
                     Text(self.partner.url)
                         .font(.custom(fonts.ZCOOL, size: 18))
@@ -40,7 +40,7 @@ struct PartnerPage: View {
 struct PartnerPage_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            PartnerPage(partner: partnerbio.allpartners.randomElement()!)
+            PartnerPage(partner: Partners.allpartners.randomElement()!)
         }
     }
 }

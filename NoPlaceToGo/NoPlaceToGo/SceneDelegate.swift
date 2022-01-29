@@ -5,6 +5,7 @@
 //  Created by Bryan Costanza on 8/29/20.
 //  Copyright © 2020 Bryan Costanza. All rights reserved.
 //
+// swiftlint:disable line_length
 
 import UIKit
 import SwiftUI
@@ -12,9 +13,9 @@ import SwiftUI
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-    
-    var pm = ProgressManager()
-    var am = AudioManager()
+
+    var pm = ProgressManager() // swiftlint:disable:this identifier_name
+    var am = AudioManager() // swiftlint:disable:this identifier_name
 
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
@@ -22,6 +23,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
 
         // Get the managed object context from the shared persistent container.
+        // swiftlint:disable:next force_cast
         let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
 
         // Create the SwiftUI view and set the context as the value for the managedObjectContext environment keyPath.
@@ -70,7 +72,4 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Save changes in the application's managed object context when the application transitions to the background.
         (UIApplication.shared.delegate as? AppDelegate)?.saveContext()
     }
-
-
 }
-

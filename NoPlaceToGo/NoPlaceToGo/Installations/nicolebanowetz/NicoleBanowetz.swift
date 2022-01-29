@@ -12,25 +12,25 @@ struct NicoleBanowetz: View {
     @Binding var installIndex: Int
     var numInstallsAtSite: Int
     @State private var screenIndex: Int = 0
-    
+
     var body: some View {
-        if (screenIndex == 0) {
+        if screenIndex == 0 {
             Screen01BeforeProceeding(screenIndex: $screenIndex)
-        } else if (screenIndex == 1) {
+        } else if screenIndex == 1 {
             Screen02Trust(screenIndex: $screenIndex)
-        } else if (screenIndex == 2) {
+        } else if screenIndex == 2 {
             Screen03HumanOrMachine(screenIndex: $screenIndex)
-        } else if (screenIndex == 3) {
+        } else if screenIndex == 3 {
             Screen04OutsideForce(screenIndex: $screenIndex)
-        } else if (screenIndex == 4) {
+        } else if screenIndex == 4 {
             Screen05InterfaceWithMedium(screenIndex: $screenIndex)
-        } else if (screenIndex == 5) {
+        } else if screenIndex == 5 {
             Screen06ProceedInterfaceMedium(screenIndex: $screenIndex)
-        } else if (screenIndex == 6) {
+        } else if screenIndex == 6 {
             Screen07MeetMachine(screenIndex: $screenIndex)
-        } else if (screenIndex == 7) {
+        } else if screenIndex == 7 {
             Screen08HaveRecorded(screenIndex: $screenIndex)
-        } else if (screenIndex == 8) {
+        } else if screenIndex == 8 {
             Screen09FinalMaterialization(installIndex: $installIndex, numInstallsAtSite: numInstallsAtSite)
         }
     }

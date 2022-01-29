@@ -24,7 +24,7 @@ struct PickAnswers: View {
                 .multilineTextAlignment(.center)
                 .font(.custom(fonts.ZCOOL, size: 20))
                 .padding(.bottom, 5)
-            HStack{
+            HStack {
                 Spacer()
                 HStack {
                     Text(leftSide)
@@ -53,7 +53,6 @@ struct PickAnswers: View {
         }
     }
 }
-
 
 struct PickAnswers_Previews: PreviewProvider {
     static var previews: some View {

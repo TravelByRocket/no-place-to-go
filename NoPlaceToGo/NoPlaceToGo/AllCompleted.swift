@@ -13,13 +13,15 @@ struct AllCompleted: View {
     @State private var showSpyPhoto = false
     @State private var showSpyPhotoInstead = false
     @State private var showDonation = false
-    @EnvironmentObject private var pm: ProgressManager
-    
-    let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+
+    private let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+
+    @EnvironmentObject private var pm: ProgressManager // swiftlint:disable:this identifier_name
+
     var body: some View {
         VStack {
-            if (!showDonation) {
-                Text("Thank you for joining us for No Place to Go! Where will you go next?\n\nYou can visit the NP2G Merch store tonight at Mint & Serif or at our online store at No-Place-To-Go.com!")
+            if !showDonation {
+                Text("Thank you for joining us for No Place to Go! Where will you go next?\n\nYou can visit the NP2G Merch store tonight at Mint & Serif or at our online store at No-Place-To-Go.com!")// swiftlint:disable:this line_length
                     .padding()
                     .font(.custom(fonts.ZCOOL, size: 22))
                     .multilineTextAlignment(.center)
@@ -49,7 +51,7 @@ struct AllCompleted: View {
             .sheet(isPresented: $showSheet) {
                 DonatePage()
             }
-            if (showDonation) {
+            if showDonation {
                 DonatePage()
             }
         }
@@ -58,7 +60,7 @@ struct AllCompleted: View {
                 .environmentObject(pm)
         }
         .onReceive(timer, perform: { _ in
-            if(!pm.hasShownSpyPhoto) {
+            if !pm.hasShownSpyPhoto {
                 pm.hasShownSpyPhoto = true
                 showSpyPhoto = true
             }
