@@ -10,7 +10,7 @@ import SwiftUI
 
 struct PartnersPage: View {
     var body: some View {
-        List(Partners.allpartners) {partner in
+        List(Partner.allpartners) {partner in
             NavigationLink {
                 PartnerPage(partner: partner)
             } label: {

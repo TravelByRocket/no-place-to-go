@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct PartnerRow: View {
-    let partner: Partners
+    let partner: Partner
     var body: some View {
         HStack {
             partner.image

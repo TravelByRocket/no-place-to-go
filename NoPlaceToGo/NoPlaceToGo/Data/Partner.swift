@@ -9,7 +9,7 @@
 
 import SwiftUI
 
-struct Partners: Identifiable {
+struct Partner: Identifiable {
     let name: String
     let url: String
     let bio: String
@@ -17,7 +17,7 @@ struct Partners: Identifiable {
 
     var id: String {name}
 
-    static let redline = Partners(
+    static let redline = Partner(
         name: "RedLine",
         url: "redlineart.com",
         bio: """
@@ -26,7 +26,7 @@ struct Partners: Identifiable {
         image: Image("redline")
     )
 
-    static let fortywest = Partners(
+    static let fortywest = Partner(
         name: "40 West Arts",
         url: "40westarts.org",
         bio: """
@@ -35,7 +35,7 @@ struct Partners: Identifiable {
         image: Image("fortywest")
     )
 
-    static let bestonhomes = Partners(
+    static let bestonhomes = Partner(
         name: "Beston Homes Team",
         url: "bestonhomesteam.kw.com",
         bio: """
@@ -46,7 +46,7 @@ struct Partners: Identifiable {
         image: Image("bestonhomes")
     )
 
-    static let mintserif = Partners(
+    static let mintserif = Partner(
         name: "Mint & Serif",
         url: "mintandserif.com",
         bio: """
@@ -55,7 +55,7 @@ struct Partners: Identifiable {
         image: Image("mintserif")
     )
 
-    static let scfd = Partners(
+    static let scfd = Partner(
         name: "Scientific and Cultural Facilities District",
         url: "scfd.org",
         bio: """
@@ -64,7 +64,7 @@ struct Partners: Identifiable {
         image: Image("scfd_hor")
     )
 
-    static let npn = Partners(
+    static let npn = Partner(
         name: "National Performance Network",
         url: "npnweb.org",
         bio: """
@@ -73,7 +73,7 @@ struct Partners: Identifiable {
         image: Image("npn")
     )
 
-    static let musicrange = Partners(
+    static let musicrange = Partner(
         name: "The Music Range",
         url: "themusicrange.com",
         bio: """
@@ -82,14 +82,14 @@ struct Partners: Identifiable {
         image: Image("musicrange")
     )
 
-    static let tootsies = Partners(
+    static let tootsies = Partner(
         name: "Tootsies the Nail Shoppe",
         url: "tootsiesnailshoppe.com",
         bio: "Tootsies the Nail Shoppe is a salon for extremely sanitary, manicures, pedicures, and waxing.",
         image: Image("tootsies")
     )
 
-    static let allpartners: [Partners] = [
+    static let allpartners: [Partner] = [
         redline,
         fortywest,
         bestonhomes,

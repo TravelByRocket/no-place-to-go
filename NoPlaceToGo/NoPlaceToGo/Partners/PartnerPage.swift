@@ -9,7 +9,8 @@
 import SwiftUI
 
 struct PartnerPage: View {
-    let partner: Partners
+    let partner: Partner
+
     var body: some View {
         List {
             VStack(alignment: .center) {
@@ -40,7 +41,7 @@ struct PartnerPage: View {
 struct PartnerPage_Previews: PreviewProvider {
     static var previews: some View {
         NavigationView {
-            PartnerPage(partner: Partners.allpartners.randomElement()!)
+            PartnerPage(partner: Partner.allpartners.randomElement()!)
         }
     }
 }

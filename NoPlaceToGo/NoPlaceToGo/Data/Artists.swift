@@ -8,7 +8,8 @@
 
 import SwiftUI
 
-enum Artists: String { // swiftlint:disable identifier_name
+// swiftlint:disable identifier_name
+enum Artists: String {
     case NicoleBanowetz
     case MoeGram
     case Chrissy_Grace
@@ -18,7 +19,8 @@ enum Artists: String { // swiftlint:disable identifier_name
     case Emily_Michaela
     case Nolan
     case HayleyK
-} // swiftlint:enable identifier_name
+}
+// swiftlint:enable identifier_name
 
 struct ArtistBio: Identifiable {
     let name: String
@@ -29,11 +31,7 @@ struct ArtistBio: Identifiable {
 
     var id: String {name}
 
-    static let alldirectors = [
-        frankie,
-        serena,
-        kate
-    ]
+    static let alldirectors = [frankie, serena, kate]
 
     static let allartists = [
         nolan,
@@ -43,8 +41,7 @@ struct ArtistBio: Identifiable {
         hayleyk,
         hayleyrenee,
         gracechrissy,
-        steven
-    ]
+        steven]
 
     static let nolan = ArtistBio(
         name: "nolan tredway",

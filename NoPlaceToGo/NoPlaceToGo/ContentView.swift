@@ -18,10 +18,10 @@ struct ContentView: View {
                 Spacer()
                 BackstageButton()
             }
-            // The next two lines are to not resize around the keyboard
-            // .ignoresSafeArea(.keyboard) is not available until iOS 14
+            // The next three modifiers are a workaround for
+            // .ignoresSafeArea(.keyboard) not available until iOS 14
             .padding(.bottom, safeAreaBottom)
-            .edgesIgnoringSafeArea(.bottom) // .ignoresSafeArea(.keyboard) better but only iOS 14
+            .edgesIgnoringSafeArea(.bottom)
             .onAppear {
                 self.safeAreaBottom = geo.safeAreaInsets.bottom
             }

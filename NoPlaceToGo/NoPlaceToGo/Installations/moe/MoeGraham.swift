@@ -17,7 +17,8 @@ struct MoeGraham: View {
     @State private var isPlaying = false // state is wrong if leaving the view and returning but this shouldn't happen
     @State private var pausedManually = true
 
-    let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+    private let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+
     var body: some View {
         VStack {
             Spacer()

@@ -9,9 +9,10 @@
 import SwiftUI
 
 struct PauseAudioButton: View {
-    @EnvironmentObject private var am: AudioManager // swiftlint:disable:this identifier_name
     @Binding var isPlaying: Bool
     @Binding var pausedManually: Bool
+
+    @EnvironmentObject private var am: AudioManager // swiftlint:disable:this identifier_name
 
     var body: some View {
         Button {
