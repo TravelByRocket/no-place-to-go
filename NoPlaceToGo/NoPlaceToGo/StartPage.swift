@@ -8,45 +8,12 @@
 import SwiftUI
 
 struct StartPage: View {
-    @State private var passwordEntry = ""
+    @State private var textEntry = ""
+
     @EnvironmentObject var pm: ProgressManager
     
-    let passDict: [String: CarGroup] =
-    ["tootsies": .a3,
-     "mintserif": CarGroup(.MintSerif, "a", 1), // cannot normally start here
-     "lamara": .a2,
-     "lamarb": .a1,
-     "musicrange": .a4,
-     "allcomplete": .c4,
-     "tofinal": .a1,
-     // shortcuts above, guest access below
-     "paparazzi": .a1,
-     "quarandream": .a2,
-     "hologrammasks": .a3,
-     "liberace": .a4,
-     "surveillancespa": .b1,
-     "ectoplasm": .b2,
-     "systemfailure": .b3,
-     "cyborg": .b4,
-     "jauntyvampire": .c1,
-     "clowntherapy": .c2,
-     "revolution": .c3,
-     "dreamdatabase": .c4,
-     "queerdreams": .d1,
-     "belief=fact": .d2,
-     "nightmaredesires": .d3,
-     "secrets": .d4,
-     "toxicsanitation": .e1,
-     "noplace2go": .e2,
-     "beanyone!": .e3,
-     "goanywhere!": .e4,
-     "staythecourse!": .f1,
-     "soulblueprint": .f2,
-     "dataghost": .f3,
-     "fearfulphotos": .f4]
-    
     var matching: Bool {
-        passDict[passwordEntry.lowercased()] != nil
+        CarGroup.codePhrases[textEntry.lowercased()] != nil
     }
     
     var body: some View {
@@ -54,24 +21,24 @@ struct StartPage: View {
             Image("nptg_transparent")
                 .resizable()
                 .aspectRatio(contentMode: .fit)
-            TextField("Try to go somewhere", text: $passwordEntry)
+            TextField("Try to go somewhere", text: $textEntry)
                 .textFieldStyle(RoundedBorderTextFieldStyle())
                 .autocapitalization(.none)
                 .disableAutocorrection(true)
                 .padding()
             Button {
                 // can force unwrap because protected by `matching`
-                let carGroup = self.passDict[self.passwordEntry.lowercased()]!
+                let carGroup = CarGroup.codePhrases[self.textEntry.lowercased()]!
                 let siteEnum = carGroup.startingLocation
-                self.pm.setLocation(to: siteEnum)
-                self.pm.carGroup = carGroup
-                self.pm.date = Date()
-                if (passwordEntry.lowercased() == "allcomplete") {
-                    self.pm.setLocation(to: .MintSerifFinal)
-                    self.pm.inTransitToSite = false
-                } else if (passwordEntry.lowercased() == "tofinal") {
-                    self.pm.setLocation(to: .MintSerifFinal)
-                    self.pm.inTransitToSite = true
+                pm.setLocation(to: siteEnum)
+                pm.carGroup = carGroup
+                pm.date = Date()
+                if (textEntry.lowercased() == "allcomplete") {
+                    pm.setLocation(to: .MintSerifFinal)
+                    pm.inTransitToSite = false
+                } else if (textEntry.lowercased() == "tofinal") {
+                    pm.setLocation(to: .MintSerifFinal)
+                    pm.inTransitToSite = true
                 }
             } label: {
                 HStack {

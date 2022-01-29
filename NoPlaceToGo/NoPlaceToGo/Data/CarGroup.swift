@@ -47,4 +47,39 @@ struct CarGroup {
     static let f2 = CarGroup(.LamarA,"f",2)
     static let f3 = CarGroup(.Tootsies,"f",3)
     static let f4 = CarGroup(.MusicRange,"f",4)
+
+    static let codePhrases: [String: CarGroup] = [
+        // special code phrases for debugging
+        "tootsies": a3,
+        "mintserif": CarGroup(.MintSerif, "a", 1), // for debugging; cannot normally start here
+        "lamara": a2,
+        "lamarb": a1,
+        "musicrange": a4,
+        "allcomplete": c4,
+        "tofinal": a1,
+        // guest code phrases
+        "paparazzi": a1,
+        "quarandream": a2,
+        "hologrammasks": a3,
+        "liberace": a4,
+        "surveillancespa": b1,
+        "ectoplasm": b2,
+        "systemfailure": b3,
+        "cyborg": b4,
+        "jauntyvampire": c1,
+        "clowntherapy": c2,
+        "revolution": c3,
+        "dreamdatabase": c4,
+        "queerdreams": d1,
+        "belief=fact": d2,
+        "nightmaredesires": d3,
+        "secrets": d4,
+        "toxicsanitation": e1,
+        "noplace2go": e2,
+        "beanyone!": e3,
+        "goanywhere!": e4,
+        "staythecourse!": f1,
+        "soulblueprint": f2,
+        "dataghost": f3,
+        "fearfulphotos": f4]
 }
