@@ -66,8 +66,9 @@ Guests would answer questions in the app as they approached the installation whe
 ![Using sliders and checkboxes to answer questions about interfacing with spirits](Documentation/ReadmeContent/nicolebanowetz.gif) 
 
 ## Surveillance Spa -- Nolan Tredway
+Here, guests are simply directed to interract with the exhibit. The "genders" are related to four alien figures presented in this location. Again, no information is collected in the app.
 
-![A spinning x and circle like a person's body in a pink circle that is spinning](Documentation/ReadmeContent/nolantredway.gif). The "genders" are related to four alien figures presented in this location. Again, no information is collected in the app.
+![A spinning x and circle like a person's body in a pink circle that is spinning](Documentation/ReadmeContent/nolantredway.gif)
 
 ## Phone Tree -- Renee & Hayley D.
 
