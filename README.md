@@ -78,7 +78,7 @@ Unfortunately, none of the fun of this portion of the app comes through in an an
 
 ## Backstage
 
-At any time before, during, or after the event, users can bpull up additional "Backstage" information about No Place to Go, the artists, directors, and installations. 
+At any time before, during, or after the event, users can pull up additional "Backstage" information about No Place to Go, the artists, directors, and installations. 
 
 ![Going through multiple pages of information about the artists, installations, and sponsors.](Documentation/ReadmeContent/backstage.gif)
 
