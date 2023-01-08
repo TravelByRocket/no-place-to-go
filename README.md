@@ -84,11 +84,11 @@ At any time before, during, or after the event, users can pull up additional "Ba
 
 ## In the Artists' Words
 
-> [Y]ou're awesome. This is going to be SO integral to the experience for everyone and we SO appreciate you!!
+> [Y]ou're awesome. This is going to be SO integral to the experience for everyone and we SO appreciate you!! -- Moe Gram
 
 ...
 
-> This is all great. Thank you so much for taking the time to do this. You are appreciated!!
+> This is all great. Thank you so much for taking the time to do this. You are appreciated!! -- Renee Marino
 
 ## In the Press
 
@@ -97,7 +97,7 @@ At any time before, during, or after the event, users can pull up additional "Ba
 
 ...
 
-> There they’ll unlock a smartphone **app** (to be downloaded in advance) that guides their staggered, overlapping journeys through the otherworldly installations. [The Know, Denver Post](https://theknow-old.denverpost.com/2020/10/22/no-place-to-go-rainbow-militia-deaths-unraveling/247376/)
+> There they’ll unlock a smartphone **app** (to be downloaded in advance) that guides their staggered, overlapping journeys through the otherworldly installations. -- [The Know, Denver Post](https://theknow-old.denverpost.com/2020/10/22/no-place-to-go-rainbow-militia-deaths-unraveling/247376/)
 
 ...
 
